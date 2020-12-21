@@ -11,19 +11,6 @@ int main()
     window.setFramerateLimit(60);
     sf::Clock clock;
 
-    /*// Create Player
-    sf::Texture playerTexture;
-
-    if (!playerTexture.loadFromFile("./Assets/idle.png")) {
-        std::cout << "Erreur de chargement de la texture du joueur !" << std::endl;
-    }
-    playerTexture.setSmooth(true);
-
-    sf::Sprite playerSprite;
-    playerSprite.setTexture(playerTexture);
-    playerSprite.setTextureRect(sf::IntRect(0, 0, 128, 128)); // On ne prend seulement que la première texture
-    playerSprite.setPosition(W_WIDTH / 2 - S_SIZE, W_HEIGHT / 2 - S_SIZE);
-    playerSprite.setScale(SCALE_FACTOR, SCALE_FACTOR);*/
     Player player;
 
     while (window.isOpen())
@@ -34,10 +21,33 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::Left) {
+                    if (!player.isPlayerMoving()) {
+                        player.toggleMovement(0);
+                        player.setState(1);
+                    }
+                }
+                if (event.key.code == sf::Keyboard::Right) {
+                    if (!player.isPlayerMoving()) {
+                        player.toggleMovement(1);
+                        player.setState(1);
+                    }
+                }
+            }
+            if (event.type == sf::Event::KeyReleased) {
+                if (event.key.code == sf::Keyboard::Right ||
+                    event.key.code == sf::Keyboard::Left) {
+                    if (player.isPlayerMoving()) {
+                        player.toggleMovement(-1);
+                        player.setState(0);
+                    }
+                }
+            }
         }
         player.animate(dt);
         window.clear(sf::Color(154, 240, 229, 1.0f));
-        //window.draw(playerSprite);
         player.draw(window);
         window.display();
     }
