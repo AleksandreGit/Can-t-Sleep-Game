@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\Animation\Builder">
       <UniqueIdentifier>{138c8e68-8b24-443f-9331-21d6c7f1927a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Interactions">
+      <UniqueIdentifier>{bf01c276-d7c0-47ab-b3fe-58cd84e641bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Interactions">
+      <UniqueIdentifier>{5eb55bf8-f42a-4209-8bb2-ba660f9ef351}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,8 +51,17 @@
     <ClCompile Include="DefaultAnimableBuilder.cpp">
       <Filter>Fichiers sources\Animation\Builder</Filter>
     </ClCompile>
-    <ClCompile Include="AnimablePlayer.cpp">
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Fichiers sources\Interactions</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidElement.cpp">
+      <Filter>Fichiers sources\Interactions</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimablePlayer.cpp">
+      <Filter>Fichiers sources\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,8 +86,31 @@
     <ClInclude Include="VoidAnimableBuilder.h">
       <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
     </ClInclude>
-    <ClInclude Include="AnimablePlayer.h">
+    <ClInclude Include="RigidBody.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="RigidElement.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimablePlayer.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameJam1.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -11,7 +11,6 @@ int main()
     window.setFramerateLimit(60);
     sf::Clock clock;
 
-    Player player;
 
     while (window.isOpen())
     {
@@ -24,31 +23,20 @@ int main()
 
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Left) {
-                    if (!player.isPlayerMoving()) {
-                        player.toggleMovement(0);
-                        player.setState(1);
-                    }
+                    
                 }
                 if (event.key.code == sf::Keyboard::Right) {
-                    if (!player.isPlayerMoving()) {
-                        player.toggleMovement(1);
-                        player.setState(1);
-                    }
+                   
                 }
             }
             if (event.type == sf::Event::KeyReleased) {
                 if (event.key.code == sf::Keyboard::Right ||
                     event.key.code == sf::Keyboard::Left) {
-                    if (player.isPlayerMoving()) {
-                        player.toggleMovement(-1);
-                        player.setState(0);
-                    }
+                    
                 }
             }
         }
-        player.animate(dt);
         window.clear(sf::Color(154, 240, 229, 1.0f));
-        player.draw(window);
         window.display();
     }
 
