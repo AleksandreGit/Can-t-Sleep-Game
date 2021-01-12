@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation">
+      <UniqueIdentifier>{8a4f4d28-76b1-410b-919e-9defc119284e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation\Builder">
+      <UniqueIdentifier>{f095038f-c0e0-49ba-a9ee-967ed3b25419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Animation">
+      <UniqueIdentifier>{eca66fe7-ebea-4a82-b57d-2877429e3e91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Animation\Builder">
+      <UniqueIdentifier>{138c8e68-8b24-443f-9331-21d6c7f1927a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,12 +36,42 @@
     <ClCompile Include="Map.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="AnimableEntity.cpp">
+      <Filter>Fichiers sources\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="VoidAnimableBuilder.cpp">
+      <Filter>Fichiers sources\Animation\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultAnimableBuilder.cpp">
+      <Filter>Fichiers sources\Animation\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimablePlayer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimableEntity.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animable.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultAnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="VoidAnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimablePlayer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

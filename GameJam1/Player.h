@@ -46,6 +46,8 @@ public:
 	*/
 	void toggleMovement(unsigned int direction = 3);
 
+	void handleTime(float deltaTime);
+
 	/**
 		Check if the player is moving
 	*/
@@ -54,9 +56,11 @@ public:
 	void setState(unsigned int state);
 
 	const string ASSETS_PATH = "./Assets/";
-	const float FRAMERATE_LIMIT = 0.2f;
-	const int FRAME_SIZE = 128;
-	const float SCALE_VAL = 2.0f;
+	const float IDLE_FRAMERATE = 0.02f;
+	const float WALK_FRAMERATE = 0.05f;
+	const int FRAME_WIDTH = 298;
+	const int FRAME_HEIGHT = 421;
+	const float SCALE_VAL = 1.0f;
 	const float SPEED = 200.0f;
 
 private:

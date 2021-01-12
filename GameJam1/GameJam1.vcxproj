@@ -146,13 +146,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimableEntity.cpp" />
+    <ClCompile Include="AnimablePlayer.cpp" />
+    <ClCompile Include="DefaultAnimableBuilder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animable.h" />
+    <ClInclude Include="AnimableBuilder.h" />
+    <ClInclude Include="AnimableEntity.h" />
+    <ClInclude Include="AnimablePlayer.h" />
+    <ClInclude Include="DefaultAnimableBuilder.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="VoidAnimableBuilder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
