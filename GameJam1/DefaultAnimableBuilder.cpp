@@ -8,7 +8,7 @@ AnimableEntity DefaultAnimableBuilder::build() {
 	return AnimableEntity(texture, spriteSheet, frameRate, nbCol, nbRow, totalFrame);
 }
 
-void DefaultAnimableBuilder::setSpriteSheet(string path) {
+DefaultAnimableBuilder DefaultAnimableBuilder::setSpriteSheet(string path) {
 	if (!texture.loadFromFile(path)) {
 		cout << "Erreur de chargement de la texture !" << endl;
 	}
@@ -23,13 +23,15 @@ void DefaultAnimableBuilder::setSpriteSheet(string path) {
 			DEFAULT_HEIGHT));
 		spriteSheet.push_back(sprite);
 	}
+	return (*this);
 
 }
-
-void DefaultAnimableBuilder::setFrameRate(int frameRate) {
+DefaultAnimableBuilder DefaultAnimableBuilder::setFrameRate(float frameRate) {
 	this->frameRate = frameRate;
+	return (*this);
 }
 
-void DefaultAnimableBuilder::setTotalFrame(int totalFrame) {
+DefaultAnimableBuilder DefaultAnimableBuilder::setTotalFrame(int totalFrame) {
 	this->totalFrame = totalFrame;
+	return (*this);
 }

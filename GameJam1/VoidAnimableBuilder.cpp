@@ -6,7 +6,7 @@ AnimableEntity VoidAnimableBuilder::build() {
 	return AnimableEntity(texture, spriteSheet, frameRate, framePerCol, framePerLig, totalFrame);
 }
 
-void VoidAnimableBuilder::setSpriteSheet(string path) {
+VoidAnimableBuilder VoidAnimableBuilder::setSpriteSheet(string path) {
 	if (!texture.loadFromFile(path)) {
 		cout << "Erreur de chargement de la texture !" << endl;
 	}
@@ -21,20 +21,26 @@ void VoidAnimableBuilder::setSpriteSheet(string path) {
 			height));
 		spriteSheet.push_back(sprite);
 	}
+	return (*this);
 }
 
-void VoidAnimableBuilder::setFrameRate(int frameRate) {
+VoidAnimableBuilder VoidAnimableBuilder::setFrameRate(float frameRate) {
 	this->frameRate = frameRate;
+	return (*this);
 }
 
-void VoidAnimableBuilder::setFrameRatePerCol(int frameRatePerCol) {
+VoidAnimableBuilder VoidAnimableBuilder::setFrameRatePerCol(int frameRatePerCol) {
 	this->framePerCol = framePerCol;
+	return (*this);
 }
 
-void VoidAnimableBuilder::setFrameRatePerLig(int frameRatePerLig) {
+VoidAnimableBuilder VoidAnimableBuilder::setFrameRatePerLig(int frameRatePerLig) {
 	this->framePerLig = framePerLig;
+	return (*this);
 }
 
-void VoidAnimableBuilder::setTotalFrame(int totalFrame) {
+VoidAnimableBuilder VoidAnimableBuilder::setTotalFrame(int totalFrame) {
 	this->totalFrame = totalFrame;
+	return (*this);
 }
+

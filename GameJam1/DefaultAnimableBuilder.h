@@ -23,20 +23,20 @@ public:
 		Set the spritesheet with the given path
 		/!\ The number total of frames must be defined first !
 	*/
-	void setSpriteSheet(string path);
+	DefaultAnimableBuilder setSpriteSheet(string path);
 	/**
 		Set the framerate
 	*/
-	void setFrameRate(int frameRate);
+	DefaultAnimableBuilder setFrameRate(float frameRate);
 	/**
 		Set the number total of frames
 	*/
-	void setTotalFrame(int totalFrame);
+	DefaultAnimableBuilder setTotalFrame(int totalFrame);
 
 protected:
 	sf::Texture texture;
 	vector<sf::Sprite> spriteSheet;
-	int frameRate;
+	float frameRate;
 	int totalFrame;
 
 private:

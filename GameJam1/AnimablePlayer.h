@@ -3,7 +3,7 @@
 class AnimablePlayer : public AnimableEntity
 {
 public:
-	void flipOrientation();
+	virtual void flipOrientation() = 0;
 
 protected: 
 	bool m_orientation;

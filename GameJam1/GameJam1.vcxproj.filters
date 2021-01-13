@@ -31,6 +31,12 @@
     <Filter Include="Fichiers d%27en-tête\Interactions">
       <UniqueIdentifier>{5eb55bf8-f42a-4209-8bb2-ba660f9ef351}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Animation\Player">
+      <UniqueIdentifier>{f9f1601a-182a-44f7-b6ab-7ecdde7b05ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation\Player">
+      <UniqueIdentifier>{109accb5-4303-493e-a313-112987d3a3d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -60,8 +66,8 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="AnimablePlayer.cpp">
-      <Filter>Fichiers sources\Animation</Filter>
+    <ClCompile Include="PlayerWalk.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="State.h">
       <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWalk.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
