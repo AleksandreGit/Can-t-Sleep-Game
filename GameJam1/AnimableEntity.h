@@ -2,7 +2,6 @@
 #include "Animable.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
-#include <SFML/OpenGL.hpp>
 
 using namespace std;
 

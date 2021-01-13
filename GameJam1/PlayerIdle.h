@@ -6,6 +6,5 @@ class PlayerIdle : public AnimablePlayer
 {
 public:
 	PlayerIdle();
-	virtual void flipOrientation();
 };
 

@@ -8,7 +8,12 @@ AnimableEntity::AnimableEntity(sf::Texture &texture, vector<sf::Sprite> spriteSh
 
 void AnimableEntity::animate(float deltaTime) {
 	m_elapsedTime += deltaTime;
-	m_currentFrame = ((int) (m_frameRate * m_elapsedTime)) % m_totalFrame;
+	if (m_totalFrame > 0) {
+		m_currentFrame = ((int)(m_frameRate * m_elapsedTime)) % m_totalFrame;
+	}
+	else {
+		m_currentFrame = 0;
+	}
 }
 
 void AnimableEntity::draw(sf::RenderWindow& window) const {

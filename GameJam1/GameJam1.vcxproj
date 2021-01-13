@@ -148,12 +148,11 @@
   <ItemGroup>
     <ClCompile Include="AnimableEntity.cpp" />
     <ClCompile Include="DefaultAnimableBuilder.cpp" />
-    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerIdle.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
-    <ClCompile Include="RigidBody.cpp" />
     <ClCompile Include="RigidElement.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
@@ -167,6 +166,7 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerIdle.h" />
     <ClInclude Include="PlayerWalk.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />

@@ -1,5 +1,2 @@
-﻿  Player.cpp
-  main.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(50,47): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-  Génération de code en cours...
+﻿  AnimableEntity.cpp
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe

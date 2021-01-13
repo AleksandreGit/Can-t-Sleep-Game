@@ -6,6 +6,5 @@ class PlayerWalk : public AnimablePlayer
 {
 public:
 	PlayerWalk();
-	virtual void flipOrientation();
 };
 

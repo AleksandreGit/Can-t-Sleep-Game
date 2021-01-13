@@ -10,12 +10,14 @@ int main()
     sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "GameJam #1");
     window.setFramerateLimit(60);
     sf::Clock clock;
+    Player player;
 
 
     while (window.isOpen())
     {
         float dt = clock.restart().asSeconds();
         sf::Event event;
+        player.move(dt);
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -23,20 +25,24 @@ int main()
 
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Left) {
-                    
+                    player.setDirection(LEFT);
+                    player.setState(WALK);
                 }
                 if (event.key.code == sf::Keyboard::Right) {
+                    player.setDirection(RIGHT);
+                    player.setState(WALK);
                    
                 }
             }
             if (event.type == sf::Event::KeyReleased) {
                 if (event.key.code == sf::Keyboard::Right ||
                     event.key.code == sf::Keyboard::Left) {
-                    
+                    player.setState(IDLE);
                 }
             }
         }
         window.clear(sf::Color(154, 240, 229, 1.0f));
+        player.draw(window);
         window.display();
     }
 
