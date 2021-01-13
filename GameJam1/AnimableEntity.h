@@ -45,7 +45,6 @@ protected:
 	int m_currentFrame;
 	float m_elapsedTime; // Time elapsed since the beginning of the animation
 
-
 private:
 	const int DEFAULT_WIDTH = 298;
 	const int DEFAULT_HEIGHT = 421;
