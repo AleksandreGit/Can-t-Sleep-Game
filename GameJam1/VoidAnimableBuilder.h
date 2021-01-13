@@ -13,14 +13,14 @@ class VoidAnimableBuilder : public AnimableBuilder
 {
 public:
 	VoidAnimableBuilder();
-	virtual AnimableEntity build();
+	virtual AnimableEntity& build();
 
 	/**
 		Set the spriteSheet
 		/!\ Muste define the number total of frames, the number
 		of frames per columns and per rows before
 	*/
-	VoidAnimableBuilder setSpriteSheet(string path);
+	VoidAnimableBuilder setTexture(string path);
 	VoidAnimableBuilder setFrameRate(float frameRate);
 	VoidAnimableBuilder setFrameRatePerCol(int frameRatePerCol);
 	VoidAnimableBuilder setFrameRatePerLig(int frameRatePerLig);
@@ -28,7 +28,6 @@ public:
 
 protected:
 	sf::Texture texture;
-	vector<sf::Sprite> spriteSheet;
 	float frameRate;
 	int framePerCol;
 	int framePerLig;

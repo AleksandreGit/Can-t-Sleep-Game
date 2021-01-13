@@ -1,9 +1,6 @@
 #include "PlayerWalk.h"
 
-PlayerWalk::PlayerWalk() {
-	DefaultAnimableBuilder builder;
-	AnimablePlayer(builder.setFrameRate(0.5f)
-		.setTotalFrame(37)
-		.setSpriteSheet("./Assets/walk2.png")
-		.build());
-}
+PlayerWalk::PlayerWalk() : AnimablePlayer(DefaultAnimableBuilder().setFrameRate(30.0f)
+	.setTotalFrame(37)
+	.setTexture("./Assets/walk2.png")
+	.build()) {}

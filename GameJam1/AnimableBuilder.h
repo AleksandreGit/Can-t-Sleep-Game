@@ -6,5 +6,5 @@
 */
 class AnimableBuilder {
 public:
-	virtual AnimableEntity build() = 0;
+	virtual AnimableEntity& build() = 0;
 };

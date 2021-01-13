@@ -1,25 +1,14 @@
 #include "VoidAnimableBuilder.h"
 
-VoidAnimableBuilder::VoidAnimableBuilder() {}
+VoidAnimableBuilder::VoidAnimableBuilder() : frameRate(1.0f), totalFrame(0), framePerCol(0), framePerLig(0) {}
 
-AnimableEntity VoidAnimableBuilder::build() {
-	return AnimableEntity(texture, spriteSheet, frameRate, framePerCol, framePerLig, totalFrame);
+AnimableEntity& VoidAnimableBuilder::build() {
+	return *(new AnimableEntity(texture, frameRate, framePerCol, framePerLig, totalFrame));
 }
 
-VoidAnimableBuilder VoidAnimableBuilder::setSpriteSheet(string path) {
+VoidAnimableBuilder VoidAnimableBuilder::setTexture(string path) {
 	if (!texture.loadFromFile(path)) {
 		cout << "Erreur de chargement de la texture !" << endl;
-	}
-	const int width = texture.getSize().x / framePerCol;
-	const int height = texture.getSize().y / framePerLig;
-	for (int i = 0; i < totalFrame; i++) {
-		sf::Sprite sprite;
-		sprite.setTexture(texture);
-		sprite.setTextureRect(sf::IntRect((i % framePerCol) * width,
-			(i / framePerLig) * height,
-			width,
-			height));
-		spriteSheet.push_back(sprite);
 	}
 	return (*this);
 }

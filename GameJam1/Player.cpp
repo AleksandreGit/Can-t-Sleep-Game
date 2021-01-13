@@ -2,16 +2,19 @@
 
 
 Player::Player() : Entity() {
-	m_currentAnimation = new PlayerIdle();
+	m_animations.push_back(new PlayerIdle());
+	m_animations.push_back(new PlayerWalk());
 }
 
 // TODO Add delta time
 void Player::move(float deltaTime) {
+	int anim = 0;
 	switch (m_currentState) {
 		case IDLE:
-			// NOTHING HAPPEND
+			anim = 0;
 			break;
 		case WALK:
+			anim = 1;
 			switch (m_dir) {
 			case LEFT:
 				m_position += m_speed * deltaTime;
@@ -26,35 +29,37 @@ void Player::move(float deltaTime) {
 		default:
 			break;
 	}
-	m_currentAnimation->animate(deltaTime);
+	m_animations[anim]->animate(deltaTime);
 }
 
 void Player::setState(State state) {
-	m_currentState = state;
-	switch (state) {
-		case IDLE:
-			m_currentAnimation = new PlayerIdle();
-			break;
-		case WALK:
-			m_currentAnimation = new PlayerWalk();
-			break;
-		default:
-			break;
+	if (m_currentState == IDLE && state == WALK) {
+		m_currentState = state;
+	}
+	else if (m_currentState == WALK && state == IDLE) {
+		m_currentState = state;
 	}
 }
 
 void Player::setDirection(Direction dir) {
-	if (m_dir == LEFT && dir == RIGHT) {
-		m_currentAnimation->flipOrientation();
+	if ((m_dir == LEFT && dir == RIGHT) || (m_dir == RIGHT && dir == LEFT)) {
+		for (int i = 0; i < m_animations.size(); i++) {
+			m_animations[i]->flipOrientation();
+		}
+		m_dir = dir;
 	}
-	else if (m_dir == RIGHT && dir == LEFT) {
-		m_currentAnimation->flipOrientation();
-	}
-	m_dir = dir;
 }
 
 void Player::draw(sf::RenderWindow& window) const {
-	m_currentAnimation->draw(window);
+	int anim = 0;
+	switch (m_currentState) {
+		case IDLE:
+			anim = 0;
+			break;
+		case WALK:
+			anim = 1;
+	}
+	m_animations[anim]->draw(window);
 }
 
 void Player::attack(Entity& target) const {

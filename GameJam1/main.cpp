@@ -12,7 +12,6 @@ int main()
     sf::Clock clock;
     Player player;
 
-
     while (window.isOpen())
     {
         float dt = clock.restart().asSeconds();
@@ -31,7 +30,6 @@ int main()
                 if (event.key.code == sf::Keyboard::Right) {
                     player.setDirection(RIGHT);
                     player.setState(WALK);
-                   
                 }
             }
             if (event.type == sf::Event::KeyReleased) {

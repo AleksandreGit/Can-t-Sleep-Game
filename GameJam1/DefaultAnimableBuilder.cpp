@@ -1,27 +1,16 @@
 #include "DefaultAnimableBuilder.h"
 
-DefaultAnimableBuilder::DefaultAnimableBuilder() {}
+DefaultAnimableBuilder::DefaultAnimableBuilder() : frameRate(1.0f), totalFrame(0) {}
 
-AnimableEntity DefaultAnimableBuilder::build() {
+AnimableEntity& DefaultAnimableBuilder::build() {
 	const int nbCol = texture.getSize().x / DEFAULT_WIDTH;
 	const int nbRow = texture.getSize().y / DEFAULT_HEIGHT;
-	return AnimableEntity(texture, spriteSheet, frameRate, nbCol, nbRow, totalFrame);
+	return *(new AnimableEntity(texture, frameRate, nbCol, nbRow, totalFrame));
 }
 
-DefaultAnimableBuilder DefaultAnimableBuilder::setSpriteSheet(string path) {
+DefaultAnimableBuilder DefaultAnimableBuilder::setTexture(string path) {
 	if (!texture.loadFromFile(path)) {
 		cout << "Erreur de chargement de la texture !" << endl;
-	}
-	const int nbCol = texture.getSize().x / DEFAULT_WIDTH;
-	const int nbRow = texture.getSize().y / DEFAULT_HEIGHT;
-	for (int i = 0; i < totalFrame; i++) {
-		sf::Sprite sprite;
-		sprite.setTexture(texture);
-		sprite.setTextureRect(sf::IntRect((i % nbCol) * DEFAULT_WIDTH,
-			(i / nbCol) * DEFAULT_HEIGHT,
-			DEFAULT_WIDTH,
-			DEFAULT_HEIGHT));
-		spriteSheet.push_back(sprite);
 	}
 	return (*this);
 

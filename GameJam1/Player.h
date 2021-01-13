@@ -23,6 +23,6 @@ public:
 	virtual void setDirection(Direction dir);
 
 private:
-	AnimablePlayer* m_currentAnimation;
+	vector<AnimablePlayer*> m_animations;
 };
 

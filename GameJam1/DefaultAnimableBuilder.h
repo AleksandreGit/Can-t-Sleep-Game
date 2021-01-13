@@ -17,13 +17,13 @@ class DefaultAnimableBuilder : public AnimableBuilder
 
 public:
 	DefaultAnimableBuilder();
-	virtual AnimableEntity build();
+	virtual AnimableEntity& build();
 
 	/**
 		Set the spritesheet with the given path
 		/!\ The number total of frames must be defined first !
 	*/
-	DefaultAnimableBuilder setSpriteSheet(string path);
+	DefaultAnimableBuilder setTexture(string path);
 	/**
 		Set the framerate
 	*/
@@ -35,7 +35,6 @@ public:
 
 protected:
 	sf::Texture texture;
-	vector<sf::Sprite> spriteSheet;
 	float frameRate;
 	int totalFrame;
 
