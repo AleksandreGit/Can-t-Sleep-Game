@@ -4,6 +4,7 @@
 Player::Player() : Entity() {
 	m_animations.push_back(new PlayerIdle());
 	m_animations.push_back(new PlayerWalk());
+	m_position = m_animations[1]->getPosition();
 }
 
 // TODO Add delta time
@@ -17,10 +18,16 @@ void Player::move(float deltaTime) {
 			anim = 1;
 			switch (m_dir) {
 			case LEFT:
-				m_position += m_speed * deltaTime;
+				m_position -= m_speed * deltaTime;
+				for (int i = 0; i < m_animations.size(); i++) {
+					m_animations[i]->moveTo(m_position);
+				}
 				break;
 			case RIGHT:
 				m_position += m_speed * deltaTime;
+				for (int i = 0; i < m_animations.size(); i++) {
+					m_animations[i]->moveTo(m_position);
+				}
 				break;
 			default:
 				break;

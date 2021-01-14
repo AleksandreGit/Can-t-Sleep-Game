@@ -4,8 +4,7 @@ DefaultAnimableBuilder::DefaultAnimableBuilder() : frameRate(1.0f), totalFrame(0
 
 AnimableEntity& DefaultAnimableBuilder::build() {
 	const int nbCol = texture.getSize().x / DEFAULT_WIDTH;
-	const int nbRow = texture.getSize().y / DEFAULT_HEIGHT;
-	return *(new AnimableEntity(texture, frameRate, nbCol, nbRow, totalFrame));
+	return *(new AnimableEntity(texture, frameRate, nbCol, totalFrame));
 }
 
 DefaultAnimableBuilder DefaultAnimableBuilder::setTexture(string path) {

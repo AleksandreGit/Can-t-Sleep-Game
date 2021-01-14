@@ -23,14 +23,12 @@ public:
 	VoidAnimableBuilder setTexture(string path);
 	VoidAnimableBuilder setFrameRate(float frameRate);
 	VoidAnimableBuilder setFrameRatePerCol(int frameRatePerCol);
-	VoidAnimableBuilder setFrameRatePerLig(int frameRatePerLig);
 	VoidAnimableBuilder setTotalFrame(int totalFrame);
 
 protected:
 	sf::Texture texture;
 	float frameRate;
 	int framePerCol;
-	int framePerLig;
 	int totalFrame;
 
 };

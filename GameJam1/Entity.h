@@ -9,7 +9,7 @@ class Entity : public RigidElement
 {
 public:
 	inline Entity() : m_health(100), m_position(0), m_strength(10),
-		m_dir(RIGHT), m_speed(0.5f), m_name("Entity"), m_currentState(IDLE) {};
+		m_dir(RIGHT), m_speed(200.0f), m_name("Entity"), m_currentState(IDLE) {};
 	virtual void move(float deltaTime) = 0;
 	virtual void draw(sf::RenderWindow& window) const = 0;
 	virtual void attack(Entity& target) const = 0;

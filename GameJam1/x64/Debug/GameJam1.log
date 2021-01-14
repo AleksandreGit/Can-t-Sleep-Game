@@ -1,2 +1,7 @@
-﻿  AnimableEntity.cpp
+﻿  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(7,43): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(21,38): warning C4244: '-=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(23,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(27,38): warning C4244: '+=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(29,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe
