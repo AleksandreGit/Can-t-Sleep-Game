@@ -23,18 +23,23 @@ int main()
                 window.close();
 
             if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Left) {
+                if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Q) {
                     player.setDirection(LEFT);
                     player.setState(WALK);
                 }
-                if (event.key.code == sf::Keyboard::Right) {
+                if (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::D) {
                     player.setDirection(RIGHT);
                     player.setState(WALK);
+                }
+                if (event.key.code == sf::Keyboard::E) {
+                    player.setState(INTERACT);
                 }
             }
             if (event.type == sf::Event::KeyReleased) {
                 if (event.key.code == sf::Keyboard::Right ||
-                    event.key.code == sf::Keyboard::Left) {
+                    event.key.code == sf::Keyboard::Left ||
+                    event.key.code == sf::Keyboard::Q ||
+                    event.key.code == sf::Keyboard::D) {
                     player.setState(IDLE);
                 }
             }

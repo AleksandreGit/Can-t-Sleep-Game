@@ -151,7 +151,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerAttack.cpp" />
     <ClCompile Include="PlayerIdle.cpp" />
+    <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
     <ClCompile Include="RigidElement.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
@@ -166,7 +168,9 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerAttack.h" />
     <ClInclude Include="PlayerIdle.h" />
+    <ClInclude Include="PlayerInteract.h" />
     <ClInclude Include="PlayerWalk.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />

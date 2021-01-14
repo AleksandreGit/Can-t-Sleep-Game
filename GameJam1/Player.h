@@ -4,6 +4,8 @@
 #include "AnimablePlayer.h"
 #include "PlayerIdle.h"
 #include "PlayerWalk.h"
+#include "PlayerInteract.h"
+#include "PlayerAttack.h"
 #include <vector>
 #include <iostream>
 

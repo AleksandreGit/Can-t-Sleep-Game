@@ -66,6 +66,12 @@
     <ClCompile Include="PlayerIdle.cpp">
       <Filter>Fichiers sources\Animation\Player</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerInteract.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttack.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -114,6 +120,12 @@
       <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
     </ClInclude>
     <ClInclude Include="PlayerIdle.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInteract.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttack.h">
       <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
     </ClInclude>
   </ItemGroup>

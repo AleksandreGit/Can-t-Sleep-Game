@@ -4,10 +4,11 @@
 Player::Player() : Entity() {
 	m_animations.push_back(new PlayerIdle());
 	m_animations.push_back(new PlayerWalk());
+	m_animations.push_back(new PlayerInteract());
+	m_animations.push_back(new PlayerAttack());
 	m_position = m_animations[1]->getPosition();
 }
 
-// TODO Add delta time
 void Player::move(float deltaTime) {
 	int anim = 0;
 	switch (m_currentState) {
@@ -33,6 +34,15 @@ void Player::move(float deltaTime) {
 				break;
 			}
 			break;
+		case INTERACT:
+			anim = 2;
+			if (m_animations[anim]->isAnimationFinished()) {
+				this->setState(IDLE);
+			}
+			break;
+		case ATTACK:
+			anim = 3;
+			break;
 		default:
 			break;
 	}
@@ -40,10 +50,10 @@ void Player::move(float deltaTime) {
 }
 
 void Player::setState(State state) {
-	if (m_currentState == IDLE && state == WALK) {
-		m_currentState = state;
-	}
-	else if (m_currentState == WALK && state == IDLE) {
+	if (m_currentState != state) {
+		for (int i = 0; i < m_animations.size(); i++) {
+			m_animations[i]->reset();
+		}
 		m_currentState = state;
 	}
 }
@@ -65,6 +75,13 @@ void Player::draw(sf::RenderWindow& window) const {
 			break;
 		case WALK:
 			anim = 1;
+			break;
+		case INTERACT:
+			anim = 2;
+			break;
+		case ATTACK:
+			anim = 3;
+			break;
 	}
 	m_animations[anim]->draw(window);
 }
