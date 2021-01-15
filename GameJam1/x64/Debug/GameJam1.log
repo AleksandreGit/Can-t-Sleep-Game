@@ -1,7 +1,11 @@
-﻿  Player.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(9,43): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(22,38): warning C4244: '-=' : conversion de 'float' en 'int', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(24,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(28,38): warning C4244: '+=' : conversion de 'float' en 'int', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(30,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+﻿  Map.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(27,56): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(27,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  main.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(52,47): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Génération de code en cours...
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe

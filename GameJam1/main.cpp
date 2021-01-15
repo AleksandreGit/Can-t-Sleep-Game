@@ -2,6 +2,7 @@
 #include <SFML/OpenGL.hpp>
 #include <iostream>
 #include "Player.h"
+#include "Map.h"
 
 unsigned int W_WIDTH(1080), W_HEIGHT(720), S_SIZE(200), SCALE_FACTOR(2);
 
@@ -11,6 +12,7 @@ int main()
     window.setFramerateLimit(60);
     sf::Clock clock;
     Player player;
+    Map map;
 
     while (window.isOpen())
     {
@@ -34,6 +36,9 @@ int main()
                 if (event.key.code == sf::Keyboard::E) {
                     player.setState(INTERACT);
                 }
+                if (event.key.code == sf::Keyboard::A) {
+                    player.setState(ATTACK);
+                }
             }
             if (event.type == sf::Event::KeyReleased) {
                 if (event.key.code == sf::Keyboard::Right ||
@@ -45,6 +50,7 @@ int main()
             }
         }
         window.clear(sf::Color(154, 240, 229, 1.0f));
+        map.draw(window, 0, 0.0f);
         player.draw(window);
         window.display();
     }

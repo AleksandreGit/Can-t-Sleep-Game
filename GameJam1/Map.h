@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+#include "TileType.h"
 
 using namespace std;
 
@@ -9,14 +10,14 @@ class Map
 {
 public:
 	Map();
-	~Map();
+	void draw(sf::RenderWindow& window, int currentPos, float zoom) const;
 
-	void loadTextures();
-	const static unsigned int MAP_SIZE = 100;
+	const static unsigned int MAP_SIZE = 5;
 
 private:
-	vector<int> m_tilesTypes;
-	vector<sf::Sprite> m_shownSprites;
-	vector<sf::Texture> m_tilesTextures;
+	vector<TileType> m_tiles;
+	sf::Texture m_tilesTexture;
+	const int TILE_WIDTH = 291;
+	const int TILE_HEIGHT = 842;
 };
 

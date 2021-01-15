@@ -37,15 +37,18 @@
     <Filter Include="Fichiers d%27en-tête\Animation\Player">
       <UniqueIdentifier>{109accb5-4303-493e-a313-112987d3a3d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map">
+      <UniqueIdentifier>{42e69ab0-940d-43d1-88b0-7b99f87a955f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map">
+      <UniqueIdentifier>{dcba3467-381f-4601-862c-cf851680ff0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="AnimableEntity.cpp">
@@ -72,12 +75,12 @@
     <ClCompile Include="PlayerAttack.cpp">
       <Filter>Fichiers sources\Animation\Player</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="AnimableBuilder.h">
@@ -127,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="PlayerAttack.h">
       <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="TileType.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

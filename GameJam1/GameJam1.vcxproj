@@ -176,6 +176,7 @@
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="RigidElement.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="TileType.h" />
     <ClInclude Include="VoidAnimableBuilder.h" />
   </ItemGroup>
   <ItemGroup>
