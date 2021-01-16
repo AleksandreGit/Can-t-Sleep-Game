@@ -24,7 +24,7 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 				sprite.setTextureRect(sf::IntRect(2*TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT));
 				break;
 		}
-		sprite.setPosition(TILE_WIDTH * i, window.getSize().y/2);
+		sprite.setPosition(TILE_WIDTH * i, -30);
 		window.draw(sprite);
 	}
 }

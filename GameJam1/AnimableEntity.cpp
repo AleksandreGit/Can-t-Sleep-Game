@@ -5,8 +5,8 @@ AnimableEntity::AnimableEntity(sf::Texture &texture, float frameRate,
 	m_texture(texture), m_frameRate(frameRate), m_framePerCol(framePerCol),
 	m_totalFrame(totalFrame), m_currentFrame(0), m_elapsedTime(0.0f) {
 	m_currentSprite.setTexture(m_texture);
-	m_currentSprite.setPosition(100, 200);
-	m_currentSprite.setOrigin(DEFAULT_WIDTH / 2, DEFAULT_HEIGHT / 2);
+	m_currentSprite.setPosition(0, 0);
+	m_currentSprite.setOrigin(DEFAULT_WIDTH / 2, DEFAULT_HEIGHT);
 	m_currentSprite.setTextureRect(sf::IntRect(0,0,
 		DEFAULT_WIDTH,
 		DEFAULT_HEIGHT));

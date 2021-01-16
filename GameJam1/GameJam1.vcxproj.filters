@@ -43,12 +43,15 @@
     <Filter Include="Fichiers sources\Map">
       <UniqueIdentifier>{dcba3467-381f-4601-862c-cf851680ff0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entities">
+      <UniqueIdentifier>{90d12e42-1a69-49ae-aff5-e9efe7ba253f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entities">
+      <UniqueIdentifier>{915fe22a-3b5a-47c4-b356-d0130cadaada}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="AnimableEntity.cpp">
@@ -78,11 +81,14 @@
     <ClCompile Include="Map.cpp">
       <Filter>Fichiers sources\Map</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="AnimableBuilder.h">
       <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
     </ClInclude>
@@ -106,9 +112,6 @@
     </ClInclude>
     <ClInclude Include="RigidElement.h">
       <Filter>Fichiers d%27en-tête\Interactions</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="AnimablePlayer.h">
       <Filter>Fichiers d%27en-tête\Animation</Filter>
@@ -136,6 +139,15 @@
     </ClInclude>
     <ClInclude Include="TileType.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

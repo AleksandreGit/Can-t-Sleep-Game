@@ -20,6 +20,8 @@ public:
 	inline void setSpeed(float speed) { m_speed = speed; };
 	inline void setName(string name) { m_name = name; };
 
+	inline int getPosition() const { return m_position; };
+
 	virtual void setDirection(Direction dir) { m_dir = dir; };
 	virtual void setState(State state) { m_currentState = state; };
 

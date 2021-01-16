@@ -38,9 +38,5 @@ protected:
 	float frameRate;
 	int totalFrame;
 
-private:
-	const int DEFAULT_WIDTH = 298;
-	const int DEFAULT_HEIGHT = 421;
-
 };
 

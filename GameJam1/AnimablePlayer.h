@@ -1,5 +1,7 @@
 #pragma once
 #include "AnimableEntity.h"
+#include "AnimableBuilder.h"
+
 class AnimablePlayer : public AnimableEntity
 {
 public:
