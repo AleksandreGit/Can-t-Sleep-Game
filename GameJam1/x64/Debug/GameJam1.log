@@ -1,15 +1,4 @@
 ﻿  Game.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(18,28): warning C4305: 'argument' : troncation de 'double' à 'T'
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(15,29): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(23,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(96,54): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  LINK : C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(26,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(99,54): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe

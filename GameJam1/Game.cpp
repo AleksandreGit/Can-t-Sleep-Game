@@ -11,11 +11,14 @@ Game::Game() :
 {
     m_window.setFramerateLimit(60);
 
-    m_playerView = sf::View(sf::FloatRect(
+    /*m_playerView = sf::View(sf::FloatRect(
         m_player.getPosition(),
-        -Map::TILE_HEIGHT / 2,
-        Map::TILE_WIDTH * 7.065,
-        Map::TILE_WIDTH * 5));
+        -Map::TILE_HEIGHT,
+        Map::TILE_WIDTH * 14.13 ,
+        Map::TILE_WIDTH * 10));*/
+    std::cout << Map::TILE_WIDTH << std::endl;
+    std::cout << Map::TILE_WIDTH * 9 / 16 << std::endl;
+    m_playerView.setSize(Map::TILE_WIDTH * 10, Map::TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
 }
 
@@ -36,8 +39,8 @@ void Game::handleEvents(float deltaTime) {
         else if (event.type == sf::Event::Resized) {
             // resize my view
             m_playerView.setSize({
-                    static_cast<float>(event.size.width),
-                    static_cast<float>(event.size.height)
+                    static_cast<float>(Map::TILE_WIDTH * 10),
+                    static_cast<float>(Map::TILE_WIDTH * 10 * event.size.height / event.size.width)
                 });
             m_window.setView(m_playerView);
         }
@@ -93,7 +96,7 @@ void Game::update() {
 }
 
 void Game::handleCamera() {
-    this->m_playerView.setCenter(m_player.getPosition(), -Map::TILE_HEIGHT / 2);
+    this->m_playerView.setCenter(m_player.getPosition(), -Map::TILE_HEIGHT/2 );
     this->m_window.setView(m_playerView);
 
 }

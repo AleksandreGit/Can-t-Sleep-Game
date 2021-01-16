@@ -26,7 +26,7 @@ private:
 	Player m_player;
 	Map m_map;
 
-	const float ratio = AnimableBuilder::DEFAULT_WIDTH / AnimableBuilder::DEFAULT_HEIGHT;
+	const float ratio = 9 / 16;
 	const unsigned int S_SIZE = 200;
 	const unsigned int SCALE_FACTOR = 2;
 };
