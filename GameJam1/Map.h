@@ -12,7 +12,8 @@ public:
 	Map();
 	void draw(sf::RenderWindow& window, int currentPos, float zoom) const;
 
-	const static unsigned int MAP_SIZE = 10;
+	const static unsigned int MAP_SIZE = 100;
+	const static unsigned int BLOC_TO_SHOW = 14;
 	const static int TILE_WIDTH = 298;
 	const static int TILE_HEIGHT = 842;
 

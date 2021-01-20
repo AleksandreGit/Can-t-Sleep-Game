@@ -6,6 +6,7 @@
 #include "PlayerWalk.h"
 #include "PlayerInteract.h"
 #include "PlayerAttack.h"
+#include "Map.h"
 #include <vector>
 #include <iostream>
 
@@ -23,6 +24,7 @@ public:
 	virtual void defend(Entity& attacker); 
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);
+	virtual  void setRealPosition(float pos);
 
 private:
 	vector<AnimablePlayer*> m_animations;

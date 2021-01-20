@@ -6,7 +6,13 @@ Player::Player() : Entity() {
 	m_animations.push_back(new PlayerWalk());
 	m_animations.push_back(new PlayerInteract());
 	m_animations.push_back(new PlayerAttack());
-	m_position = m_animations[1]->getPosition();
+
+	// We place the player at the center of the map
+	m_realPosition = Map::TILE_WIDTH * Map::MAP_SIZE / 2;
+	for (int i = 0; i < m_animations.size(); i++) {
+		m_animations[i]->moveTo(m_realPosition);
+	}
+	setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
 }
 
 void Player::move(float deltaTime) {
@@ -19,17 +25,26 @@ void Player::move(float deltaTime) {
 			anim = 1;
 			switch (m_dir) {
 			case LEFT:
-				m_position -= m_speed * deltaTime;
-				for (int i = 0; i < m_animations.size(); i++) {
-					m_animations[i]->moveTo(m_position);
+				// We block the movement if the player is at the left border
+				if (m_realPosition > 0) {
+					// We move the player
+					m_realPosition -= m_speed * deltaTime;
+					setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+					for (int i = 0; i < m_animations.size(); i++) {
+						m_animations[i]->moveTo(m_realPosition);
+					}
+					break;
 				}
-				break;
 			case RIGHT:
-				m_position += m_speed * deltaTime;
-				for (int i = 0; i < m_animations.size(); i++) {
-					m_animations[i]->moveTo(m_position);
+				// We block the movement if the player is at the right border
+				if (m_realPosition < Map::TILE_WIDTH * Map::MAP_SIZE) {
+					// We move the player
+					m_realPosition += m_speed * deltaTime;
+					for (int i = 0; i < m_animations.size(); i++) {
+						m_animations[i]->moveTo(m_realPosition);
+					}
+					break;
 				}
-				break;
 			default:
 				break;
 			}
@@ -46,6 +61,9 @@ void Player::move(float deltaTime) {
 		default:
 			break;
 	}
+	// Update the position of the player in the world according to his sprite position
+	setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+	// Animation of the current state
 	m_animations[anim]->animate(deltaTime);
 }
 
@@ -65,6 +83,10 @@ void Player::setDirection(Direction dir) {
 		}
 		m_dir = dir;
 	}
+}
+
+void Player::setRealPosition(float pos) {
+	m_realPosition = pos;
 }
 
 void Player::draw(sf::RenderWindow& window) const {

@@ -10,21 +10,13 @@ Game::Game() :
     m_clock()
 {
     m_window.setFramerateLimit(60);
-
-    /*m_playerView = sf::View(sf::FloatRect(
-        m_player.getPosition(),
-        -Map::TILE_HEIGHT,
-        Map::TILE_WIDTH * 14.13 ,
-        Map::TILE_WIDTH * 10));*/
-    std::cout << Map::TILE_WIDTH << std::endl;
-    std::cout << Map::TILE_WIDTH * 9 / 16 << std::endl;
     m_playerView.setSize(Map::TILE_WIDTH * 10, Map::TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
 }
 
 void Game::draw() {
     m_window.clear(sf::Color(154, 240, 229, 1.0f));
-    m_map.draw(m_window, 0, 0.0f);
+    m_map.draw(m_window, m_player.getWorldPosition(), 0.0f);
     m_player.draw(m_window);
     m_window.display();
 }
@@ -96,7 +88,7 @@ void Game::update() {
 }
 
 void Game::handleCamera() {
-    this->m_playerView.setCenter(m_player.getPosition(), -Map::TILE_HEIGHT/2 );
+    this->m_playerView.setCenter(m_player.getRealPosition(), -Map::TILE_HEIGHT/2 );
     this->m_window.setView(m_playerView);
 
 }
