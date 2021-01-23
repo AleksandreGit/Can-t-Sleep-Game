@@ -148,6 +148,8 @@
   <ItemGroup>
     <ClCompile Include="AnimableEntity.cpp" />
     <ClCompile Include="DefaultAnimableBuilder.cpp" />
+    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
+    <ClCompile Include="EnvironmentElement.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -157,6 +159,7 @@
     <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
     <ClCompile Include="RigidElement.cpp" />
+    <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,10 +168,14 @@
     <ClInclude Include="AnimableEntity.h" />
     <ClInclude Include="AnimablePlayer.h" />
     <ClInclude Include="DefaultAnimableBuilder.h" />
+    <ClInclude Include="DefaultEnvironmentElementBuilder.h" />
     <ClInclude Include="Direction.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EnvironmentElement.h" />
+    <ClInclude Include="EnvironmentElementBuilder.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Natural.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerAttack.h" />
     <ClInclude Include="PlayerIdle.h" />
@@ -179,6 +186,8 @@
     <ClInclude Include="RigidElement.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TileType.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="TreeType.h" />
     <ClInclude Include="VoidAnimableBuilder.h" />
   </ItemGroup>
   <ItemGroup>

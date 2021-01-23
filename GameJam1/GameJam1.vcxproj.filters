@@ -49,6 +49,12 @@
     <Filter Include="Fichiers sources\Entities">
       <UniqueIdentifier>{915fe22a-3b5a-47c4-b356-d0130cadaada}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map\Builder">
+      <UniqueIdentifier>{1d7591eb-75ac-4a31-9f31-fa0d851c471d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map\Builder">
+      <UniqueIdentifier>{d79db9a0-b526-4925-89e3-84b0eeb9c866}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +92,15 @@
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentElement.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp">
+      <Filter>Fichiers sources\Map\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Fichiers sources\Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +163,24 @@
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElement.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Natural.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeType.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElementBuilder.h">
+      <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultEnvironmentElementBuilder.h">
+      <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

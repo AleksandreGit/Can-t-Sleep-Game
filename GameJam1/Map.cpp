@@ -3,21 +3,18 @@
 Map::Map() {
 	for (int i = 0; i < MAP_SIZE; i++) {
 		m_tiles.push_back(GRASS);
+		m_elements.push_back(new Tree(OAK, i));
 	}
-	if (!m_tilesTexture.loadFromFile("./Assets/tiles.png")) {
+	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
 		cout << "Problem with tiles loading" << endl;
 	}
 }
 
 
-// TODO réduire cette fonction
 void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 	int bound = BLOC_TO_SHOW / 2;
 	int lowerBound = currentPos - bound + 1;
 	int upperBound = currentPos + bound;
-	std::cout << "Current: " << currentPos << std::endl;
-	std::cout << "Lower: " << lowerBound << std::endl;
-	std::cout << "Upper: " << upperBound << std::endl;
 
 	if (lowerBound < 0) {
 		lowerBound = 0;
@@ -45,5 +42,10 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 		sprite.setPosition(TILE_WIDTH * firstValue, -30);
 		firstValue++;
 		window.draw(sprite);
+		m_elements[i]->draw(window);
 	}
+}
+
+void Map::generateRandom() {
+
 }

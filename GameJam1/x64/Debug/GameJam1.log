@@ -1,8 +1,484 @@
-﻿  Game.cpp
+﻿  DefaultEnvironmentElementBuilder.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2433: 'EnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,41): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(4,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(7,1): error C2504: 'EnvironmentElementBuilder' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2433: 'DefaultEnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,37): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C3646: 'setWidth' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,54): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C3646: 'setPosition' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,60): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C3646: 'setTexture' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,58): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(19,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(6,1): error C2504: 'Natural' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(8,16): error C2061: erreur de syntaxe : identificateur 'TreeType'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C3646: 'm_type' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(9,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(15,16): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,8): error C2143: erreur de syntaxe : absence de ';' avant '<'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,26): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,8): error C2143: erreur de syntaxe : absence de ';' avant '<'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,40): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(26,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(4,1): error C2011: 'EnvironmentElementBuilder' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(3): message : voir la déclaration de 'EnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(4,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6,40): error C2011: 'DefaultEnvironmentElementBuilder' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(4,35): error C2227: la partie gauche de '->DefaultEnvironmentElementBuilder' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(4,35): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(4,70): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(4,94): error C2550: '{ctor}' : les listes d'initialiseurs de constructeur ne sont autorisées que dans la définition d'un constructeur
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(4,95): warning C4508: '{ctor}' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,68): error C2227: la partie gauche de '->setWidth' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,68): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,76): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,76): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'setWidth'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,88): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6,88): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,68): error C2227: la partie gauche de '->setPosition' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,68): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,79): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,1): error C2086: 'int DefaultEnvironmentElementBuilder' : redéfinition
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,79): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'setPosition'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,94): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(11,94): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,68): error C2227: la partie gauche de '->setTexture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,68): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,78): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,1): error C2086: 'int DefaultEnvironmentElementBuilder' : redéfinition
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,78): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'setTexture'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,92): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(16,92): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,19): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,55): error C2227: la partie gauche de '->build' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,55): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,63): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,63): error C2059: erreur de syntaxe : '{'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,63): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.cpp(23,63): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+  EnvironmentElement.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(756,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(861,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(867,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(3,21): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(3,87): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(8,1): error C2550: '{ctor}' : les listes d'initialiseurs de constructeur ne sont autorisées que dans la définition d'un constructeur
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(10,1): warning C4508: '{ctor}' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(12,26): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(16,26): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(16,63): error C2270: 'draw' : modificateurs non autorisés sur les fonctions non membres
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(18,20): error C2065: 'm_texture' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(19,60): error C2065: 'm_width' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(19,69): error C2065: 'm_texture' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(19,90): error C2440: '<function-style-cast>' : impossible de convertir de 'initializer list' en 'sf::IntRect'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(19,90): message : Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(20,37): error C2065: 'm_position' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(25,26): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(29,26): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(33,26): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(34,2): error C2355: 'this' : ne peut être référencé qu'à l'intérieur de fonctions membres non static ou d'initialiseurs de membres de données non static
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(35,6): error C2065: 'm_health' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(36,3): error C2065: 'm_health' : identificateur non déclaré
+  Game.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2433: 'EnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,41): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(4,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(7,1): error C2504: 'EnvironmentElementBuilder' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2433: 'DefaultEnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,37): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C3646: 'setWidth' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,54): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C3646: 'setPosition' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,60): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C3646: 'setTexture' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,58): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(19,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(6,1): error C2504: 'Natural' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(8,16): error C2061: erreur de syntaxe : identificateur 'TreeType'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C3646: 'm_type' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(9,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(15,16): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,19): error C2061: erreur de syntaxe : identificateur 'vector<TileType,std::allocator<TileType> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,26): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,30): error C2061: erreur de syntaxe : identificateur 'vector<EnvironmentElement *,std::allocator<EnvironmentElement *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,40): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(26,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(13,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(17,1): error C2504: 'Entity' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(22,24): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(23,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(24,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(25,30): error C2061: erreur de syntaxe : identificateur 'State'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(26,38): error C2061: erreur de syntaxe : identificateur 'Direction'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,26): error C2061: erreur de syntaxe : identificateur 'vector<AnimablePlayer *,std::allocator<AnimablePlayer *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,38): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(22,6): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(23,6): error C2227: la partie gauche de '->View' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(24,6): error C2227: la partie gauche de '->Clock' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(26,17): error C3646: 'm_player' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(26,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(27,11): error C3646: 'm_map' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(27,11): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(3,19): error C2227: la partie gauche de '->WORLD_UNIT' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(3,49): error C2227: la partie gauche de '->DEFAULT_WIDTH' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(3,49): error C2597: référence non conforme à un membre non static 'AnimableBuilder::DEFAULT_WIDTH'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\AnimableBuilder.h(10): message : voir la déclaration de 'AnimableBuilder::DEFAULT_WIDTH'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(3,62): error C2440: 'initialisation' : impossible de convertir de 'unknown' en 'float'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(3,49): message : Le contexte ne permet pas de lever l'ambiguïté de la fonction surchargée
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(5,7): error C2227: la partie gauche de '->Game' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(9,18): error C2227: la partie gauche de '->VideoMode' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(9,13): error C2664: 'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)' : impossible de convertir l'argument 1 de 'const char [11]' en 'sf::WindowHandle'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(9,48): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
+C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(94,5): message : voir la déclaration de 'sf::RenderWindow::RenderWindow'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(7,5): error C2614: 'Game' : initialisation de membre non conforme : 'm_player' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(8,5): error C2614: 'Game' : initialisation de membre non conforme : 'm_map' n'est ni une base ni un membre
 C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(18,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-  Map.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(45,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(19,5): error C2065: 'm_map' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(19,26): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(20,5): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(42,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(43,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(46,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(47,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(50,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(53,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(71,17): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(81,9): error C2065: 'm_player' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(91,34): error C2065: 'm_player' : identificateur non déclaré
   main.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2433: 'EnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,41): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(4,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(7,1): error C2504: 'EnvironmentElementBuilder' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2433: 'DefaultEnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,37): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C3646: 'setWidth' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,54): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C3646: 'setPosition' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,60): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C3646: 'setTexture' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,58): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(19,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(6,1): error C2504: 'Natural' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(8,16): error C2061: erreur de syntaxe : identificateur 'TreeType'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C3646: 'm_type' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(9,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(15,16): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,19): error C2061: erreur de syntaxe : identificateur 'vector<TileType,std::allocator<TileType> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,26): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,30): error C2061: erreur de syntaxe : identificateur 'vector<EnvironmentElement *,std::allocator<EnvironmentElement *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,40): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(26,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(13,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(17,1): error C2504: 'Entity' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(22,24): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(23,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(24,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(25,30): error C2061: erreur de syntaxe : identificateur 'State'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(26,38): error C2061: erreur de syntaxe : identificateur 'Direction'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,26): error C2061: erreur de syntaxe : identificateur 'vector<AnimablePlayer *,std::allocator<AnimablePlayer *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,38): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(22,6): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(23,6): error C2227: la partie gauche de '->View' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(24,6): error C2227: la partie gauche de '->Clock' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(26,17): error C3646: 'm_player' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(26,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(27,11): error C3646: 'm_map' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.h(27,11): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(9,10): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'game'
+  Map.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(756,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(861,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(867,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(6,40): error C2664: 'void std::vector<EnvironmentElement *,std::allocator<EnvironmentElement *>>::push_back(const _Ty &)' : impossible de convertir l'argument 1 de 'Tree *' en 'const _Ty &'
+          with
+          [
+              _Ty=EnvironmentElement *
+          ]
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(6,40): message : Raison : impossible de convertir de 'Tree *' en 'const _Ty'
+          with
+          [
+              _Ty=EnvironmentElement *
+          ]
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(6,32): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\vector(716,10): message : voir la déclaration de 'std::vector<EnvironmentElement *,std::allocator<EnvironmentElement *>>::push_back'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(42,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(45,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C2433: 'EnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(6,41): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(4,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(7,1): error C2504: 'EnvironmentElementBuilder' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2143: erreur de syntaxe : absence de ';' avant '&'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C2433: 'DefaultEnvironmentElementBuilder::EnvironmentElement' : 'virtual' non autorisé sur les déclarations de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,28): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(10,37): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C3646: 'setWidth' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,43): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(12,54): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C3646: 'setPosition' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,46): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(13,60): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C3646: 'setTexture' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,45): error C2059: erreur de syntaxe : '('
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(14,58): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(19,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(6,1): error C2504: 'Natural' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(8,16): error C2061: erreur de syntaxe : identificateur 'TreeType'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C3646: 'm_type' : spécificateur de substitution inconnu
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(11,17): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(9,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(15,16): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,19): error C2061: erreur de syntaxe : identificateur 'vector<TileType,std::allocator<TileType> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(24,26): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,30): error C2061: erreur de syntaxe : identificateur 'vector<EnvironmentElement *,std::allocator<EnvironmentElement *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(25,40): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.h(26,6): error C2227: la partie gauche de '->Texture' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(13,20): error C2871: 'std' : un espace de noms avec ce nom n'existe pas
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(17,1): error C2504: 'Entity' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(22,24): error C2227: la partie gauche de '->RenderWindow' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(23,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(24,28): error C2061: erreur de syntaxe : identificateur 'Entity'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(25,30): error C2061: erreur de syntaxe : identificateur 'State'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(26,38): error C2061: erreur de syntaxe : identificateur 'Direction'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,26): error C2061: erreur de syntaxe : identificateur 'vector<AnimablePlayer *,std::allocator<AnimablePlayer *> >'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(30,38): error C2238: jetons inattendus avant ';'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(4,9): error C2227: la partie gauche de '->Player' doit pointer vers un type class/struct/union/générique
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(4,20): error C2614: 'Player' : initialisation de membre non conforme : 'Entity' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(6,2): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(7,2): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(8,2): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(11,2): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(12,22): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(13,3): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(13,27): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(15,25): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(15,2): error C3861: 'setWorldPosition' : identificateur introuvable
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(20,10): error C2065: 'm_currentState' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(20,26): error C2050: expression de switch non intégrale
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(26,12): error C2065: 'm_dir' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(26,19): error C2050: expression de switch non intégrale
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(29,9): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(31,6): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(31,24): error C2065: 'm_speed' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(32,29): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(32,6): error C3861: 'setWorldPosition' : identificateur introuvable
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(33,26): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(34,7): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(34,31): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(40,9): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(42,6): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(42,24): error C2065: 'm_speed' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(43,26): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(44,7): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(44,31): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(54,8): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(55,24): error C2660: 'Player::setState' : la fonction ne prend pas 1 arguments
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(25,15): message : voir la déclaration de 'Player::setState'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(65,25): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(65,2): error C3861: 'setWorldPosition' : identificateur introuvable
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(67,2): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(70,36): error C2511: 'void Player::setState(State)' : impossible de trouver la fonction membre surchargée dans 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(16): message : voir la déclaration de 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(71,6): error C2065: 'm_currentState' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(72,23): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(73,4): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(75,3): error C2065: 'm_currentState' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(79,42): error C2511: 'void Player::setDirection(Direction)' : impossible de trouver la fonction membre surchargée dans 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(16): message : voir la déclaration de 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(80,7): error C2065: 'm_dir' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(80,42): error C2065: 'm_dir' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(81,23): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(82,4): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(84,3): error C2065: 'm_dir' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(89,2): error C2065: 'm_realPosition' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(94,10): error C2065: 'm_currentState' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(94,26): error C2050: expression de switch non intégrale
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(108,2): error C2065: 'm_animations' : identificateur non déclaré
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(111,43): error C2511: 'void Player::attack(Entity &) const' : impossible de trouver la fonction membre surchargée dans 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(16): message : voir la déclaration de 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.cpp(115,39): error C2511: 'void Player::defend(Entity &)' : impossible de trouver la fonction membre surchargée dans 'Player'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Player.h(16): message : voir la déclaration de 'Player'
+  Tree.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4,26): error C2011: 'EnvironmentElement' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(4,1): error C2504: 'EnvironmentElement' : classe de base non définie
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,2): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,16): error C2027: utilisation du type non défini 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.h(4): message : voir la déclaration de 'EnvironmentElement'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(7,41): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(8,66): error C2614: 'Natural' : initialisation de membre non conforme : 'EnvironmentElement' n'est ni une base ni un membre
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(756,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(757,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(822,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(827,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(832,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<`template-type-parameter-1',`template-type-parameter-2'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(838,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(861,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(862,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(867,1): error C2061: erreur de syntaxe : identificateur 'basic_istream<char,`template-type-parameter-1'>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\istream(868,1): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(3,15): error C2011: 'Natural' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Natural.h(3): message : voir la déclaration de 'Natural'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(4,1): error C2011: 'EnvironmentElementBuilder' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElementBuilder.h(3): message : voir la déclaration de 'EnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6,40): error C2011: 'DefaultEnvironmentElementBuilder' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(5,12): error C2011: 'Tree' : redéfinition du type 'class'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(5): message : voir la déclaration de 'Tree'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.cpp(4,7): error C2027: utilisation du type non défini 'Tree'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.h(5): message : voir la déclaration de 'Tree'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.cpp(4,45): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.cpp(4,87): error C2027: utilisation du type non défini 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\DefaultEnvironmentElementBuilder.h(6): message : voir la déclaration de 'DefaultEnvironmentElementBuilder'
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.cpp(9,1): error C2550: '{ctor}' : les listes d'initialiseurs de constructeur ne sont autorisées que dans la définition d'un constructeur
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Tree.cpp(10,1): warning C4508: '{ctor}' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut
   Génération de code en cours...
-  GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe
