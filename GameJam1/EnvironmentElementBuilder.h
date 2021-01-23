@@ -1,8 +1,8 @@
+#pragma once
 #include "EnvironmentElement.h"
 
-class EnvironmentElementBuilder
-{
+class EnvironmentElementBuilder {
 public:
-	virtual EnvironmentElement& build() = 0;
+	virtual EnvironmentElement& build() =0;
 };
 

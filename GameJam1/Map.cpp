@@ -3,7 +3,7 @@
 Map::Map() {
 	for (int i = 0; i < MAP_SIZE; i++) {
 		m_tiles.push_back(GRASS);
-		m_elements.push_back(new Tree(OAK, i));
+		//m_elements.push_back(new Tree(OAK, i));
 	}
 	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
 		cout << "Problem with tiles loading" << endl;
@@ -42,7 +42,7 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 		sprite.setPosition(TILE_WIDTH * firstValue, -30);
 		firstValue++;
 		window.draw(sprite);
-		m_elements[i]->draw(window);
+		//m_elements[i]->draw(window);
 	}
 }
 

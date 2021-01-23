@@ -2,14 +2,13 @@
 #include <SFML/Graphics.hpp>
 #include "EnvironmentElement.h"
 #include "Tree.h"
+#include "TileType.h"
 #include <iostream>
 #include <vector>
-#include "TileType.h"
 
 using namespace std;
 
-class Map
-{
+class Map {
 public:
 	Map();
 	void draw(sf::RenderWindow& window, int currentPos, float zoom) const;
@@ -22,7 +21,7 @@ public:
 
 private:
 	vector<TileType> m_tiles;
-	vector<EnvironmentElement*> m_elements;
+	//vector<EnvironmentElement*> m_elements;
 	sf::Texture m_tilesTexture;
 };
 

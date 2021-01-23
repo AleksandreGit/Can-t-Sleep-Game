@@ -1,17 +1,17 @@
-#include <iostream>
+#pragma once
+
 #include "EnvironmentElementBuilder.h"
+#include <iostream>
 
-using namespace std;
+class DefaultEnvironmentElementBuilder : public EnvironmentElementBuilder {
 
-class DefaultEnvironmentElementBuilder : public EnvironmentElementBuilder
-{
 public:
 	DefaultEnvironmentElementBuilder();
 	virtual EnvironmentElement& build();
 
 	DefaultEnvironmentElementBuilder setWidth(int width);
 	DefaultEnvironmentElementBuilder setPosition(int position);
-	DefaultEnvironmentElementBuilder setTexture(string path);
+	DefaultEnvironmentElementBuilder setTexture(std::string path);
 
 private:
 	int width;

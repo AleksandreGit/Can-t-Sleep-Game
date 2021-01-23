@@ -1,8 +1,7 @@
+#pragma once
 #include "Animable.h"
-#include "Map.h"
 
-class EnvironmentElement : public Animable
-{
+class EnvironmentElement : public Animable {
 
 public:
 	EnvironmentElement() = default;
@@ -18,6 +17,8 @@ protected:
 	int m_width;
 	int m_position;
 	sf::Texture m_texture;
+	sf::Sprite m_currentSprite;
+
 
 };
 

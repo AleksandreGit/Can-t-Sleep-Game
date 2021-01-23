@@ -13,9 +13,9 @@ DefaultEnvironmentElementBuilder DefaultEnvironmentElementBuilder::setPosition(i
 	return (*this);
 }
 
-DefaultEnvironmentElementBuilder DefaultEnvironmentElementBuilder::setTexture(string path) {
+DefaultEnvironmentElementBuilder DefaultEnvironmentElementBuilder::setTexture(std::string path) {
 	if (!texture.loadFromFile(path)) {
-		cout << "Erreur de chargement de la texture !" << endl;
+		std::cout << "Erreur de chargement de la texture !" << std::endl;
 	}
 	return (*this);
 }
