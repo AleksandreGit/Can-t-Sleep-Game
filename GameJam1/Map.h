@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "EnvironmentElement.h"
 #include "Tree.h"
+#include "Mineral.h"
 #include "TileType.h"
 #include <iostream>
 #include <vector>
@@ -21,7 +22,7 @@ public:
 
 private:
 	vector<TileType> m_tiles;
-	//vector<EnvironmentElement*> m_elements;
+	vector<EnvironmentElement*> m_elements;
 	sf::Texture m_tilesTexture;
 };
 

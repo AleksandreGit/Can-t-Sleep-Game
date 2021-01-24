@@ -3,11 +3,15 @@
 Map::Map() {
 	for (int i = 0; i < MAP_SIZE; i++) {
 		m_tiles.push_back(GRASS);
-		//m_elements.push_back(new Tree(OAK, i));
+		m_elements.push_back(nullptr);
 	}
 	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
 		cout << "Problem with tiles loading" << endl;
 	}
+	m_elements[MAP_SIZE / 2] = new Tree(OAK, MAP_SIZE / 2);
+	m_elements[MAP_SIZE / 2 +4] = new Tree(OAK, MAP_SIZE / 2 +4);
+	m_elements[MAP_SIZE / 2 - 2] = new Mineral(STONE, MAP_SIZE / 2 - 2);
+
 }
 
 
@@ -24,6 +28,11 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 	}
 
 	int firstValue = lowerBound;
+	for (int i = lowerBound; i < upperBound; i++) {
+		if (m_elements[i]) {
+			m_elements[i]->draw(window);
+		}
+	}
 
 	for (int i = lowerBound; i < upperBound; i++) {
 		sf::Sprite sprite;
@@ -39,10 +48,9 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 			sprite.setTextureRect(sf::IntRect(2 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT));
 			break;
 		}
-		sprite.setPosition(TILE_WIDTH * firstValue, -30);
+		sprite.setPosition(TILE_WIDTH * firstValue, 0);
 		firstValue++;
 		window.draw(sprite);
-		//m_elements[i]->draw(window);
 	}
 }
 

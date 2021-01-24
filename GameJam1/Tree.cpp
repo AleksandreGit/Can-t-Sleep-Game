@@ -4,7 +4,7 @@
 Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementBuilder()
 	.setPosition(position)
 	.setWidth(1)
-	.setTexture(".Assets/tree.png")
+	.setTexture("./Assets/tree.png")
 	.build()), m_type(treeType)
 {
 };
