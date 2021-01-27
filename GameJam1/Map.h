@@ -1,13 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "SimplexNoise.h"
 #include "EnvironmentElement.h"
 #include "Tree.h"
 #include "Mineral.h"
 #include "TileType.h"
 #include <iostream>
 #include <vector>
-
-using namespace std;
+#include <random>
 
 class Map {
 public:
@@ -15,14 +15,14 @@ public:
 	void draw(sf::RenderWindow& window, int currentPos, float zoom) const;
 	void generateRandom();
 
-	const static unsigned int MAP_SIZE = 100;
+	const static unsigned int MAP_SIZE = 500;
 	const static unsigned int BLOC_TO_SHOW = 14;
 	const static int TILE_WIDTH = 298;
 	const static int TILE_HEIGHT = 842;
 
 private:
-	vector<TileType> m_tiles;
-	vector<EnvironmentElement*> m_elements;
+	std::vector<TileType> m_tiles;
+	std::vector<EnvironmentElement*> m_elements;
 	sf::Texture m_tilesTexture;
 };
 

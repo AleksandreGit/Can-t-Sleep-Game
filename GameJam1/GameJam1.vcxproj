@@ -121,6 +121,7 @@
       <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,7 +152,9 @@
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
     <ClCompile Include="EnvironmentElement.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Mineral.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -160,6 +163,7 @@
     <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
     <ClCompile Include="RigidElement.cpp" />
+    <ClCompile Include="SimplexNoise.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
@@ -187,6 +191,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="RigidElement.h" />
+    <ClInclude Include="SimplexNoise.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TileType.h" />
     <ClInclude Include="Tree.h" />

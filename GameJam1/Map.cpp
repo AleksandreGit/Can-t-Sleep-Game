@@ -6,11 +6,9 @@ Map::Map() {
 		m_elements.push_back(nullptr);
 	}
 	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
-		cout << "Problem with tiles loading" << endl;
+		std::cout << "Problem with tiles loading" << std::endl;
 	}
-	m_elements[MAP_SIZE / 2] = new Tree(OAK, MAP_SIZE / 2);
-	m_elements[MAP_SIZE / 2 +4] = new Tree(OAK, MAP_SIZE / 2 +4);
-	m_elements[MAP_SIZE / 2 - 2] = new Mineral(STONE, MAP_SIZE / 2 - 2);
+	generateRandom();
 
 }
 
@@ -41,7 +39,7 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 		case GRASS:
 			sprite.setTextureRect(sf::IntRect(0, 0, TILE_WIDTH, TILE_HEIGHT));
 			break;
-		case SAND:
+		case FOREST:
 			sprite.setTextureRect(sf::IntRect(TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT));
 			break;
 		case ROCK:
@@ -55,5 +53,40 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 }
 
 void Map::generateRandom() {
+	int j = 0;
+	float proba = 0.0f;
+	std::random_device rd;
+	std::default_random_engine generator(rd());    
+	std::uniform_real_distribution<float> distribution(-1.0, 1.0);
+	std::uniform_real_distribution<float> seedRand(0, 9999999);
+	int seed = (int) seedRand(generator);
 
+	SimplexNoise newSimplex(100.0f, 1.0f, 2.0f, 0.5f);
+	for (float i = 0.0f; i < 49.0f; i+=(50.0f /Map::MAP_SIZE)) {
+		proba = distribution(generator);
+		if (newSimplex.noise(i) <= -0.4f) {
+			m_tiles[j] = ROCK;
+			if (proba <= 0.6f) {
+				m_elements[j] = new Mineral(STONE, j);
+			}
+
+		}
+		else if (newSimplex.noise(i) > -0.4f && newSimplex.noise(i) <= 0.2f) {
+			m_tiles[j] = FOREST;
+			if (proba <= 0.7f) {
+				m_elements[j] = new Tree(OAK, j);
+			}
+
+		}
+		else {
+			m_tiles[j] = GRASS;
+			if (proba <= 0.10f) {
+				m_elements[j] = new Mineral(STONE, j);
+			}
+			else if (proba > 0.10f && proba <= 0.20f) {
+				m_elements[j] = new Tree(OAK, j);
+			}
+		}
+		j++;
+	}
 }

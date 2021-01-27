@@ -18,7 +18,7 @@ void EnvironmentElement::draw(sf::RenderWindow& window) const {
 	sprite.setTexture(m_texture);
 	int height = m_texture.getSize().y;
 	sprite.setTextureRect(sf::IntRect(0, 0, ELEM_WIDTH * m_width, height));
-	sprite.setPosition(ELEM_WIDTH *m_position, 10);
+	sprite.setPosition(ELEM_WIDTH *m_position + ELEM_WIDTH * 0.5f, 10);
 	sprite.setOrigin(ELEM_WIDTH / 2, height);
 	window.draw(sprite);
 }

@@ -3,5 +3,5 @@
 enum TileType {
 	GRASS,
 	ROCK,
-	SAND
+	FOREST
 };

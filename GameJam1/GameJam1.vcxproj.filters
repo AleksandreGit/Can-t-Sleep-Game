@@ -105,6 +105,9 @@
     <ClCompile Include="Mineral.cpp">
       <Filter>Fichiers sources\Map</Filter>
     </ClCompile>
+    <ClCompile Include="SimplexNoise.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimableBuilder.h">
@@ -189,6 +192,9 @@
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
     <ClInclude Include="MineralType.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplexNoise.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
   </ItemGroup>

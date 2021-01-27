@@ -1,9 +1,2 @@
-﻿  Game.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(18,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-  main.cpp
-  Map.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(51,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  Mineral.cpp
-  Player.cpp
-  Génération de code en cours...
+﻿  main.cpp
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe
