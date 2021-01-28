@@ -61,17 +61,16 @@ void Map::generateRandom() {
 	std::uniform_real_distribution<float> seedRand(0, 9999999);
 	int seed = (int) seedRand(generator);
 
-	SimplexNoise newSimplex(100.0f, 1.0f, 2.0f, 0.5f);
 	for (float i = 0.0f; i < 49.0f; i+=(50.0f /Map::MAP_SIZE)) {
 		proba = distribution(generator);
-		if (newSimplex.noise(i) <= -0.4f) {
+		/*if (perlin.noise1D(i) <= -0.4f) {
 			m_tiles[j] = ROCK;
 			if (proba <= 0.6f) {
 				m_elements[j] = new Mineral(STONE, j);
 			}
 
 		}
-		else if (newSimplex.noise(i) > -0.4f && newSimplex.noise(i) <= 0.2f) {
+		else if (perlin.noise1D(i) > -0.4f && perlin.noise1D(i) <= 0.2f) {
 			m_tiles[j] = FOREST;
 			if (proba <= 0.7f) {
 				m_elements[j] = new Tree(OAK, j);
@@ -86,7 +85,7 @@ void Map::generateRandom() {
 			else if (proba > 0.10f && proba <= 0.20f) {
 				m_elements[j] = new Tree(OAK, j);
 			}
-		}
+		}*/
 		j++;
 	}
 }
