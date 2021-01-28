@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "EnvironmentElement.h"
+#include "PerlinNoise.h"
 #include "Tree.h"
 #include "Mineral.h"
 #include "TileType.h"

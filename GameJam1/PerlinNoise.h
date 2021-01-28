@@ -13,7 +13,7 @@
 class PerlinNoise
 {
 public:
-	PerlinNoise(float seed);
+	PerlinNoise(float seed, float frequence=0.1f, float amplitude=1.0f);
 
 	double noise1D(double x);
 	double noise2D(double x, double y);
@@ -26,5 +26,7 @@ private:
 	double grad(int hash, double x, double y, double z);
 
 	int p[512];
+	float m_frequence;
+	float m_amplitude;
 };
 

@@ -56,14 +56,15 @@ void Map::generateRandom() {
 	int j = 0;
 	float proba = 0.0f;
 	std::random_device rd;
-	std::default_random_engine generator(rd());    
-	std::uniform_real_distribution<float> distribution(-1.0, 1.0);
-	std::uniform_real_distribution<float> seedRand(0, 9999999);
-	int seed = (int) seedRand(generator);
+	std::default_random_engine generator(rd());
+	std::uniform_real_distribution<float> distribution(0.0, 1.0);
 
-	for (float i = 0.0f; i < 49.0f; i+=(50.0f /Map::MAP_SIZE)) {
+	PerlinNoise perlin(-30.0f, 0.02f);
+
+	for (int i = 0; i < Map::MAP_SIZE; i++) {
 		proba = distribution(generator);
-		/*if (perlin.noise1D(i) <= -0.4f) {
+		if (perlin.noise1D(i) <= -0.4f) {
+
 			m_tiles[j] = ROCK;
 			if (proba <= 0.6f) {
 				m_elements[j] = new Mineral(STONE, j);
@@ -82,10 +83,10 @@ void Map::generateRandom() {
 			if (proba <= 0.10f) {
 				m_elements[j] = new Mineral(STONE, j);
 			}
-			else if (proba > 0.10f && proba <= 0.20f) {
+			else if (proba > 0.40f && proba <= 0.50f) {
 				m_elements[j] = new Tree(OAK, j);
 			}
-		}*/
+		}
 		j++;
 	}
 }

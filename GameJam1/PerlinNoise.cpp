@@ -1,6 +1,6 @@
 #include "PerlinNoise.h"
 
-PerlinNoise::PerlinNoise(float seed) {
+PerlinNoise::PerlinNoise(float seed, float frequence, float amplitude) : m_frequence(frequence), m_amplitude(amplitude){
 	reseed(seed);
 }
 
@@ -23,6 +23,9 @@ double PerlinNoise::noise2D(double x, double y) {
 }
 
 double PerlinNoise::noise3D(double x, double y, double z) {
+	x *= m_frequence;
+	y *= m_frequence;
+	z *= m_frequence;
 	int X = (int)floor(x) & 255;
 	int Y = (int)floor(y) & 255;
 	int Z = (int)floor(z) & 255; // Find unit cube that contains point
@@ -42,7 +45,7 @@ double PerlinNoise::noise3D(double x, double y, double z) {
 		BA(p[B] + Z),
 		BB(p[B+1]+Z); // Hash coordinates of the 8 cubes cube corners
 	
-	return lerp(w, lerp(v, lerp(u, grad(p[AA], x, y, z),
+	return m_amplitude * lerp(w, lerp(v, lerp(u, grad(p[AA], x, y, z),
 			grad(p[BA], x - 1, y, z)),
 			lerp(u, grad(p[AB], x, y - 1, z),
 			grad(p[BB], x - 1, y - 1, z))),
