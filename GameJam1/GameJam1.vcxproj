@@ -164,7 +164,6 @@
     <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
     <ClCompile Include="RigidElement.cpp" />
-    <ClCompile Include="SimplexNoise.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
@@ -193,7 +192,6 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="RigidElement.h" />
-    <ClInclude Include="SimplexNoise.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TileType.h" />
     <ClInclude Include="Tree.h" />
