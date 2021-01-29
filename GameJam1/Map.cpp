@@ -63,28 +63,9 @@ void Map::generateRandom() {
 	// -30
 	PerlinNoise perlin(seed(generator), 0.015f, 2.0f);
 
-	// QUALITY METRICS
-	int nbBiome = 0;
-	std::map<std::string, int> biomesDiversite;
-	biomesDiversite.insert(std::pair<std::string, int>("forest", 0));
-	biomesDiversite.insert(std::pair<std::string, int>("rock", 0));
-	biomesDiversite.insert(std::pair<std::string, int>("classic", 0));
-	std::vector<int> biomesSizes;
-	TileType currentBiome = NOTYPE;
-	int currentSize = 0;
-
 	for (int i = 0; i < Map::MAP_SIZE; i++) {
 		proba = distribution(generator);
 		if (perlin.noise1D(i) <= -0.4f) {
-			if (currentBiome != ROCK) {
-				currentBiome = ROCK;
-				biomesDiversite.at("rock")++;
-				if (nbBiome != 0) {
-					biomesSizes.push_back(currentSize);
-				}
-				nbBiome++;
-				currentSize = 0;
-			}
 			m_tiles[j] = ROCK;
 			if (proba <= 0.6f) {
 				m_elements[j] = new Mineral(STONE, j);
@@ -92,15 +73,6 @@ void Map::generateRandom() {
 
 		}
 		else if (perlin.noise1D(i) > -0.4f && perlin.noise1D(i) <= 0.2f) {
-			if (currentBiome != FOREST) {
-				currentBiome = FOREST;
-				biomesDiversite.at("forest")++;
-				if (nbBiome != 0) {
-					biomesSizes.push_back(currentSize);
-				}
-				nbBiome++;
-				currentSize = 0;
-			}
 			m_tiles[j] = FOREST;
 			if (proba <= 0.7f) {
 				m_elements[j] = new Tree(OAK, j);
@@ -108,15 +80,6 @@ void Map::generateRandom() {
 
 		}
 		else {
-			if (currentBiome != GRASS) {
-				currentBiome = GRASS;
-				biomesDiversite.at("classic")++;
-				if (nbBiome != 0) {
-					biomesSizes.push_back(currentSize);
-				}
-				nbBiome++;
-				currentSize = 0;
-			}
 			m_tiles[j] = GRASS;
 			if (proba <= 0.10f) {
 				m_elements[j] = new Mineral(STONE, j);
@@ -125,22 +88,6 @@ void Map::generateRandom() {
 				m_elements[j] = new Tree(OAK, j);
 			}
 		}
-		currentSize++;
 		j++;
 	}
-
-	/*COMPUTE METRICS*/
-	biomesSizes.push_back(currentSize);
-	std::cout << "Taille map : " << m_tiles.size() << std::endl;
-	std::cout << "Nombre biomes : " << nbBiome << std::endl;
-	float moyenne = 0;
-	for (int i = 0; i < biomesSizes.size(); i++) {
-		moyenne += biomesSizes[i];
-		std::cout << "Taille biome " << i << " " << biomesSizes[i] << std::endl;
-	}
-	moyenne /= biomesSizes.size();
-	std::cout << "Taille moyenne des biomes : " << moyenne << std::endl;
-	std::cout << "Nombre de biomes 'foret' : " << biomesDiversite.at("forest") << std::endl;
-	std::cout << "Nombre de biomes 'rock' : " << biomesDiversite.at("rock") << std::endl;
-	std::cout << "Nombre de biomes 'classic' : " << biomesDiversite.at("classic") << std::endl;
 }
