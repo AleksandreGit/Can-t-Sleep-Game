@@ -58,9 +58,10 @@ void Map::generateRandom() {
 	std::random_device rd;
 	std::default_random_engine generator(rd());
 	std::uniform_real_distribution<float> distribution(0.0, 1.0);
+	std::uniform_real_distribution<float> seed(-10000.0f, 10000.0f);
 
 	// -30
-	PerlinNoise perlin(600.0f, 0.02f);
+	PerlinNoise perlin(seed(generator), 0.015f, 2.0f);
 
 	// QUALITY METRICS
 	int nbBiome = 0;
