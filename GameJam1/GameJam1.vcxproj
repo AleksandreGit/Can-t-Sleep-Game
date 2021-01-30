@@ -152,11 +152,13 @@
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
     <ClCompile Include="EnvironmentElement.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Interactable.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Mineral.cpp" />
+    <ClCompile Include="MovingEntity.cpp" />
     <ClCompile Include="PerlinNoise.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerAttack.cpp" />
@@ -179,9 +181,11 @@
     <ClInclude Include="EnvironmentElement.h" />
     <ClInclude Include="EnvironmentElementBuilder.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Interactable.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Mineral.h" />
     <ClInclude Include="MineralType.h" />
+    <ClInclude Include="MovingEntity.h" />
     <ClInclude Include="Natural.h" />
     <ClInclude Include="PerlinNoise.h" />
     <ClInclude Include="Player.h" />

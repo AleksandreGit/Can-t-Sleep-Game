@@ -93,19 +93,25 @@
     <ClCompile Include="Game.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="EnvironmentElement.cpp">
-      <Filter>Fichiers sources\Map</Filter>
-    </ClCompile>
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp">
       <Filter>Fichiers sources\Map\Builder</Filter>
     </ClCompile>
-    <ClCompile Include="Tree.cpp">
-      <Filter>Fichiers sources\Map</Filter>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentElement.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
     </ClCompile>
     <ClCompile Include="Mineral.cpp">
-      <Filter>Fichiers sources\Map</Filter>
+      <Filter>Fichiers sources\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="PerlinNoise.cpp">
+    <ClCompile Include="Tree.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingEntity.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -158,9 +164,6 @@
     <ClInclude Include="Map.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
-    <ClInclude Include="TileType.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
@@ -170,31 +173,40 @@
     <ClInclude Include="Game.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="EnvironmentElement.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Natural.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeType.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
-    </ClInclude>
     <ClInclude Include="EnvironmentElementBuilder.h">
       <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
     </ClInclude>
     <ClInclude Include="DefaultEnvironmentElementBuilder.h">
       <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
     </ClInclude>
-    <ClInclude Include="Tree.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElement.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
     <ClInclude Include="Mineral.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
     <ClInclude Include="MineralType.h">
-      <Filter>Fichiers d%27en-tête\Map</Filter>
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="PerlinNoise.h">
+    <ClInclude Include="Natural.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TileType.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeType.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingEntity.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
