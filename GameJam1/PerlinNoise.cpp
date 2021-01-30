@@ -1,6 +1,6 @@
 #include "PerlinNoise.h"
 
-PerlinNoise::PerlinNoise(float seed, float frequence, float amplitude) : m_frequence(frequence), m_amplitude(amplitude){
+PerlinNoise::PerlinNoise(float seed, float frequence, float amplitude, int octaves) : m_frequence(frequence), m_amplitude(amplitude), m_octaves(octaves) {
 	reseed(seed);
 }
 
@@ -15,17 +15,22 @@ void PerlinNoise::reseed(float seed) {
 }
 
 double PerlinNoise::noise1D(double x) {
-	return noise3D(x, 0, 0);
+	double result = 0.0;
+	for (int i = 0; i < m_octaves; ++i) {
+		result += noise3D(x, 0, 0, m_frequence / pow(2, i));
+	}
+
+	return result;
 }
 
 double PerlinNoise::noise2D(double x, double y) {
-	return noise3D(x, y, 0);
+	return noise3D(x, y, 0, m_frequence);
 }
 
-double PerlinNoise::noise3D(double x, double y, double z) {
-	x *= m_frequence;
-	y *= m_frequence;
-	z *= m_frequence;
+double PerlinNoise::noise3D(double x, double y, double z, float frequence) {
+	x *= frequence;
+	y *= frequence;
+	z *= frequence;
 	int X = (int)floor(x) & 255;
 	int Y = (int)floor(y) & 255;
 	int Z = (int)floor(z) & 255; // Find unit cube that contains point

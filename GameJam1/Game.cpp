@@ -52,16 +52,6 @@ void Game::handleEvents(float deltaTime) {
             if (event.key.code == sf::Keyboard::A) {
                 m_player.setState(ATTACK);
             }
-            if (event.key.code == sf::Keyboard::X) {
-                m_currentZoom -= 0.01f;
-                m_playerView.zoom(m_currentZoom);
-                m_window.setView(m_playerView);
-            }
-            if (event.key.code == sf::Keyboard::W) {
-                m_currentZoom += 0.01f;
-                m_playerView.zoom(m_currentZoom);
-                m_window.setView(m_playerView);
-            }
         }
         if (event.type == sf::Event::KeyReleased) {
             if (event.key.code == sf::Keyboard::Right ||

@@ -61,7 +61,7 @@ void Map::generateRandom() {
 	std::uniform_real_distribution<float> seed(-10000.0f, 10000.0f);
 
 	// -30
-	PerlinNoise perlin(seed(generator), 0.015f, 2.0f);
+	PerlinNoise perlin(seed(generator), 0.015f, 1.0f, 5);
 
 	for (int i = 0; i < Map::MAP_SIZE; i++) {
 		proba = distribution(generator);
