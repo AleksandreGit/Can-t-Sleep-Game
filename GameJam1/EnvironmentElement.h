@@ -1,7 +1,8 @@
 #pragma once
 #include "Animable.h"
+#include "MovingEntity.h"
 
-class EnvironmentElement : public Animable {
+class EnvironmentElement : public Animable, public Entity {
 
 public:
 	EnvironmentElement() = default;
@@ -9,6 +10,7 @@ public:
 	virtual void animate(float deltaTime);
 	virtual void draw(sf::RenderWindow& window) const;
 	virtual void reset();
+	virtual void defend(MovingEntity& attacker);
 	void remove();
 	void receiveDamages(int damages);
 

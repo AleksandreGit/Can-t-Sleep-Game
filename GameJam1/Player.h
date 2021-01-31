@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Entity.h"
+#include "MovingEntity.h"
 #include "AnimablePlayer.h"
 #include "PlayerIdle.h"
 #include "PlayerWalk.h"
@@ -13,7 +13,7 @@
 using namespace std;
 
 
-class Player : public Entity
+class Player : public MovingEntity
 {
 public:
 	Player();

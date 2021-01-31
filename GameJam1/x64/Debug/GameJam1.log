@@ -1,3 +1,15 @@
-﻿  Map.cpp
+﻿  DefaultEnvironmentElementBuilder.cpp
+  EnvironmentElement.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\EnvironmentElement.cpp(22,35): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Game.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Game.cpp(18,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Map.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\Map.cpp(49,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Mineral.cpp
+  MovingEntity.cpp
+  Player.cpp
+  Tree.cpp
+  Génération de code en cours...
+  main.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(12,15): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe

@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player() : Entity() {
+Player::Player() : MovingEntity() {
 	m_animations.push_back(new PlayerIdle());
 	m_animations.push_back(new PlayerWalk());
 	m_animations.push_back(new PlayerInteract());

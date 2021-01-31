@@ -38,3 +38,6 @@ void EnvironmentElement::receiveDamages(int damages) {
 	}
 }
 
+void EnvironmentElement::defend(MovingEntity& attacker) {
+	this->m_health -= attacker.getStrength();
+}
