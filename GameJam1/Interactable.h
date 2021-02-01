@@ -3,5 +3,7 @@
 
 class Interactable : public RigidElement
 {
+public:
+	inline Interactable() : RigidElement() {};
 };
 

@@ -31,6 +31,7 @@ public:
 	inline const int getTotalFrame() { return m_totalFrame; };
 	inline const float getPosition() { return m_currentSprite.getPosition().y; }
 	inline const bool isAnimationFinished() { return m_elapsedTime > (m_totalFrame / m_frameRate); }
+	inline const sf::Sprite getCurrentSprite() { return m_currentSprite; }
 
 protected:
 	// TODO: vérifier que ça passe bien sans pointeurs

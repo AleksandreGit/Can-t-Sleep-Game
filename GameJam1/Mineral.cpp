@@ -6,4 +6,13 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 	.setTexture("./Assets/rock.png")
 	.build()), m_type(mineralType)
 {
+	sf::FloatRect rectBounds = this->m_currentSprite.getGlobalBounds();
+	this->m_realPosition = this->m_currentSprite.getPosition().x;
+	this->setSize(200, 200);
 };
+
+
+void Mineral::draw(sf::RenderWindow& window) const {
+	EnvironmentElement::draw(window);
+	this->drawColliderBox(window);
+}

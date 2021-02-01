@@ -13,6 +13,8 @@ Player::Player() : MovingEntity() {
 		m_animations[i]->moveTo(m_realPosition);
 	}
 	setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+	sf::FloatRect rectBounds = m_animations[0]->getCurrentSprite().getGlobalBounds();
+	this->setSize(rectBounds.width/1.5, rectBounds.height-60);
 }
 
 void Player::move(float deltaTime) {
@@ -106,6 +108,8 @@ void Player::draw(sf::RenderWindow& window) const {
 			break;
 	}
 	m_animations[anim]->draw(window);
+	sf::FloatRect rectBounds = m_animations[anim]->getCurrentSprite().getGlobalBounds();
+	this->drawColliderBox(window);
 }
 
 void Player::attack(Entity& target) const {
