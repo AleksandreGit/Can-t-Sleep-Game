@@ -3,10 +3,10 @@
 EnvironmentElement::EnvironmentElement(sf::Texture& texture, int width, int position) :
 	m_texture(texture),
 	m_width(width), 
-	m_position(position),
 	m_health(100)
 {
-
+	m_worldPosition = position;
+	m_realPosition = TILE_WIDTH * m_worldPosition + TILE_WIDTH * 0.5f;
 }
 
 void EnvironmentElement::animate(float deltaTime) {
@@ -17,9 +17,9 @@ void EnvironmentElement::draw(sf::RenderWindow& window) const {
 	sf::Sprite sprite;
 	sprite.setTexture(m_texture);
 	int height = m_texture.getSize().y;
-	sprite.setTextureRect(sf::IntRect(0, 0, ELEM_WIDTH * m_width, height));
-	sprite.setPosition(ELEM_WIDTH *m_position + ELEM_WIDTH * 0.5f, 10);
-	sprite.setOrigin(ELEM_WIDTH / 2, height);
+	sprite.setTextureRect(sf::IntRect(0, 0, TILE_WIDTH * m_width, height));
+	sprite.setPosition(m_realPosition, 10);
+	sprite.setOrigin(TILE_WIDTH / 2, height);
 	window.draw(sprite);
 }
 

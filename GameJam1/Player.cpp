@@ -8,11 +8,11 @@ Player::Player() : MovingEntity() {
 	m_animations.push_back(new PlayerAttack());
 
 	// We place the player at the center of the map
-	m_realPosition = Map::TILE_WIDTH * Map::MAP_SIZE / 2;
+	m_realPosition = TILE_WIDTH * MAP_SIZE / 2;
 	for (int i = 0; i < m_animations.size(); i++) {
 		m_animations[i]->moveTo(m_realPosition);
 	}
-	setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 	sf::FloatRect rectBounds = m_animations[0]->getCurrentSprite().getGlobalBounds();
 	this->setSize(rectBounds.width/1.5, rectBounds.height-60);
 }
@@ -31,7 +31,7 @@ void Player::move(float deltaTime) {
 				if (m_realPosition > 0) {
 					// We move the player
 					m_realPosition -= m_speed * deltaTime;
-					setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+					setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 					for (int i = 0; i < m_animations.size(); i++) {
 						m_animations[i]->moveTo(m_realPosition);
 					}
@@ -39,7 +39,7 @@ void Player::move(float deltaTime) {
 				}
 			case RIGHT:
 				// We block the movement if the player is at the right border
-				if (m_realPosition < Map::TILE_WIDTH * Map::MAP_SIZE) {
+				if (m_realPosition < TILE_WIDTH * MAP_SIZE) {
 					// We move the player
 					m_realPosition += m_speed * deltaTime;
 					for (int i = 0; i < m_animations.size(); i++) {
@@ -64,7 +64,7 @@ void Player::move(float deltaTime) {
 			break;
 	}
 	// Update the position of the player in the world according to his sprite position
-	setWorldPosition((int)(m_realPosition / Map::TILE_WIDTH));
+	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 	// Animation of the current state
 	m_animations[anim]->animate(deltaTime);
 }

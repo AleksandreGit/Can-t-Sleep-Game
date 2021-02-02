@@ -7,4 +7,11 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	.setTexture("./Assets/tree.png")
 	.build()), m_type(treeType)
 {
+	this->setSize(TILE_WIDTH, TILE_HEIGHT);
 };
+
+
+void Tree::draw(sf::RenderWindow& window) const {
+	EnvironmentElement::draw(window);
+	this->drawColliderBox(window);
+}

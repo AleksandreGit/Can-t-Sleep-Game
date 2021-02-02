@@ -200,6 +200,7 @@
     <ClInclude Include="TileType.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="TreeType.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="VoidAnimableBuilder.h" />
   </ItemGroup>
   <ItemGroup>

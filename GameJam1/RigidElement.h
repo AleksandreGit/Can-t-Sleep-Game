@@ -1,5 +1,6 @@
 #pragma once
 #include "RigidBody.h"
+#include "Utils.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 

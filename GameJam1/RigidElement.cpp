@@ -18,7 +18,7 @@ void RigidElement::drawColliderBox(sf::RenderWindow& window) const {
 	rectangle.setPosition(m_realPosition, 30);
 	rectangle.setFillColor(sf::Color::Transparent);
 	rectangle.setOutlineThickness(2);
-	rectangle.setOutlineColor(sf::Color(0, 255, 0));
+	rectangle.setOutlineColor(sf::Color(255, 0, 0));
 	window.draw(rectangle);
 }
 

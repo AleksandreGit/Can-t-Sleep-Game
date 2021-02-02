@@ -10,7 +10,7 @@ Game::Game() :
     m_clock()
 {
     m_window.setFramerateLimit(60);
-    m_playerView.setSize(Map::TILE_WIDTH * 10, Map::TILE_WIDTH * 10 * 9 / 16);
+    m_playerView.setSize(TILE_WIDTH * 10, TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
 }
 
@@ -31,8 +31,8 @@ void Game::handleEvents(float deltaTime) {
         else if (event.type == sf::Event::Resized) {
             // resize my view
             m_playerView.setSize({
-                    static_cast<float>(Map::TILE_WIDTH * 10),
-                    static_cast<float>(Map::TILE_WIDTH * 10 * event.size.height / event.size.width)
+                    static_cast<float>(TILE_WIDTH * 10),
+                    static_cast<float>(TILE_WIDTH * 10 * event.size.height / event.size.width)
                 });
             m_window.setView(m_playerView);
         }
@@ -78,7 +78,7 @@ void Game::update() {
 }
 
 void Game::handleCamera() {
-    this->m_playerView.setCenter(m_player.getRealPosition(), -Map::TILE_HEIGHT/2 );
+    this->m_playerView.setCenter(m_player.getRealPosition(), -TILE_HEIGHT/2 );
     this->m_window.setView(m_playerView);
 
 }

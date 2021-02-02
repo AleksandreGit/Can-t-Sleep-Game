@@ -21,8 +21,8 @@ void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
 	if (lowerBound < 0) {
 		lowerBound = 0;
 	}
-	if (upperBound > Map::MAP_SIZE) {
-		upperBound = Map::MAP_SIZE;
+	if (upperBound > MAP_SIZE) {
+		upperBound = MAP_SIZE;
 	}
 
 	int firstValue = lowerBound;
@@ -63,7 +63,7 @@ void Map::generateRandom() {
 	// -30
 	PerlinNoise perlin(seed(generator), 0.015f, 1.0f, 5);
 
-	for (int i = 0; i < Map::MAP_SIZE; i++) {
+	for (int i = 0; i < MAP_SIZE; i++) {
 		proba = distribution(generator);
 		if (perlin.noise1D(i) <= -0.4f) {
 			m_tiles[j] = ROCK;
