@@ -6,7 +6,7 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 	.setTexture("./Assets/rock.png")
 	.build()), m_type(mineralType)
 {
-	this->setSize(TILE_WIDTH, TILE_HEIGHT);
+	this->setSize(200, 200);
 };
 
 
@@ -14,5 +14,3 @@ void Mineral::draw(sf::RenderWindow& window) const {
 	EnvironmentElement::draw(window);
 	this->drawColliderBox(window);
 }
-
-

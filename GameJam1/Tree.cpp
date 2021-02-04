@@ -7,7 +7,7 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	.setTexture("./Assets/tree.png")
 	.build()), m_type(treeType)
 {
-	this->setSize(TILE_WIDTH, TILE_HEIGHT);
+	this->setSize(250, TILE_HEIGHT);
 };
 
 

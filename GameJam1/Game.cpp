@@ -71,6 +71,9 @@ void Game::update() {
         m_player.move(dt);
 
         this->handleEvents(dt);
+        if (this->m_map.checkCollisions(m_player) != nullptr) {
+            std::cout << "COLLISION !!!" << std::endl;
+        }
         this->handleCamera();
 
         this->draw();

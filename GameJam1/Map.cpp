@@ -91,3 +91,28 @@ void Map::generateRandom() {
 		j++;
 	}
 }
+
+// TODO : attention il peut y avoir plusieurs collisions, il faut checker avec la direction du player
+EnvironmentElement* Map::checkCollisions(Player& player) {
+	float playerPos = player.getRealPosition();
+	float playerWidth = player.getSize().x;
+
+	for (int i = 0; i < m_elements.size(); i++) {
+		if (m_elements[i] != nullptr) {
+			float upperBorder = m_elements[i]->getRealPosition() + m_elements[i]->getSize().x * 0.5f;
+			float lowerBorder = m_elements[i]->getRealPosition() - m_elements[i]->getSize().x * 0.5f;
+			if (
+				upperBorder > (playerPos - playerWidth * 0.5f)
+				&& upperBorder < (playerPos + playerWidth * 0.5f)) {
+				return m_elements[i];
+			}
+			else if (
+				lowerBorder < (playerPos + playerWidth * 0.5f)
+				&& lowerBorder >(playerPos - playerWidth * 0.5f)) {
+				return m_elements[i];
+			}
+		}	 
+	}
+
+	return nullptr;
+}
