@@ -22,6 +22,8 @@ public:
 	virtual void draw(sf::RenderWindow& window) const;
 	virtual void attack(Entity& target) const;
 	virtual void defend(Entity& attacker); 
+
+	virtual Direction getCollisionDirection() const;
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);
 	virtual  void setRealPosition(float pos);

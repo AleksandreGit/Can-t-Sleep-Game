@@ -119,3 +119,8 @@ void Player::attack(Entity& target) const {
 void Player::defend(Entity& attacker) {
 
 }
+
+
+Direction Player::getCollisionDirection() const {
+	return m_dir;
+}
