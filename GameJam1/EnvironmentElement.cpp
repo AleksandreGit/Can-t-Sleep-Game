@@ -28,16 +28,16 @@ void EnvironmentElement::reset() {
 }
 
 void EnvironmentElement::remove() {
-
+	this->~EnvironmentElement();
 }
 
-void EnvironmentElement::receiveDamages(int damages) {
-	this->m_health -= damages;
-	if (m_health < 0) {
-		m_health = 0;
+void EnvironmentElement::defend(Entity* attacker) {
+	if (dynamic_cast<MovingEntity*>(attacker)) {
+		this->m_health -= dynamic_cast<MovingEntity*>(attacker)->getStrength();
+		std::cout << "Vie restante : " << std::endl;
+		if (m_health < 0) {
+			this->remove();
+		}
 	}
 }
 
-void EnvironmentElement::defend(MovingEntity& attacker) {
-	this->m_health -= attacker.getStrength();
-}

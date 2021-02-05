@@ -51,6 +51,7 @@ void Game::handleEvents(float deltaTime) {
             }
             if (event.key.code == sf::Keyboard::A) {
                 m_player.setState(ATTACK);
+                m_player.attack();
             }
         }
         if (event.type == sf::Event::KeyReleased) {
@@ -71,9 +72,7 @@ void Game::update() {
         m_player.move(dt);
 
         this->handleEvents(dt);
-        if (this->m_map.checkCollisions(m_player) != nullptr) {
-            std::cout << "COLLISION !!!" << std::endl;
-        }
+        m_player.setTarget(this->m_map.checkCollisions(m_player));
         this->handleCamera();
 
         this->draw();

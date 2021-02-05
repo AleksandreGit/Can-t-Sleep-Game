@@ -10,9 +10,8 @@ public:
 	virtual void animate(float deltaTime);
 	virtual void draw(sf::RenderWindow& window) const;
 	virtual void reset();
-	virtual void defend(MovingEntity& attacker);
+	virtual void defend(Entity* attacker);
 	void remove();
-	void receiveDamages(int damages);
 
 protected:
 	int m_health;

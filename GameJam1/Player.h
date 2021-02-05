@@ -20,15 +20,18 @@ public:
 
 	virtual void move(float deltaTime);
 	virtual void draw(sf::RenderWindow& window) const;
-	virtual void attack(Entity& target) const;
-	virtual void defend(Entity& attacker); 
+	virtual void attack();
 
 	virtual Direction getCollisionDirection() const;
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);
 	virtual  void setRealPosition(float pos);
 
+	inline void setTarget(Entity* target) { m_target = target; };
+
 private:
 	vector<AnimablePlayer*> m_animations;
+	Entity* m_target;
+
 };
 

@@ -9,9 +9,10 @@ public:
 		m_dir(RIGHT), m_speed(200.0f), m_name("Entity"), m_currentState(IDLE) {};
 
 	virtual void move(float deltaTime) = 0;
-	virtual void attack(Entity& target) const = 0;
+	virtual void attack() = 0;
+	virtual void defend(Entity* attacker);
 
-	inline int getStrength() { return m_strength; };
+	inline int getStrength() const { return m_strength; };
 	inline void setSpeed(float speed) { m_speed = speed; };
 	inline void setName(string name) { m_name = name; };
 	virtual inline void setDirection(Direction dir) { m_dir = dir; };

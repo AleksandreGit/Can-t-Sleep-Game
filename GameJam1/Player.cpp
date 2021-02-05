@@ -112,13 +112,12 @@ void Player::draw(sf::RenderWindow& window) const {
 	this->drawColliderBox(window);
 }
 
-void Player::attack(Entity& target) const {
-
+void Player::attack() {
+	if (m_target != nullptr) {
+		m_target->defend(this);
+	}
 }
 
-void Player::defend(Entity& attacker) {
-
-}
 
 
 Direction Player::getCollisionDirection() const {

@@ -12,6 +12,9 @@ public:
 
 	inline void setHealth(float health) { m_health = health; };
 
+	virtual void defend(Entity* attacker) = 0;
+	
+
 protected:
 	float m_health;
 
