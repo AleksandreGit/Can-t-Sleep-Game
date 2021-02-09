@@ -9,6 +9,11 @@ EnvironmentElement::EnvironmentElement(sf::Texture& texture, int width, int posi
 	m_realPosition = TILE_WIDTH * m_worldPosition + TILE_WIDTH * 0.5f;
 }
 
+
+EnvironmentElement::~EnvironmentElement() {
+	
+}
+
 void EnvironmentElement::animate(float deltaTime) {
 	// TODO lorsque les elements seront créés en Animable
 }
