@@ -22,7 +22,6 @@ private:
 	sf::RenderWindow m_window;
 	sf::View m_playerView;
 	sf::Clock m_clock;
-	float m_currentZoom;
 	Player m_player;
 	Map m_map;
 

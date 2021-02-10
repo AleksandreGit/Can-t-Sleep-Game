@@ -16,6 +16,7 @@ void AnimableEntity::animate(float deltaTime) {
 	m_elapsedTime += deltaTime;
 	if (m_totalFrame > 0) {
 		m_currentFrame = ((int)(m_frameRate * m_elapsedTime)) % m_totalFrame;
+		std::cout << m_currentSprite.getPosition().y << std::endl;
 		m_currentSprite.setTextureRect(sf::IntRect(
 			(m_currentFrame % m_framePerCol) * DEFAULT_WIDTH,
 			(m_currentFrame / m_framePerCol) * DEFAULT_HEIGHT,

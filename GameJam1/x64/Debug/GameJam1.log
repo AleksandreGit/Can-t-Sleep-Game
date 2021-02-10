@@ -1,5 +1,4 @@
-﻿  main.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(38,56): warning C4305: 'argument' : troncation de 'double' à 'float'
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(43,60): warning C4305: 'argument' : troncation de 'double' à 'float'
-C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\main.cpp(57,57): warning C4305: 'argument' : troncation de 'double' à 'float'
+﻿  AnimableEntity.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\AnimableEntity.cpp(9,47): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\GameJam1\AnimableEntity.cpp(9,42): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   GameJam1.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\GameJam-1\x64\Debug\GameJam1.exe

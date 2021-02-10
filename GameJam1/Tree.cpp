@@ -8,6 +8,8 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	.build()), m_type(treeType)
 {
 	this->setSize(250, TILE_HEIGHT);
+	m_animation = &DefaultAnimableBuilder().setFrameRate(1.0f).setTotalFrame(1).setTexture("./Assets/tree.png").build();
+	m_animation->moveTo(m_realPosition);
 };
 
 

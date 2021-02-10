@@ -13,7 +13,7 @@ Map::Map() {
 }
 
 
-void Map::draw(sf::RenderWindow& window, int currentPos, float zoom) const {
+void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	int bound = BLOC_TO_SHOW / 2;
 	int lowerBound = currentPos - bound + 1;
 	int upperBound = currentPos + bound;

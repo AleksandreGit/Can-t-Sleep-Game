@@ -1,12 +1,16 @@
 #include "EnvironmentElement.h"
 
 EnvironmentElement::EnvironmentElement(sf::Texture& texture, int width, int position) :
-	m_texture(texture),
-	m_width(width), 
-	m_health(100)
+	Entity(),
+	//m_texture(texture),
+	m_width(width)
 {
 	m_worldPosition = position;
 	m_realPosition = TILE_WIDTH * m_worldPosition + TILE_WIDTH * 0.5f;
+	// TODO check si avec pointeur là c'est OK !
+	// On met un arbre par défaut
+	m_animation = &DefaultAnimableBuilder().setFrameRate(1.0f).setTotalFrame(1).setTexture("./Assets/tree.png").build();
+	m_animation->moveTo(m_realPosition);
 }
 
 
@@ -15,22 +19,23 @@ EnvironmentElement::~EnvironmentElement() {
 }
 
 void EnvironmentElement::animate(float deltaTime) {
-	// TODO lorsque les elements seront créés en Animable
+	m_animation->animate(deltaTime);
 }
 
 void EnvironmentElement::draw(sf::RenderWindow& window) const {
-	sf::Sprite sprite;
+	m_animation->draw(window);
+	/*sf::Sprite sprite;
 	sprite.setTexture(m_texture);
 	int height = m_texture.getSize().y;
 	sprite.setTextureRect(sf::IntRect(0, 0, TILE_WIDTH * m_width, height));
 	sprite.setPosition(m_realPosition, 10);
 	sprite.setOrigin(TILE_WIDTH / 2, height);
-	window.draw(sprite);
+	window.draw(sprite);*/
 }
 
-void EnvironmentElement::reset() {
+/*void EnvironmentElement::reset() {
 
-}
+}*/
 
 void EnvironmentElement::remove() {
 	this->~EnvironmentElement();

@@ -9,31 +9,33 @@
 
 int main()
 {
-    /*Game game;
+    Game game;
     srand(time(NULL));
 
-    game.update();*/
-
+    game.update();
+    /*
     const double SCALE = 30.0;
+
     //  Creating sfml window
     sf::RenderWindow window(sf::VideoMode(640, 640), "SFML works!");
     window.setFramerateLimit(60);
 
-    //falling object
+    // SFML Objects
+    // Box
     sf::RectangleShape shape;
     shape.setSize(sf::Vector2f(100, 100));
-
-    //ground
+    // Ground
     sf::RectangleShape Gshape;
     Gshape.setSize(sf::Vector2f(800, 100));
     Gshape.setFillColor(sf::Color::Green);
 
-    //create world
-    b2Vec2 gravity(0.0, 10.f);
+    //BOX2D
+    // Create World
+    b2Vec2 gravity(0.0, 20.f);
     b2World world(gravity);
 
 
-    //falling object physics
+    // Create a dynamic body
     b2BodyDef BodyDef;
     BodyDef.position = b2Vec2(100 / SCALE, 100 / SCALE);
     BodyDef.type = b2_dynamicBody;
@@ -47,7 +49,7 @@ int main()
     boxBody->CreateFixture(&FixtureDef);
 
 
-    //ground physics
+    // Create ground
     b2BodyDef gBodyDef;
     gBodyDef.position = b2Vec2(0 / SCALE, 600 / SCALE);
     gBodyDef.type = b2_staticBody;
@@ -59,6 +61,18 @@ int main()
     gFixtureDef.density = 0.f;
     gFixtureDef.shape = &gShape;
     gBody->CreateFixture(&gFixtureDef);
+
+    // Create another box
+    b2BodyDef box;
+    box.position = b2Vec2(300 / SCALE, 100 / SCALE);
+    box.type = b2_dynamicBody;
+    b2Body* boxBody2 = world.CreateBody(&box);
+    b2PolygonShape boxShape;
+    boxShape.SetAsBox((100.f / 2) / SCALE, (100.f / 2) / SCALE);
+    b2FixtureDef boxFixture;
+    boxFixture.density = 0.5f;
+    boxFixture.shape = &boxShape;
+    boxBody2->CreateFixture(&boxFixture);
 
     while (window.isOpen())
     {
@@ -90,7 +104,7 @@ int main()
             }
         }
         window.display();
-    }
+    }*/
 
     return 0;
 

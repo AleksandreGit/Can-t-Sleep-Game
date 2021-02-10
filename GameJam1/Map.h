@@ -14,7 +14,7 @@
 class Map {
 public:
 	Map();
-	void draw(sf::RenderWindow& window, int currentPos, float zoom) const;
+	void draw(sf::RenderWindow& window, int currentPos) const;
 	EnvironmentElement* checkCollisions(Player& player);
 	void generateRandom();
 

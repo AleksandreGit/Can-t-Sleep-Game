@@ -34,7 +34,6 @@ public:
 	inline const sf::Sprite getCurrentSprite() { return m_currentSprite; }
 
 protected:
-	// TODO: vérifier que ça passe bien sans pointeurs
 	sf::Texture m_texture;
 	sf::Sprite m_currentSprite;
 

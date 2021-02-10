@@ -3,7 +3,6 @@
 const float Game::WORLD_UNIT = AnimableBuilder::DEFAULT_WIDTH;
 
 Game::Game() : 
-    m_currentZoom(1.0f), 
     m_player(), 
     m_map(), 
     m_window(sf::VideoMode(W_WIDTH, W_HEIGHT), "GameJam #1"), 
@@ -16,7 +15,7 @@ Game::Game() :
 
 void Game::draw() {
     m_window.clear(sf::Color(154, 240, 229, 1.0f));
-    m_map.draw(m_window, m_player.getWorldPosition(), 0.0f);
+    m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
     m_window.display();
 }
