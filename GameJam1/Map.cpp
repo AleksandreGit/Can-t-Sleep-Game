@@ -28,7 +28,6 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	int firstValue = lowerBound;
 	for (int i = lowerBound; i < upperBound; i++) {
 		if (m_elements[i]) {
-			std::cout << "Element en position " << i << std::endl;
 			m_elements[i]->draw(window);
 		}
 	}

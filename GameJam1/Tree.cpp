@@ -10,6 +10,7 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	this->setSize(250, TILE_HEIGHT);
 	m_animation = &DefaultAnimableBuilder().setFrameRate(1.0f).setTotalFrame(1).setTexture("./Assets/tree.png").build();
 	m_animation->moveTo(m_realPosition);
+	m_animation->setOffsetY(10);
 };
 
 
