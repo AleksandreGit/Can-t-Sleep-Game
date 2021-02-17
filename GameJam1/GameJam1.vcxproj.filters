@@ -109,10 +109,13 @@
       <Filter>Fichiers sources\Entities</Filter>
     </ClCompile>
     <ClCompile Include="Interactable.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Interactions</Filter>
     </ClCompile>
     <ClCompile Include="MovingEntity.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionListener.cpp">
+      <Filter>Fichiers sources\Interactions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,14 +206,20 @@
     <ClInclude Include="TreeType.h">
       <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="Interactable.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MovingEntity.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Utils.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingEntity.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionListener.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskEntities.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

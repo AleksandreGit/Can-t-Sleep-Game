@@ -3,21 +3,50 @@
 const float Game::WORLD_UNIT = AnimableBuilder::DEFAULT_WIDTH;
 
 Game::Game() : 
-    m_player(), 
-    m_map(), 
     m_window(sf::VideoMode(W_WIDTH, W_HEIGHT), "GameJam #1"), 
-    m_clock()
+    m_clock() 
 {
     m_window.setFramerateLimit(60);
     m_playerView.setSize(TILE_WIDTH * 10, TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
+
+    b2Vec2 gravity(0.0f, 0.0f);
+    m_world = new b2World(gravity);
+
+    m_player = Player(m_world);
+    m_map = Map(m_world);
+    if (!BoxTexture.loadFromFile("./Assets/bush.png")) {
+        std::cout << "Pas bien chargé" << std::endl;
+    }
 }
 
 void Game::draw() {
     m_window.clear(sf::Color(154, 240, 229, 1.0f));
+
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
+
+
+    for (b2Body* BodyIterator = m_world->GetBodyList(); BodyIterator != 0; BodyIterator = BodyIterator->GetNext())
+    {
+        if (BodyIterator->GetType() == b2_dynamicBody)
+        {
+            sf::RectangleShape rectangle(sf::Vector2f(TILE_WIDTH, 2*TILE_WIDTH));;
+            rectangle.setFillColor(sf::Color(0, 255, 0, 120));
+            std::cout << BodyIterator->GetPosition().y << std::endl;
+            rectangle.setPosition(m_player.getRealPosition(), TILE_WIDTH * BodyIterator->GetPosition().y);
+            m_window.draw(rectangle);
+            /*sf::Sprite sprite;
+           //sprite.setColor(sf::Color::Green);
+            sprite.setTexture(BoxTexture);
+            sprite.setOrigin(0, 0);
+            sprite.setPosition(m_player.getRealPosition(), TILE_WIDTH * BodyIterator->GetPosition().y);
+            //Sprite.setRotation(BodyIterator->GetAngle() * 180 / b2_pi);
+            m_window.draw(sprite);*/
+        }
+    }
     m_window.display();
+
 }
 
 void Game::handleEvents(float deltaTime) {
@@ -71,7 +100,7 @@ void Game::update() {
         m_player.move(dt);
 
         this->handleEvents(dt);
-        m_player.setTarget(this->m_map.checkCollisions(m_player));
+        // TODO : checker collision et set la target ici ----> m_player.setTarget(this->m_map.checkCollisions(m_player));
         this->handleCamera();
 
         this->draw();

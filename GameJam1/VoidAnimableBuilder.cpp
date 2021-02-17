@@ -1,9 +1,9 @@
 #include "VoidAnimableBuilder.h"
 
-VoidAnimableBuilder::VoidAnimableBuilder() : frameRate(1.0f), totalFrame(0), framePerCol(0) {}
+VoidAnimableBuilder::VoidAnimableBuilder() : frameRate(1.0f), totalFrame(0), framePerCol(0), spriteSize(298, 421) {}
 
 AnimableEntity& VoidAnimableBuilder::build() {
-	return *(new AnimableEntity(texture, frameRate, framePerCol, totalFrame));
+	return *(new AnimableEntity(texture, frameRate, framePerCol, totalFrame, spriteSize.x, spriteSize.y));
 }
 
 VoidAnimableBuilder VoidAnimableBuilder::setTexture(string path) {
@@ -25,6 +25,17 @@ VoidAnimableBuilder VoidAnimableBuilder::setFrameRatePerCol(int frameRatePerCol)
 
 VoidAnimableBuilder VoidAnimableBuilder::setTotalFrame(int totalFrame) {
 	this->totalFrame = totalFrame;
+	return (*this);
+}
+
+
+VoidAnimableBuilder VoidAnimableBuilder::setHeight(int height) {
+	this->spriteSize.y = height;
+	return (*this);
+}
+
+VoidAnimableBuilder VoidAnimableBuilder::setWidth(int width) {
+	this->spriteSize.x = width;
 	return (*this);
 }
 

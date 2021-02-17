@@ -11,7 +11,7 @@ class AnimableEntity : public Animable
 public:
 	AnimableEntity() = default;
 	AnimableEntity(sf::Texture &texture, float frameRate,
-		int framePerCol, int totalFrame);
+		int framePerCol, int totalFrame, int height, int width);
 
 	virtual void animate(float deltaTime);
 	virtual void draw(sf::RenderWindow& window) const;
@@ -23,7 +23,7 @@ public:
 	inline void setFramePerCol(int framePerCol) { m_framePerCol = framePerCol; };
 	inline void setTotalFrame(int totalFrame) { m_totalFrame = totalFrame; };
 	inline void setTextureHeight(int height) { sf::IntRect rect = m_currentSprite.getTextureRect(); m_currentSprite.setTextureRect(sf::IntRect(0, 0, rect.width, height));};
-	inline void setOffsetY(int offsetY) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(pos.x, offset); }
+	inline void setOffsetY(int offsetY) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(pos.x, offsetY); }
 	inline void moveTo(float movementValue) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(movementValue, pos.y);}
 
 	// GETTERS
@@ -45,10 +45,7 @@ protected:
 	int m_totalFrame; 
 	int m_currentFrame;
 	float m_elapsedTime; // Time elapsed since the beginning of the animation
-
-private:
-	const int DEFAULT_WIDTH = 298;
-	const int DEFAULT_HEIGHT = 421;
+	sf::Vector2<int> m_spriteSize;
 
 };
 

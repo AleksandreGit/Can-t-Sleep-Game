@@ -1,6 +1,6 @@
 #include "Map.h"
 
-Map::Map() {
+Map::Map(b2World* world) {
 	for (int i = 0; i < MAP_SIZE; i++) {
 		m_tiles.push_back(GRASS);
 		m_elements.push_back(nullptr);
@@ -8,7 +8,7 @@ Map::Map() {
 	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
 		std::cout << "Problem with tiles loading" << std::endl;
 	}
-	generateRandom();
+	generateRandom(world);
 
 }
 
@@ -46,13 +46,13 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 			sprite.setTextureRect(sf::IntRect(2 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT));
 			break;
 		}
-		sprite.setPosition(TILE_WIDTH * firstValue, 0);
+		sprite.setPosition(TILE_WIDTH * firstValue-1, 0);
 		firstValue++;
 		window.draw(sprite);
 	}
 }
 
-void Map::generateRandom() {
+void Map::generateRandom(b2World* world) {
 	int j = 0;
 	float proba = 0.0f;
 	std::random_device rd;
@@ -90,48 +90,4 @@ void Map::generateRandom() {
 		}
 		j++;
 	}
-}
-
-EnvironmentElement* Map::checkCollisions(Player& player) {
-
-	int bound = BLOC_TO_SHOW / 2;
-	int lowerBound = player.getWorldPosition() - bound + 1;
-	int upperBound = player.getWorldPosition() + bound;
-
-	if (lowerBound < 0) {
-		lowerBound = 0;
-	}
-	if (upperBound > MAP_SIZE) {
-		upperBound = MAP_SIZE;
-	}
-
-	float playerPos = player.getRealPosition();
-	float playerWidth = player.getSize().x;
-	Direction playerDir = player.getCollisionDirection();
-
-	for (int i = lowerBound; i < upperBound; i++) {
-		if (m_elements[i] != nullptr) {
-			float upperBorder = m_elements[i]->getRealPosition() + m_elements[i]->getSize().x * 0.5f;
-			float lowerBorder = m_elements[i]->getRealPosition() - m_elements[i]->getSize().x * 0.5f;
-			if (
-				upperBorder > (playerPos - playerWidth * 0.5f)
-				&& upperBorder < (playerPos + playerWidth * 0.5f)
-				&& playerDir == LEFT) {
-				return m_elements[i];
-			}
-			else if (
-				lowerBorder < (playerPos + playerWidth * 0.5f)
-				&& lowerBorder >(playerPos - playerWidth * 0.5f)
-				&& playerDir == RIGHT) {
-				return m_elements[i];
-			}
-			else if (
-				upperBorder > (playerPos + playerWidth * 0.5f)
-				&& lowerBorder < (playerPos - playerWidth * 0.5f)) {
-				return m_elements[i];
-			}
-		}	 
-	}
-
-	return nullptr;
 }

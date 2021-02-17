@@ -3,7 +3,7 @@
 #include "DefaultAnimableBuilder.h"
 #include "MovingEntity.h"
 
-class EnvironmentElement : /*public Animable, */public Entity {
+class EnvironmentElement : public Entity {
 
 public:
 	EnvironmentElement() = default;
@@ -11,14 +11,12 @@ public:
 	~EnvironmentElement();
 	virtual void draw(sf::RenderWindow& window) const;
 	virtual void animate(float deltaTime);
-	//virtual void reset();
 	virtual void defend(Entity* attacker);
 	void remove();
+	inline int getWidth() const { return m_width; };
 
 protected:
 	int m_width;
-	/*sf::Texture m_texture;
-	sf::Sprite m_currentSprite;*/
 	AnimableEntity* m_animation;
 };
 

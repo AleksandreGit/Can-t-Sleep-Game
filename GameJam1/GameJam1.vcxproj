@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimableEntity.cpp" />
+    <ClCompile Include="CollisionListener.cpp" />
     <ClCompile Include="DefaultAnimableBuilder.cpp" />
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
     <ClCompile Include="EnvironmentElement.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="AnimableBuilder.h" />
     <ClInclude Include="AnimableEntity.h" />
     <ClInclude Include="AnimablePlayer.h" />
+    <ClInclude Include="CollisionListener.h" />
     <ClInclude Include="DefaultAnimableBuilder.h" />
     <ClInclude Include="DefaultEnvironmentElementBuilder.h" />
     <ClInclude Include="Direction.h" />
@@ -183,6 +185,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Interactable.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="MaskEntities.h" />
     <ClInclude Include="Mineral.h" />
     <ClInclude Include="MineralType.h" />
     <ClInclude Include="MovingEntity.h" />

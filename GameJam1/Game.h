@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <box2d/box2d.h>
 #include "AnimableBuilder.h"
 #include "Player.h"
 #include "Map.h"
@@ -24,6 +25,8 @@ private:
 	sf::Clock m_clock;
 	Player m_player;
 	Map m_map;
+	b2World* m_world;
+	sf::Texture BoxTexture;
 
 	const float ratio = 9 / 16;
 	const unsigned int S_SIZE = 200;

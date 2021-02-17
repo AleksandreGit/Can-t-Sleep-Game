@@ -11,7 +11,7 @@ bool RigidElement::checkCollision(Direction dir) const {
 Direction RigidElement::getCollisionDirection() const {
 	return LEFT;
 }
-
+/*
 void RigidElement::drawColliderBox(sf::RenderWindow& window) const {
 	sf::RectangleShape rectangle(m_size);
 	rectangle.setOrigin(m_size.x / 2, m_size.y);
@@ -22,3 +22,4 @@ void RigidElement::drawColliderBox(sf::RenderWindow& window) const {
 	window.draw(rectangle);
 }
 
+*/

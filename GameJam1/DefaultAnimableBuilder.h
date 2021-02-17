@@ -32,11 +32,14 @@ public:
 		Set the number total of frames
 	*/
 	DefaultAnimableBuilder setTotalFrame(int totalFrame);
+	DefaultAnimableBuilder setHeight(int height);
+	DefaultAnimableBuilder setWidth(int width);
 
 protected:
 	sf::Texture texture;
 	float frameRate;
 	int totalFrame;
+	sf::Vector2<int> spriteSize;
 
 };
 

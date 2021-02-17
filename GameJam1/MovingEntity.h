@@ -14,7 +14,7 @@ public:
 
 	inline int getStrength() const { return m_strength; };
 	inline void setSpeed(float speed) { m_speed = speed; };
-	inline void setName(string name) { m_name = name; };
+	inline void setName(std::string name) { m_name = name; };
 	virtual inline void setDirection(Direction dir) { m_dir = dir; };
 	virtual inline void setState(State state) { m_currentState = state; };
 
@@ -22,7 +22,7 @@ protected:
 	int m_strength;
 	Direction m_dir;
 	float m_speed;
-	string m_name;
+	std::string m_name;
 	State m_currentState;
 };
 

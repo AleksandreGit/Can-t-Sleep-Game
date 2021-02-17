@@ -24,12 +24,15 @@ public:
 	VoidAnimableBuilder setFrameRate(float frameRate);
 	VoidAnimableBuilder setFrameRatePerCol(int frameRatePerCol);
 	VoidAnimableBuilder setTotalFrame(int totalFrame);
+	VoidAnimableBuilder setHeight(int height);
+	VoidAnimableBuilder setWidth(int width);
 
 protected:
 	sf::Texture texture;
 	float frameRate;
 	int framePerCol;
 	int totalFrame;
+	sf::Vector2<int> spriteSize;
 
 };
 

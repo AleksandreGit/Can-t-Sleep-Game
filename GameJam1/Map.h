@@ -13,10 +13,10 @@
 
 class Map {
 public:
-	Map();
+	inline Map() = default;
+	Map(b2World* world);
 	void draw(sf::RenderWindow& window, int currentPos) const;
-	EnvironmentElement* checkCollisions(Player& player);
-	void generateRandom();
+	void generateRandom(b2World* world);
 
 private:
 	std::vector<TileType> m_tiles;
