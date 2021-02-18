@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation">
+      <UniqueIdentifier>{8a4f4d28-76b1-410b-919e-9defc119284e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation\Builder">
+      <UniqueIdentifier>{f095038f-c0e0-49ba-a9ee-967ed3b25419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Animation">
+      <UniqueIdentifier>{eca66fe7-ebea-4a82-b57d-2877429e3e91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Animation\Builder">
+      <UniqueIdentifier>{138c8e68-8b24-443f-9331-21d6c7f1927a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Interactions">
+      <UniqueIdentifier>{bf01c276-d7c0-47ab-b3fe-58cd84e641bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Interactions">
+      <UniqueIdentifier>{5eb55bf8-f42a-4209-8bb2-ba660f9ef351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Animation\Player">
+      <UniqueIdentifier>{f9f1601a-182a-44f7-b6ab-7ecdde7b05ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation\Player">
+      <UniqueIdentifier>{109accb5-4303-493e-a313-112987d3a3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map">
+      <UniqueIdentifier>{42e69ab0-940d-43d1-88b0-7b99f87a955f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map">
+      <UniqueIdentifier>{dcba3467-381f-4601-862c-cf851680ff0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entities">
+      <UniqueIdentifier>{90d12e42-1a69-49ae-aff5-e9efe7ba253f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entities">
+      <UniqueIdentifier>{915fe22a-3b5a-47c4-b356-d0130cadaada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map\Builder">
+      <UniqueIdentifier>{1d7591eb-75ac-4a31-9f31-fa0d851c471d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map\Builder">
+      <UniqueIdentifier>{d79db9a0-b526-4925-89e3-84b0eeb9c866}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimableEntity.cpp">
+      <Filter>Fichiers sources\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="VoidAnimableBuilder.cpp">
+      <Filter>Fichiers sources\Animation\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultAnimableBuilder.cpp">
+      <Filter>Fichiers sources\Animation\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerWalk.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerIdle.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInteract.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttack.cpp">
+      <Filter>Fichiers sources\Animation\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp">
+      <Filter>Fichiers sources\Map\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentElement.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Mineral.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Fichiers sources\Interactions</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingEntity.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="HitBox.cpp">
+      <Filter>Fichiers sources\Interactions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimableEntity.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animable.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultAnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="VoidAnimableBuilder.h">
+      <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimablePlayer.h">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWalk.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerIdle.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInteract.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttack.h">
+      <Filter>Fichiers d%27en-tête\Animation\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElementBuilder.h">
+      <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultEnvironmentElementBuilder.h">
+      <Filter>Fichiers d%27en-tête\Map\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElement.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Mineral.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MineralType.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Natural.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TileType.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeType.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingEntity.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskEntities.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+    <ClInclude Include="HitBox.h">
+      <Filter>Fichiers d%27en-tête\Interactions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Can%27tSleep.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

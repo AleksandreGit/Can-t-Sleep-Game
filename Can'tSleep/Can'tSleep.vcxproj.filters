@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HitBox.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimableEntity.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultAnimableBuilder.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttack.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerIdle.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInteract.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerWalk.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="VoidAnimableBuilder.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingEntity.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentElement.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Mineral.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DefaultEnvironmentElementBuilder.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HitBox.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Animable.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimableBuilder.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimableEntity.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimablePlayer.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultAnimableBuilder.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWalk.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInteract.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerIdle.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttack.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="VoidAnimableBuilder.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElement.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentElementBuilder.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskEntities.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Mineral.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MineralType.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingEntity.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Natural.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TileType.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeType.h">
+      <Filter>Header\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{18a2d44c-6533-4784-be17-7b27a8bcbd0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{53fa0c7b-bb6f-4109-89e8-5bd536411ad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Animation">
+      <UniqueIdentifier>{16a5c963-81ac-45fa-81e2-929c1643f1fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Entities">
+      <UniqueIdentifier>{66e1c945-e177-467b-9993-0dc8e06e086e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Animation">
+      <UniqueIdentifier>{fa6ecef0-64d5-4f4f-958d-419ef3ef0cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Entities">
+      <UniqueIdentifier>{fd5b865f-d8a0-4898-ab3b-41c121fb71c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{e7d41c75-61bc-4398-94c2-deb1a54d7a44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Can%27tSleep.rc">
+      <Filter>Other</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
