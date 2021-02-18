@@ -28,7 +28,12 @@ public:
 	virtual  void setRealPosition(float pos);
 
 	inline void setTarget(Entity* target) { m_target = target; };
-	virtual inline void debugCollision(sf::RenderWindow& window) { m_hitBox.setColor(255, 0, 0, 100); m_hitBox.draw(window); };
+	virtual inline void debugCollision(sf::RenderWindow& window) { 
+		m_hitBox.setColor(255, 0, 0, 100); 
+		m_fieldOfAction.setColor(255, 255, 255, 100);
+		m_hitBox.draw(window);
+		m_fieldOfAction.draw(window);
+	};
 
 private:
 	vector<AnimablePlayer*> m_animations;

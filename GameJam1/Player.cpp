@@ -13,7 +13,10 @@ Player::Player() : MovingEntity() {
 		m_animations[i]->moveTo(m_realPosition);
 	}
 	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
-	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -TILE_HEIGHT);
+	m_hitBox.setSize(150, 300);
+	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
+	m_fieldOfAction.setSize(100, 300);
+	m_fieldOfAction.setPosition(m_realPosition+75, -m_fieldOfAction.getHeight());
 }
 
 void Player::move(float deltaTime) {
@@ -49,7 +52,8 @@ void Player::move(float deltaTime) {
 			default:
 				break;
 			}
-			m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -TILE_HEIGHT);
+			m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
+			m_fieldOfAction.setPosition(m_realPosition + 75, -m_fieldOfAction.getHeight());
 			// Update the position of the player in the world according to his sprite position
 			setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 			break;

@@ -23,6 +23,7 @@ public:
 	inline void setSize(float width, float height) { m_box.setSize(sf::Vector2f(width, height)); };
 	inline void setPosition(float x, float y) { m_box.setPosition(x, y); };
 	inline float getWidth() const { return m_box.getSize().x; };
+	inline float getHeight() const { return m_box.getSize().y; };
 
 private:
 	sf::RectangleShape m_box;

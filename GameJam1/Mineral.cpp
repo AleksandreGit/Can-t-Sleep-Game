@@ -15,9 +15,12 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 		.build();
 	m_animation->moveTo(m_realPosition);
 	m_animation->setOffsetY(10);
+	m_hitBox.setSize(230, 210);
+	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
 };
 
 
 void Mineral::draw(sf::RenderWindow& window) {
 	EnvironmentElement::draw(window);
+	debugCollision(window);
 }
