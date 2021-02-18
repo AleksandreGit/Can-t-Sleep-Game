@@ -1,6 +1,6 @@
 #include "Map.h"
 
-Map::Map(b2World* world) {
+Map::Map() {
 	for (int i = 0; i < MAP_SIZE; i++) {
 		m_tiles.push_back(GRASS);
 		m_elements.push_back(nullptr);
@@ -8,7 +8,7 @@ Map::Map(b2World* world) {
 	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
 		std::cout << "Problem with tiles loading" << std::endl;
 	}
-	generateRandom(world);
+	generateRandom();
 
 }
 
@@ -52,7 +52,7 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	}
 }
 
-void Map::generateRandom(b2World* world) {
+void Map::generateRandom() {
 	int j = 0;
 	float proba = 0.0f;
 	std::random_device rd;

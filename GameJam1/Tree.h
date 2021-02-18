@@ -9,7 +9,7 @@ public :
 	Tree() = default;
 	Tree(TreeType treeType, int position);
 
-	virtual void draw(sf::RenderWindow& window) const;
+	virtual void draw(sf::RenderWindow& window);
 private:
 	TreeType m_type;
 };

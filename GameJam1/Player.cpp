@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player(b2World* world) : MovingEntity() {
+Player::Player() : MovingEntity() {
 	m_animations.push_back(new PlayerIdle());
 	m_animations.push_back(new PlayerWalk());
 	m_animations.push_back(new PlayerInteract());
@@ -13,25 +13,7 @@ Player::Player(b2World* world) : MovingEntity() {
 		m_animations[i]->moveTo(m_realPosition);
 	}
 	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
-	sf::FloatRect rectBounds = m_animations[0]->getCurrentSprite().getGlobalBounds();
-
-
-	// CREATING THE BODY
-	b2BodyDef bodyDef;
-	bodyDef.type = b2_dynamicBody; //this will be a dynamic body
-	bodyDef.position.Set(m_realPosition/TILE_WIDTH - TILE_WIDTH/2, TILE_HEIGHT); //set the starting position
-	bodyDef.angle = 0; //set the starting angle
-
-	m_body = world->CreateBody(&bodyDef);
-
-	b2PolygonShape boxShape;
-	boxShape.SetAsBox(1, 2);
-
-	b2FixtureDef boxFixtureDef;
-	boxFixtureDef.shape = &boxShape;
-	boxFixtureDef.density = 1;
-
-	m_body->CreateFixture(&boxFixtureDef);
+	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -TILE_HEIGHT);
 }
 
 void Player::move(float deltaTime) {
@@ -67,7 +49,9 @@ void Player::move(float deltaTime) {
 			default:
 				break;
 			}
-			m_body->SetTransform(b2Vec2(m_realPosition/TILE_WIDTH, 0), m_body->GetAngle());
+			m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -TILE_HEIGHT);
+			// Update the position of the player in the world according to his sprite position
+			setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 			break;
 		case INTERACT:
 			anim = 2;
@@ -81,8 +65,6 @@ void Player::move(float deltaTime) {
 		default:
 			break;
 	}
-	// Update the position of the player in the world according to his sprite position
-	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 	// Animation of the current state
 	m_animations[anim]->animate(deltaTime);
 }
@@ -109,7 +91,7 @@ void Player::setRealPosition(float pos) {
 	m_realPosition = pos;
 }
 
-void Player::draw(sf::RenderWindow& window) const {
+void Player::draw(sf::RenderWindow& window) {
 	int anim = 0;
 	switch (m_currentState) {
 		case IDLE:
@@ -126,8 +108,7 @@ void Player::draw(sf::RenderWindow& window) const {
 			break;
 	}
 	m_animations[anim]->draw(window);
-	sf::FloatRect rectBounds = m_animations[anim]->getCurrentSprite().getGlobalBounds();
-	sf::Vector2f pos(m_body->GetPosition().x*TILE_WIDTH, m_body->GetPosition().y*TILE_WIDTH);
+	this->debugCollision(window);
 }
 
 void Player::attack() {

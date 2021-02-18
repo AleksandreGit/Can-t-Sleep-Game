@@ -19,6 +19,6 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 };
 
 
-void Tree::draw(sf::RenderWindow& window) const {
+void Tree::draw(sf::RenderWindow& window) {
 	EnvironmentElement::draw(window);
 }

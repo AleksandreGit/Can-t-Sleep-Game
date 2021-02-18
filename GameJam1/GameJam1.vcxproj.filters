@@ -69,9 +69,6 @@
     <ClCompile Include="DefaultAnimableBuilder.cpp">
       <Filter>Fichiers sources\Animation\Builder</Filter>
     </ClCompile>
-    <ClCompile Include="RigidElement.cpp">
-      <Filter>Fichiers sources\Interactions</Filter>
-    </ClCompile>
     <ClCompile Include="PlayerWalk.cpp">
       <Filter>Fichiers sources\Animation\Player</Filter>
     </ClCompile>
@@ -114,7 +111,7 @@
     <ClCompile Include="MovingEntity.cpp">
       <Filter>Fichiers sources\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="CollisionListener.cpp">
+    <ClCompile Include="HitBox.cpp">
       <Filter>Fichiers sources\Interactions</Filter>
     </ClCompile>
   </ItemGroup>
@@ -134,14 +131,8 @@
     <ClInclude Include="VoidAnimableBuilder.h">
       <Filter>Fichiers d%27en-tête\Animation\Builder</Filter>
     </ClInclude>
-    <ClInclude Include="RigidBody.h">
-      <Filter>Fichiers d%27en-tête\Interactions</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="RigidElement.h">
-      <Filter>Fichiers d%27en-tête\Interactions</Filter>
     </ClInclude>
     <ClInclude Include="AnimablePlayer.h">
       <Filter>Fichiers d%27en-tête\Animation</Filter>
@@ -215,10 +206,10 @@
     <ClInclude Include="MovingEntity.h">
       <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionListener.h">
+    <ClInclude Include="MaskEntities.h">
       <Filter>Fichiers d%27en-tête\Interactions</Filter>
     </ClInclude>
-    <ClInclude Include="MaskEntities.h">
+    <ClInclude Include="HitBox.h">
       <Filter>Fichiers d%27en-tête\Interactions</Filter>
     </ClInclude>
   </ItemGroup>

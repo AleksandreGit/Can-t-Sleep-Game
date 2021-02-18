@@ -16,11 +16,10 @@ using namespace std;
 class Player : public MovingEntity
 {
 public:
-	inline Player() = default;
-	Player(b2World* world);
+	Player();
 
 	virtual void move(float deltaTime);
-	virtual void draw(sf::RenderWindow& window) const;
+	virtual void draw(sf::RenderWindow& window);
 	virtual void attack();
 
 	//virtual Direction getCollisionDirection() const;
@@ -29,14 +28,11 @@ public:
 	virtual  void setRealPosition(float pos);
 
 	inline void setTarget(Entity* target) { m_target = target; };
+	virtual inline void debugCollision(sf::RenderWindow& window) { m_hitBox.setColor(255, 0, 0, 100); m_hitBox.draw(window); };
 
 private:
 	vector<AnimablePlayer*> m_animations;
 	Entity* m_target;
-
-	// Box2D Collisions body
-	b2Body* m_body;
-
 
 };
 

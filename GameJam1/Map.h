@@ -13,10 +13,9 @@
 
 class Map {
 public:
-	inline Map() = default;
-	Map(b2World* world);
+	Map();
 	void draw(sf::RenderWindow& window, int currentPos) const;
-	void generateRandom(b2World* world);
+	void generateRandom();
 
 private:
 	std::vector<TileType> m_tiles;

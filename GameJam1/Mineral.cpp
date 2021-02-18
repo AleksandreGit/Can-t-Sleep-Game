@@ -18,6 +18,6 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 };
 
 
-void Mineral::draw(sf::RenderWindow& window) const {
+void Mineral::draw(sf::RenderWindow& window) {
 	EnvironmentElement::draw(window);
 }

@@ -9,7 +9,7 @@ public:
 	Mineral() = default;
 	Mineral(MineralType mineralType, int position);
 
-	virtual void draw(sf::RenderWindow& window) const;
+	virtual void draw(sf::RenderWindow& window);
 private:
 	MineralType m_type;
 };

@@ -148,11 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimableEntity.cpp" />
-    <ClCompile Include="CollisionListener.cpp" />
     <ClCompile Include="DefaultAnimableBuilder.cpp" />
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
     <ClCompile Include="EnvironmentElement.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HitBox.cpp" />
     <ClCompile Include="Interactable.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
@@ -166,7 +166,6 @@
     <ClCompile Include="PlayerIdle.cpp" />
     <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
-    <ClCompile Include="RigidElement.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
@@ -175,7 +174,6 @@
     <ClInclude Include="AnimableBuilder.h" />
     <ClInclude Include="AnimableEntity.h" />
     <ClInclude Include="AnimablePlayer.h" />
-    <ClInclude Include="CollisionListener.h" />
     <ClInclude Include="DefaultAnimableBuilder.h" />
     <ClInclude Include="DefaultEnvironmentElementBuilder.h" />
     <ClInclude Include="Direction.h" />
@@ -183,6 +181,7 @@
     <ClInclude Include="EnvironmentElement.h" />
     <ClInclude Include="EnvironmentElementBuilder.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="HitBox.h" />
     <ClInclude Include="Interactable.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MaskEntities.h" />
@@ -197,8 +196,6 @@
     <ClInclude Include="PlayerInteract.h" />
     <ClInclude Include="PlayerWalk.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="RigidBody.h" />
-    <ClInclude Include="RigidElement.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TileType.h" />
     <ClInclude Include="Tree.h" />

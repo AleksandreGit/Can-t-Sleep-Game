@@ -18,7 +18,7 @@ void EnvironmentElement::animate(float deltaTime) {
 	m_animation->animate(deltaTime);
 }
 
-void EnvironmentElement::draw(sf::RenderWindow& window) const {
+void EnvironmentElement::draw(sf::RenderWindow& window) {
 	m_animation->draw(window);
 }
 

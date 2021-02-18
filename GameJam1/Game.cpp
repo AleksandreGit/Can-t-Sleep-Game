@@ -10,11 +10,9 @@ Game::Game() :
     m_playerView.setSize(TILE_WIDTH * 10, TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
 
-    b2Vec2 gravity(0.0f, 0.0f);
-    m_world = new b2World(gravity);
 
-    m_player = Player(m_world);
-    m_map = Map(m_world);
+    m_player = Player();
+    m_map = Map();
     if (!BoxTexture.loadFromFile("./Assets/bush.png")) {
         std::cout << "Pas bien chargé" << std::endl;
     }
@@ -25,26 +23,6 @@ void Game::draw() {
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
-
-
-    for (b2Body* BodyIterator = m_world->GetBodyList(); BodyIterator != 0; BodyIterator = BodyIterator->GetNext())
-    {
-        if (BodyIterator->GetType() == b2_dynamicBody)
-        {
-            sf::RectangleShape rectangle(sf::Vector2f(TILE_WIDTH, 2*TILE_WIDTH));;
-            rectangle.setFillColor(sf::Color(0, 255, 0, 120));
-            std::cout << BodyIterator->GetPosition().y << std::endl;
-            rectangle.setPosition(m_player.getRealPosition(), TILE_WIDTH * BodyIterator->GetPosition().y);
-            m_window.draw(rectangle);
-            /*sf::Sprite sprite;
-           //sprite.setColor(sf::Color::Green);
-            sprite.setTexture(BoxTexture);
-            sprite.setOrigin(0, 0);
-            sprite.setPosition(m_player.getRealPosition(), TILE_WIDTH * BodyIterator->GetPosition().y);
-            //Sprite.setRotation(BodyIterator->GetAngle() * 180 / b2_pi);
-            m_window.draw(sprite);*/
-        }
-    }
     m_window.display();
 
 }
