@@ -6,7 +6,7 @@ class MovingEntity : public Entity
 {
 public:
 	inline MovingEntity() : Entity(), m_strength(10),
-		m_dir(RIGHT), m_speed(200.0f), m_name("Entity"), m_currentState(IDLE), m_fieldOfAction(m_realPosition+50, 0) {};
+		m_dir(RIGHT), m_speed(200.0f), m_name("Entity"), m_currentState(IDLE), m_fieldOfAction(m_realPosition+50, 0), m_target(nullptr) {};
 
 	virtual void move(float deltaTime) = 0;
 	virtual void attack() = 0;
@@ -26,5 +26,6 @@ protected:
 	State m_currentState;
 	// TODO : change side of the field of action depending on direction
 	HitBox m_fieldOfAction;
+	Entity* m_target;
 };
 

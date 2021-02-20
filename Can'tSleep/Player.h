@@ -21,6 +21,7 @@ public:
 	virtual void move(float deltaTime);
 	virtual void draw(sf::RenderWindow& window);
 	virtual void attack();
+	void checkInteraction(Entity& hitBox);
 
 	//virtual Direction getCollisionDirection() const;
 	virtual void setState(State state);
@@ -37,7 +38,6 @@ public:
 
 private:
 	vector<AnimablePlayer*> m_animations;
-	Entity* m_target;
 
 };
 

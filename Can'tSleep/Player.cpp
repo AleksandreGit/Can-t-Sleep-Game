@@ -53,7 +53,7 @@ void Player::move(float deltaTime) {
 				break;
 			}
 			m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
-			m_fieldOfAction.setPosition(m_realPosition + 75, -m_fieldOfAction.getHeight());
+			m_fieldOfAction.setPosition(m_realPosition + (m_dir*m_hitBox.getWidth()  + (m_dir - 1)*m_fieldOfAction.getWidth()) / 2, -m_fieldOfAction.getHeight());
 			// Update the position of the player in the world according to his sprite position
 			setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 			break;
@@ -118,5 +118,11 @@ void Player::draw(sf::RenderWindow& window) {
 void Player::attack() {
 	if (m_target != nullptr) {
 		m_target->defend(this);
+	}
+}
+
+void Player::checkInteraction(Entity& entity) {
+	if (m_fieldOfAction.collide(entity.getHitBox())) {
+		m_target = &entity;
 	}
 }
