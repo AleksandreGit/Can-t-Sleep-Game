@@ -123,6 +123,7 @@ void Player::attack() {
 
 void Player::checkInteraction(Entity& entity) {
 	if (m_fieldOfAction.collide(entity.getHitBox())) {
+		std::cout << "COLLISION !"  << std::endl;
 		m_target = &entity;
 	}
 }

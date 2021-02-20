@@ -78,8 +78,12 @@ void Game::update() {
         m_player.move(dt);
 
         this->handleEvents(dt);
-        // TODO : checker collision et set la target ici ----> m_player.setTarget(this->m_map.checkCollisions(m_player));
         this->handleCamera();
+        std::vector<EnvironmentElement*> elements = m_map.getCurrentElements(m_player.getWorldPosition());
+        // TODO: attention il risque d'y avoir surement un glitch si deux éléments ciblés en même temps !
+        for (int i = 0; i < elements.size(); i++) {
+            m_player.checkInteraction((*elements[i]));
+        }
 
         this->draw();
     }

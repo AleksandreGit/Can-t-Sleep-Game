@@ -16,6 +16,7 @@ public:
 	Map();
 	void draw(sf::RenderWindow& window, int currentPos) const;
 	void generateRandom();
+	std::vector<EnvironmentElement*> getCurrentElements(int currentPos);
 
 private:
 	std::vector<TileType> m_tiles;

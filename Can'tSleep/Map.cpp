@@ -52,6 +52,28 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	}
 }
 
+std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
+	int bound = BLOC_TO_SHOW / 2;
+	int lowerBound = currentPos - bound + 1;
+	int upperBound = currentPos + bound;
+
+	if (lowerBound < 0) {
+		lowerBound = 0;
+	}
+	if (upperBound > MAP_SIZE) {
+		upperBound = MAP_SIZE;
+	}
+
+	int firstValue = lowerBound;
+	std::vector<EnvironmentElement*> result;
+	for (int i = lowerBound; i < upperBound; i++) {
+		if (m_elements[i]) {
+			result.push_back(m_elements[i]);
+		}
+	}
+	return result;
+}
+
 void Map::generateRandom() {
 	int j = 0;
 	float proba = 0.0f;
