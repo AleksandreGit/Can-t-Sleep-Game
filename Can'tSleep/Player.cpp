@@ -69,6 +69,7 @@ void Player::move(float deltaTime) {
 		default:
 			break;
 	}
+	m_attackTimer += deltaTime;
 	// Animation of the current state
 	m_animations[anim]->animate(deltaTime);
 }
@@ -79,6 +80,7 @@ void Player::setState(State state) {
 			m_animations[i]->reset();
 		}
 		m_currentState = state;
+		m_attackTimer = 0.0f;
 	}
 }
 
@@ -117,17 +119,23 @@ void Player::draw(sf::RenderWindow& window) {
 
 void Player::attack() {
 	if (m_target != nullptr) {
-		m_target->defend(this);
+		if (m_attackTimer > m_attackInterval) {
+			m_target->defend(this); 
+			m_attackTimer = 0.0f;
+		}
 	}
 }
 
-void Player::checkInteraction(Entity& entity) {
+bool Player::checkInteraction(Entity& entity) {
 	if (m_target) {
 		if (m_target->getHealth() <= 0) {
 			m_target = nullptr;
+			return false;
 		}
 	}
 	if (m_fieldOfAction.collide(entity.getHitBox())) {
 		m_target = &entity;
+		return true;
 	}
+	return false;
 }

@@ -43,30 +43,24 @@ void Game::handleEvents(float deltaTime) {
             m_window.setView(m_playerView);
         }
 
-        if (event.type == sf::Event::KeyPressed) {
-            if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Q) {
-                m_player.setDirection(LEFT);
-                m_player.setState(WALK);
-            }
-            if (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::D) {
-                m_player.setDirection(RIGHT);
-                m_player.setState(WALK);
-            }
-            if (event.key.code == sf::Keyboard::E) {
-                m_player.setState(INTERACT);
-            }
-            if (event.key.code == sf::Keyboard::A) {
-                m_player.setState(ATTACK);
-                m_player.attack();
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+            m_player.setDirection(LEFT);
+            m_player.setState(WALK);
         }
-        if (event.type == sf::Event::KeyReleased) {
-            if (event.key.code == sf::Keyboard::Right ||
-                event.key.code == sf::Keyboard::Left ||
-                event.key.code == sf::Keyboard::Q ||
-                event.key.code == sf::Keyboard::D) {
-                m_player.setState(IDLE);
-            }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            m_player.setDirection(RIGHT);
+            m_player.setState(WALK);
+
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+            m_player.setState(INTERACT);
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+            m_player.setState(ATTACK);
+            m_player.attack();
+        }
+        else {
+            m_player.setState(IDLE);
         }
     }
 }
@@ -79,10 +73,19 @@ void Game::update() {
 
         this->handleEvents(dt);
         this->handleCamera();
-        std::vector<EnvironmentElement*> elements = m_map.getCurrentElements(m_player.getWorldPosition());
+
+        // TODO: peut être mettre ça dans un update player ??
         // TODO: attention il risque d'y avoir surement un glitch si deux éléments ciblés en même temps !
+        std::vector<EnvironmentElement*> elements = m_map.getCurrentElements(m_player.getWorldPosition());
+        bool hasTarget = false;
         for (int i = 0; i < elements.size(); i++) {
-            m_player.checkInteraction((*elements[i]));
+            hasTarget = m_player.checkInteraction((*elements[i]));
+            if (hasTarget) {
+                break;
+            }
+        }
+        if (!hasTarget) {
+            m_player.setTarget(nullptr);
         }
 
         this->draw();

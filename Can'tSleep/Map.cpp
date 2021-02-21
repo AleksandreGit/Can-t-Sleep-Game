@@ -69,7 +69,6 @@ std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
 	for (int i = lowerBound; i < upperBound; i++) {
 		if (m_elements[i]) {
 			if (m_elements[i]->getHealth() <= 0) {
-				//m_elements.erase(m_elements.begin() + i, m_elements.begin() + i + 1);
 				m_elements[i] = nullptr;
 			}
 			else {

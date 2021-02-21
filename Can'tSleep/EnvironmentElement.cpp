@@ -29,8 +29,9 @@ void EnvironmentElement::remove() {
 void EnvironmentElement::defend(Entity* attacker) {
 	if (dynamic_cast<MovingEntity*>(attacker)) {
 		this->m_health -= dynamic_cast<MovingEntity*>(attacker)->getStrength();
-		std::cout << "Vie restante : " << m_health << std::endl;
+		std::cout << "Defend : " << m_health << std::endl;
 		if (m_health <= 0) {
+			m_health = 0;
 			this->remove();
 		}
 	}

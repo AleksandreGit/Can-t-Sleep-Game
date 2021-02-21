@@ -21,7 +21,7 @@ public:
 	virtual void move(float deltaTime);
 	virtual void draw(sf::RenderWindow& window);
 	virtual void attack();
-	void checkInteraction(Entity& hitBox);
+	bool checkInteraction(Entity& hitBox);
 
 	//virtual Direction getCollisionDirection() const;
 	virtual void setState(State state);
