@@ -114,7 +114,7 @@ void Player::draw(sf::RenderWindow& window) {
 			break;
 	}
 	m_animations[anim]->draw(window);
-	this->debugCollision(window);
+	//this->debugCollision(window);
 }
 
 void Player::attack() {

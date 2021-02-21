@@ -5,6 +5,7 @@
 #include "PerlinNoise.h"
 #include "Tree.h"
 #include "Mineral.h"
+#include "Chest.h"
 #include "TileType.h"
 #include "Player.h"
 #include <iostream>

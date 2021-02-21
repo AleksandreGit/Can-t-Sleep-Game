@@ -23,5 +23,5 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 
 void Tree::draw(sf::RenderWindow& window) {
 	EnvironmentElement::draw(window);
-	debugCollision(window);
+	//debugCollision(window);
 }

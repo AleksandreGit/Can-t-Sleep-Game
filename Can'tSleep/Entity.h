@@ -9,6 +9,7 @@ class Entity : public Interactable
 public:
 	inline Entity() : Interactable(), m_health(100), m_realPosition(0), m_hitBox(m_realPosition, 0) {};
 	
+	// TODO : add a variable that check if we add the debug function
 	virtual void draw(sf::RenderWindow& window) = 0;
 	virtual void debugCollision(sf::RenderWindow& window) = 0;
 

@@ -1,9 +1,59 @@
-﻿  Player.cpp
+﻿  Chest.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  DefaultEnvironmentElementBuilder.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  EnvironmentElement.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Game.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\Game.cpp(22,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Map.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\Map.cpp(49,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Mineral.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  MovingEntity.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Player.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Tree.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,96): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,93): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,90): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+  Génération de code en cours...
   main.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\AnimableEntity.h(26,125): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\HitBox.h(22,99): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données

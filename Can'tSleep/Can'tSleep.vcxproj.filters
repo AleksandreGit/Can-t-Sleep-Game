@@ -58,6 +58,9 @@
     <ClCompile Include="Mineral.cpp">
       <Filter>Source\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="Chest.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultEnvironmentElementBuilder.h">
@@ -111,50 +114,56 @@
     <ClInclude Include="VoidAnimableBuilder.h">
       <Filter>Header\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="Direction.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
     <ClInclude Include="EnvironmentElement.h">
       <Filter>Header\Entities</Filter>
     </ClInclude>
     <ClInclude Include="EnvironmentElementBuilder.h">
       <Filter>Header\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="MaskEntities.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Mineral.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="MineralType.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="MovingEntity.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Natural.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
     <ClInclude Include="TileType.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="Tree.h">
-      <Filter>Header\Entities</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeType.h">
       <Filter>Header\Entities</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Constructible.h">
+      <Filter>Header\Entities\Constructible</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskEntities.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingEntity.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="Mineral.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="MineralType.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="Natural.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeType.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="Chest.h">
+      <Filter>Header\Entities\Constructible</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +187,15 @@
     </Filter>
     <Filter Include="Other">
       <UniqueIdentifier>{e7d41c75-61bc-4398-94c2-deb1a54d7a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Entities\Natural">
+      <UniqueIdentifier>{f111e95c-2ff4-469a-bac9-5088d06f1b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Entities\Living">
+      <UniqueIdentifier>{b64542ae-2edc-4de3-9a3f-832e900a84ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Entities\Constructible">
+      <UniqueIdentifier>{40a71e5e-a34a-408c-bb72-80a37930df7e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
