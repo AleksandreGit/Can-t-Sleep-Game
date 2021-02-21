@@ -122,8 +122,12 @@ void Player::attack() {
 }
 
 void Player::checkInteraction(Entity& entity) {
+	if (m_target) {
+		if (m_target->getHealth() <= 0) {
+			m_target = nullptr;
+		}
+	}
 	if (m_fieldOfAction.collide(entity.getHitBox())) {
-		std::cout << "COLLISION !"  << std::endl;
 		m_target = &entity;
 	}
 }

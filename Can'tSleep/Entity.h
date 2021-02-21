@@ -13,6 +13,7 @@ public:
 	virtual void debugCollision(sf::RenderWindow& window) = 0;
 
 	inline void setHealth(float health) { m_health = health; };
+	inline float getHealth() const { return m_health; };
 
 	virtual void defend(Entity* attacker) = 0;
 

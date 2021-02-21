@@ -11,7 +11,7 @@ EnvironmentElement::EnvironmentElement(sf::Texture& texture, int width, int posi
 }
 
 EnvironmentElement::~EnvironmentElement() {
-	
+	delete m_animation;
 }
 
 void EnvironmentElement::animate(float deltaTime) {
@@ -29,8 +29,8 @@ void EnvironmentElement::remove() {
 void EnvironmentElement::defend(Entity* attacker) {
 	if (dynamic_cast<MovingEntity*>(attacker)) {
 		this->m_health -= dynamic_cast<MovingEntity*>(attacker)->getStrength();
-		std::cout << "Vie restante : " << std::endl;
-		if (m_health < 0) {
+		std::cout << "Vie restante : " << m_health << std::endl;
+		if (m_health <= 0) {
 			this->remove();
 		}
 	}
