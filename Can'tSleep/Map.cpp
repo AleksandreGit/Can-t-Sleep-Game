@@ -5,9 +5,7 @@ Map::Map() {
 		m_tiles.push_back(GRASS);
 		m_elements.push_back(nullptr);
 	}
-	if (!m_tilesTexture.loadFromFile("./Assets/tiles2.png")) {
-		std::cout << "Problem with tiles loading" << std::endl;
-	}
+	m_tilesTexture = TextureLoader::GetInstance()->getTexture("Floor");
 	generateRandom();
 
 }

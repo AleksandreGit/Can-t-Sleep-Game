@@ -4,13 +4,13 @@
 Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementBuilder()
 	.setPosition(position)
 	.setWidth(1)
-	.setTexture("./Assets/tree.png")
+	.setTexture("Tree")
 	.build()), m_type(treeType)
 {
 	m_animation = &DefaultAnimableBuilder()
 		.setFrameRate(1.0f)
 		.setTotalFrame(1)
-		.setTexture("./Assets/tree.png")
+		.setTexture("Tree")
 		.setHeight(1677)
 		.setWidth(817)
 		.build();

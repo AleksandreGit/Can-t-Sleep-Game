@@ -1,5 +1,6 @@
 #pragma once
 #include "AnimableEntity.h"
+#include "TextureLoader.h"
 
 /**
 	Interface that defines a builder to create an AnimableEntity

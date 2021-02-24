@@ -61,6 +61,9 @@
     <ClCompile Include="Chest.cpp">
       <Filter>Source\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultEnvironmentElementBuilder.h">
@@ -164,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="Chest.h">
       <Filter>Header\Entities\Constructible</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

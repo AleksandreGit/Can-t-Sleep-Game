@@ -7,10 +7,8 @@ AnimableEntity& DefaultAnimableBuilder::build() {
 	return *(new AnimableEntity(texture, frameRate, nbCol, totalFrame, spriteSize.x, spriteSize.y));
 }
 
-DefaultAnimableBuilder DefaultAnimableBuilder::setTexture(string path) {
-	if (!texture.loadFromFile(path)) {
-		cout << "Erreur de chargement de la texture !" << endl;
-	}
+DefaultAnimableBuilder DefaultAnimableBuilder::setTexture(std::string id) {
+	this->texture = TextureLoader::GetInstance()->getTexture(id);
 	return (*this);
 
 }

@@ -3,13 +3,13 @@
 Chest::Chest(int position) : Constructible(DefaultEnvironmentElementBuilder()
 	.setPosition(position)
 	.setWidth(1)
-	.setTexture("./Assets/chest.png")
+	.setTexture("Chest")
 	.build())
 {
 	m_animation = &DefaultAnimableBuilder()
 		.setFrameRate(1.0f)
 		.setTotalFrame(1)
-		.setTexture("./Assets/chest.png")
+		.setTexture("Chest")
 		.setHeight(235)
 		.setWidth(270)
 		.build();

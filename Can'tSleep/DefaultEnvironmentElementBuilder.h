@@ -11,7 +11,7 @@ public:
 
 	DefaultEnvironmentElementBuilder setWidth(int width);
 	DefaultEnvironmentElementBuilder setPosition(int position);
-	DefaultEnvironmentElementBuilder setTexture(std::string path);
+	DefaultEnvironmentElementBuilder setTexture(std::string id);
 
 private:
 	int width;
