@@ -6,6 +6,7 @@
 #include "PlayerWalk.h"
 #include "PlayerInteract.h"
 #include "PlayerAttack.h"
+#include "Inventory.h"
 #include "Utils.h"
 #include <vector>
 #include <iostream>

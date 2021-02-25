@@ -64,6 +64,9 @@
     <ClCompile Include="TextureLoader.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultEnvironmentElementBuilder.h">
@@ -171,6 +174,9 @@
     <ClInclude Include="TextureLoader.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -202,6 +208,12 @@
     </Filter>
     <Filter Include="Header\Entities\Constructible">
       <UniqueIdentifier>{40a71e5e-a34a-408c-bb72-80a37930df7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Inventory">
+      <UniqueIdentifier>{6ba2acc5-af95-4d80-9479-72ee4433f4c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Inventory">
+      <UniqueIdentifier>{5ce80435-3a72-4b16-9e4d-f199eff5c4f8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

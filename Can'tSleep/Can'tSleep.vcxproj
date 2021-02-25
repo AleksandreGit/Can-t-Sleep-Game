@@ -156,6 +156,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HitBox.cpp" />
     <ClCompile Include="Interactable.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
@@ -188,6 +189,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="HitBox.h" />
     <ClInclude Include="Interactable.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MaskEntities.h" />
     <ClInclude Include="Mineral.h" />
