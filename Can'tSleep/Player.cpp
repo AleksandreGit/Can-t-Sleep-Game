@@ -6,6 +6,7 @@ Player::Player() : MovingEntity() {
 	m_animations.push_back(new PlayerWalk());
 	m_animations.push_back(new PlayerInteract());
 	m_animations.push_back(new PlayerAttack());
+	m_animations.push_back(new PlayerWoodAxe());
 
 	// We place the player at the center of the map
 	m_realPosition = TILE_WIDTH * MAP_SIZE / 2;
@@ -64,7 +65,7 @@ void Player::move(float deltaTime) {
 			}
 			break;
 		case ATTACK:
-			anim = 3;
+			anim = 4;
 			break;
 		default:
 			break;
@@ -110,7 +111,7 @@ void Player::draw(sf::RenderWindow& window) {
 			anim = 2;
 			break;
 		case ATTACK:
-			anim = 3;
+			anim = 4;
 			break;
 	}
 	m_animations[anim]->draw(window);

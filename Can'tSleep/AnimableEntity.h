@@ -23,7 +23,7 @@ public:
 	inline void setFramePerCol(int framePerCol) { m_framePerCol = framePerCol; };
 	inline void setTotalFrame(int totalFrame) { m_totalFrame = totalFrame; };
 	inline void setTextureHeight(int height) { sf::IntRect rect = m_currentSprite.getTextureRect(); m_currentSprite.setTextureRect(sf::IntRect(0, 0, rect.width, height));};
-	inline void setOffsetY(int offsetY) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(pos.x, offsetY); }
+	inline void setOffsetY(float offsetY) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(pos.x, offsetY); }
 	inline void moveTo(float movementValue) { sf::Vector2f pos = m_currentSprite.getPosition(); m_currentSprite.setPosition(movementValue, pos.y);}
 
 	// GETTERS

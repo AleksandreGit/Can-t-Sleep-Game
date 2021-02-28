@@ -149,7 +149,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimableEntity.cpp" />
+    <ClCompile Include="Axe.cpp" />
     <ClCompile Include="Chest.cpp" />
+    <ClCompile Include="ConstructionItem.cpp" />
+    <ClCompile Include="Craftable.cpp" />
     <ClCompile Include="DefaultAnimableBuilder.cpp" />
     <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
     <ClCompile Include="EnvironmentElement.cpp" />
@@ -157,6 +160,7 @@
     <ClCompile Include="HitBox.cpp" />
     <ClCompile Include="Interactable.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
@@ -169,7 +173,10 @@
     <ClCompile Include="PlayerIdle.cpp" />
     <ClCompile Include="PlayerInteract.cpp" />
     <ClCompile Include="PlayerWalk.cpp" />
+    <ClCompile Include="PlayerWoodAxe.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
+    <ClCompile Include="Tool.cpp" />
+    <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />
   </ItemGroup>
@@ -178,8 +185,11 @@
     <ClInclude Include="AnimableBuilder.h" />
     <ClInclude Include="AnimableEntity.h" />
     <ClInclude Include="AnimablePlayer.h" />
+    <ClInclude Include="Axe.h" />
     <ClInclude Include="Chest.h" />
     <ClInclude Include="Constructible.h" />
+    <ClInclude Include="ConstructionItem.h" />
+    <ClInclude Include="Craftable.h" />
     <ClInclude Include="DefaultAnimableBuilder.h" />
     <ClInclude Include="DefaultEnvironmentElementBuilder.h" />
     <ClInclude Include="Direction.h" />
@@ -190,6 +200,7 @@
     <ClInclude Include="HitBox.h" />
     <ClInclude Include="Interactable.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MaskEntities.h" />
     <ClInclude Include="Mineral.h" />
@@ -202,10 +213,13 @@
     <ClInclude Include="PlayerIdle.h" />
     <ClInclude Include="PlayerInteract.h" />
     <ClInclude Include="PlayerWalk.h" />
+    <ClInclude Include="PlayerWoodAxe.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="TileType.h" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="Trap.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="TreeType.h" />
     <ClInclude Include="Utils.h" />

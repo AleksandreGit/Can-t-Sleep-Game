@@ -14,7 +14,7 @@ class DefaultAnimableBuilder : public AnimableBuilder
 {
 
 public:
-	DefaultAnimableBuilder();
+	DefaultAnimableBuilder(int sizeX=298, int sizeY=421);
 	virtual AnimableEntity& build();
 
 	/**

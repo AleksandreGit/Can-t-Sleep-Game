@@ -67,6 +67,27 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Axe.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructionItem.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Craftable.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Tool.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Trap.cpp">
+      <Filter>Source\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerWoodAxe.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultEnvironmentElementBuilder.h">
@@ -176,6 +197,27 @@
     </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Axe.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstructionItem.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Craftable.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Tool.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWoodAxe.h">
+      <Filter>Header\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 #include "DefaultAnimableBuilder.h"
 
-DefaultAnimableBuilder::DefaultAnimableBuilder() : frameRate(1.0f), totalFrame(0), spriteSize(298, 421) {}
+DefaultAnimableBuilder::DefaultAnimableBuilder(int sizeX, int sizeY) : frameRate(1.0f), totalFrame(0), spriteSize(sizeX, sizeY) {}
 
 AnimableEntity& DefaultAnimableBuilder::build() {
 	const int nbCol = texture.getSize().x / DEFAULT_WIDTH;
