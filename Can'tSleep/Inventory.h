@@ -6,7 +6,8 @@
 class Inventory
 {
 public:
-	Inventory() = default;
+	Inventory();
+	void drawToolBar(sf::RenderWindow& window);
 	void draw(sf::RenderWindow& window);
 	bool addItem(Item& item);
 	bool canAddItem();
@@ -16,5 +17,7 @@ public:
 
 private:
 	std::vector<Item*> m_items;
+	sf::Texture m_toolBarTexture;
+	sf::Texture m_inventoryTexture;
 };
 

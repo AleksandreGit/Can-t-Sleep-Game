@@ -1,15 +1,25 @@
 #include "Inventory.h"
 
+Inventory::Inventory() {
+	m_toolBarTexture = TextureLoader::GetInstance()->getTexture("ToolBar");
+	m_inventoryTexture = TextureLoader::GetInstance()->getTexture("Inventory");
+}
+
+void Inventory::drawToolBar(sf::RenderWindow& window){
+	sf::Sprite toolBar;
+	float offsetY = 40.0f;
+	toolBar.setTexture(m_toolBarTexture);
+	toolBar.setPosition(window.getView().getCenter().x - m_toolBarTexture.getSize().x / 2, offsetY);
+	window.draw(toolBar);
+}
+
 void Inventory::draw(sf::RenderWindow& window) {
-	sf::RectangleShape background;
-	float offsetX = 300.0f;
-	float offsetY = 100.0f;
-	sf::Vector2f bgSize = window.getView().getSize() - sf::Vector2f(2 * offsetX, 2 * offsetY);
-	sf::Vector2f bgPos = window.getView().getCenter() - bgSize / 2.0f;
-	background.setSize(bgSize);
-	background.setPosition(bgPos);
-	background.setFillColor(sf::Color(100, 100, 100, 150));
-	window.draw(background);
+	sf::Sprite inventory;
+	float offsetY = 40.0f;
+	inventory.setTexture(m_inventoryTexture);
+	sf::Vector2f offset(m_inventoryTexture.getSize().x / 2.0f, m_inventoryTexture.getSize().y / 2.0f);
+	inventory.setPosition(window.getView().getCenter() - offset);
+	window.draw(inventory);
 
 	/*sf::Vector2f pos(0.0f, 0.0f);
 	//TODO change pos with the different items

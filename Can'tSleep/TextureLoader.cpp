@@ -37,6 +37,14 @@ TextureLoader::TextureLoader() {
 		std::cout << "Can't load player walk texture" << std::endl;
 	}
 
+	// INVENTORY
+	if (!m_textures["ToolBar"].loadFromFile("./Assets/toolBar.png")) {
+		std::cout << "Can't load toolbar texture" << std::endl;
+	}
+	if (!m_textures["Inventory"].loadFromFile("./Assets/inventory.png")) {
+		std::cout << "Can't load inventory texture" << std::endl;
+	}
+
 	// ITEMS
 	if (!m_textures["WoodAxe"].loadFromFile("./Assets/Wood_axe.png")) {
 		std::cout << "Can't load axe texture" << std::endl;

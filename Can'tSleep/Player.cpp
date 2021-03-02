@@ -116,6 +116,7 @@ void Player::draw(sf::RenderWindow& window) {
 			break;
 	}
 	m_animations[anim]->draw(window);
+	this->m_inventory.drawToolBar(window);
 	//this->debugCollision(window);
 }
 
