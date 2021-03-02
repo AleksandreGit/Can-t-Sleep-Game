@@ -67,9 +67,6 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source\Inventory</Filter>
-    </ClCompile>
     <ClCompile Include="Axe.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
@@ -79,14 +76,14 @@
     <ClCompile Include="Craftable.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="Tool.cpp">
-      <Filter>Source\Inventory</Filter>
-    </ClCompile>
     <ClCompile Include="Trap.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
     <ClCompile Include="PlayerWoodAxe.cpp">
       <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

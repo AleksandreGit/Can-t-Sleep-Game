@@ -175,7 +175,6 @@
     <ClCompile Include="PlayerWalk.cpp" />
     <ClCompile Include="PlayerWoodAxe.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
-    <ClCompile Include="Tool.cpp" />
     <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="VoidAnimableBuilder.cpp" />

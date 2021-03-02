@@ -23,7 +23,10 @@ public:
 	virtual void move(float deltaTime);
 	virtual void draw(sf::RenderWindow& window);
 	virtual void attack();
+	void drawInventory(sf::RenderWindow& window);
 	bool checkInteraction(Entity& hitBox);
+	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
+	inline bool isInventoryOpen() { return m_isInventoryOpen; };
 
 	//virtual Direction getCollisionDirection() const;
 	virtual void setState(State state);
@@ -40,6 +43,8 @@ public:
 
 private:
 	vector<AnimablePlayer*> m_animations;
+	Inventory m_inventory;
+	bool m_isInventoryOpen;
 
 };
 

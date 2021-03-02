@@ -4,7 +4,7 @@
 class Craftable : public Item
 {
 public:
-	Craftable();
+	Craftable() = default;
 	bool checkItems(std::vector<std::string> itemNames);
 
 protected:

@@ -5,8 +5,8 @@
 class Tool : public Craftable
 {
 public:
-	Tool();
-	void use(EnvironmentElement* target);
+	Tool() = default;
+	virtual void use(EnvironmentElement* target) = 0;
 
 protected:
 	int m_efficacity;

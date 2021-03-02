@@ -1,11 +1,21 @@
 #include "Inventory.h"
 
 void Inventory::draw(sf::RenderWindow& window) {
-	sf::Vector2f pos(0.0f, 0.0f);
+	sf::RectangleShape background;
+	float offsetX = 300.0f;
+	float offsetY = 100.0f;
+	sf::Vector2f bgSize = window.getView().getSize() - sf::Vector2f(2 * offsetX, 2 * offsetY);
+	sf::Vector2f bgPos = window.getView().getCenter() - bgSize / 2.0f;
+	background.setSize(bgSize);
+	background.setPosition(bgPos);
+	background.setFillColor(sf::Color(100, 100, 100, 150));
+	window.draw(background);
+
+	/*sf::Vector2f pos(0.0f, 0.0f);
 	//TODO change pos with the different items
 	for (int i = 0; i < m_items.size(); i++) {
 		m_items[i]->drawIcon(window, pos);
-	}
+	}*/
 }
 
 bool Inventory::addItem(Item& item) {

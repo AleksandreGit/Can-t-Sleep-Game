@@ -18,6 +18,7 @@ Player::Player() : MovingEntity() {
 	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
 	m_fieldOfAction.setSize(100, 300);
 	m_fieldOfAction.setPosition(m_realPosition+75, -m_fieldOfAction.getHeight());
+	m_isInventoryOpen = false;
 }
 
 void Player::move(float deltaTime) {
@@ -116,6 +117,10 @@ void Player::draw(sf::RenderWindow& window) {
 	}
 	m_animations[anim]->draw(window);
 	//this->debugCollision(window);
+}
+
+void Player::drawInventory(sf::RenderWindow& window) {
+	m_inventory.draw(window);
 }
 
 void Player::attack() {

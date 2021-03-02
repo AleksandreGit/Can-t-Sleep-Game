@@ -36,6 +36,11 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["PlayWoodAxe"].loadFromFile("./Assets/AxeAttack.png")) {
 		std::cout << "Can't load player walk texture" << std::endl;
 	}
+
+	// ITEMS
+	if (!m_textures["WoodAxe"].loadFromFile("./Assets/Wood_axe.png")) {
+		std::cout << "Can't load axe texture" << std::endl;
+	}
 }
 
 TextureLoader* TextureLoader::GetInstance()

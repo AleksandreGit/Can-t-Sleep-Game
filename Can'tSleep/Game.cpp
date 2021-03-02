@@ -3,7 +3,7 @@
 const float Game::WORLD_UNIT = AnimableBuilder::DEFAULT_WIDTH;
 
 Game::Game() : 
-    m_window(sf::VideoMode(W_WIDTH, W_HEIGHT), "GameJam #1"), 
+    m_window(sf::VideoMode(W_WIDTH, W_HEIGHT), "Can't Sleep"), 
     m_clock() 
 {
     m_window.setFramerateLimit(60);
@@ -23,6 +23,10 @@ void Game::draw() {
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
+
+    if (m_player.isInventoryOpen()) {
+        m_player.drawInventory(m_window);
+    }
     m_window.display();
 
 }
@@ -34,6 +38,10 @@ void Game::handleEvents(float deltaTime) {
         if (event.type == sf::Event::Closed) {
             m_window.close();
         }
+        else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::I) {
+            m_player.toggleInventory();
+            m_player.setState(IDLE);
+        }
         else if (event.type == sf::Event::Resized) {
             // resize my view
             m_playerView.setSize({
@@ -43,24 +51,26 @@ void Game::handleEvents(float deltaTime) {
             m_window.setView(m_playerView);
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-            m_player.setDirection(LEFT);
-            m_player.setState(WALK);
-        }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-            m_player.setDirection(RIGHT);
-            m_player.setState(WALK);
+        if (!m_player.isInventoryOpen()) {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+                m_player.setDirection(LEFT);
+                m_player.setState(WALK);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+                m_player.setDirection(RIGHT);
+                m_player.setState(WALK);
 
-        }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
-            m_player.setState(INTERACT);
-        }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-            m_player.setState(ATTACK);
-            m_player.attack();
-        }
-        else {
-            m_player.setState(IDLE);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+                m_player.setState(INTERACT);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+                m_player.setState(ATTACK);
+                m_player.attack();
+            }
+            else {
+                m_player.setState(IDLE);
+            }
         }
     }
 }

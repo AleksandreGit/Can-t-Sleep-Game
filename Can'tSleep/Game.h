@@ -15,8 +15,8 @@ public:
 	void update();
 
 	const static float WORLD_UNIT;
-	const static unsigned int W_WIDTH = 1920;
-	const static unsigned int W_HEIGHT = 1080;
+	const static int W_WIDTH = 1920;
+	const static int W_HEIGHT = 1080;
 
 private:
 	sf::RenderWindow m_window;
