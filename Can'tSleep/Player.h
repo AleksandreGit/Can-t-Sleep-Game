@@ -8,6 +8,7 @@
 #include "PlayerAttack.h"
 #include "PlayerWoodAxe.h"
 #include "Inventory.h"
+#include "Axe.h"
 #include "Utils.h"
 #include <vector>
 #include <iostream>
@@ -43,6 +44,7 @@ public:
 
 private:
 	vector<AnimablePlayer*> m_animations;
+
 	Inventory m_inventory;
 	bool m_isInventoryOpen;
 

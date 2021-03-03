@@ -18,7 +18,11 @@ Player::Player() : MovingEntity() {
 	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
 	m_fieldOfAction.setSize(100, 300);
 	m_fieldOfAction.setPosition(m_realPosition+75, -m_fieldOfAction.getHeight());
+
+	// INVENTORY
 	m_isInventoryOpen = false;
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
 }
 
 void Player::move(float deltaTime) {

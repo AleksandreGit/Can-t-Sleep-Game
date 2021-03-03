@@ -44,6 +44,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["Inventory"].loadFromFile("./Assets/inventory.png")) {
 		std::cout << "Can't load inventory texture" << std::endl;
 	}
+	if (!m_textures["SelectedItem"].loadFromFile("./Assets/SelectItem.png")) {
+		std::cout << "Can't load selected item texture" << std::endl;
+	}
 
 	// ITEMS
 	if (!m_textures["WoodAxe"].loadFromFile("./Assets/Wood_axe.png")) {
