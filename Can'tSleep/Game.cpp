@@ -71,6 +71,28 @@ void Game::handleEvents(float deltaTime) {
             else {
                 m_player.setState(IDLE);
             }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+                m_player.changeFocusTool(0);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
+                m_player.changeFocusTool(1);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
+                m_player.changeFocusTool(2);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)) {
+                m_player.changeFocusTool(3);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5)) {
+                m_player.changeFocusTool(4);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num6)) {
+                m_player.changeFocusTool(5);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7)) {
+                m_player.changeFocusTool(6);
+            }
         }
     }
 }

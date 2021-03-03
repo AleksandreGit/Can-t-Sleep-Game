@@ -1,5 +1,4 @@
 #include "Inventory.h"
-
 Inventory::Inventory() {
 	m_toolBarTexture = TextureLoader::GetInstance()->getTexture("ToolBar");
 	m_inventoryTexture = TextureLoader::GetInstance()->getTexture("Inventory");

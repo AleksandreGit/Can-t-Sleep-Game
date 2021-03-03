@@ -26,6 +26,7 @@ public:
 	virtual void attack();
 	void drawInventory(sf::RenderWindow& window);
 	bool checkInteraction(Entity& hitBox);
+	inline void changeFocusTool(int value) { m_inventory.changeSelectedItem(value); };
 	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
 	inline bool isInventoryOpen() { return m_isInventoryOpen; };
 
