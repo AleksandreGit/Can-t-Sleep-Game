@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Item.h"
 #include "Utils.h"
+#include "Axe.h"
 
 class Inventory
 {

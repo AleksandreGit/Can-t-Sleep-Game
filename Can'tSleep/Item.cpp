@@ -8,5 +8,8 @@ Item::Item(std::string name, std::string textureName, std::string iconTextureNam
 }
 
 void Item::drawIcon(sf::RenderWindow& window, sf::Vector2f pos) {
-	// TODO: draw the icon
+	sf::Sprite iconSprite;
+	iconSprite.setTexture(m_textureIcon);
+	iconSprite.setPosition(pos);
+	window.draw(iconSprite);
 }

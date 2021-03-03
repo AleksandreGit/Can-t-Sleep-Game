@@ -3,6 +3,12 @@
 Inventory::Inventory() {
 	m_toolBarTexture = TextureLoader::GetInstance()->getTexture("ToolBar");
 	m_inventoryTexture = TextureLoader::GetInstance()->getTexture("Inventory");
+
+	for (int i = 0; i < INVENTORY_SIZE; i++) {
+		m_items.push_back(nullptr);
+	}
+	m_items[0] = new Axe();
+	//m_items[5] = new Axe();
 }
 
 void Inventory::drawToolBar(sf::RenderWindow& window){
@@ -11,6 +17,15 @@ void Inventory::drawToolBar(sf::RenderWindow& window){
 	toolBar.setTexture(m_toolBarTexture);
 	toolBar.setPosition(window.getView().getCenter().x - m_toolBarTexture.getSize().x / 2, offsetY);
 	window.draw(toolBar);
+
+	sf::Vector2f pos(window.getView().getCenter().x - m_toolBarTexture.getSize().x / 2 + 40, offsetY+40);
+	//TODO change pos with the different items
+	for (int i = 0; i < TOOLBAR_SIZE; i++) {
+		sf::Vector2f current(pos.x + i * 190, pos.y);
+		if (m_items[i]) {
+			m_items[i]->drawIcon(window, current);
+		}
+	}
 }
 
 void Inventory::draw(sf::RenderWindow& window) {
@@ -21,7 +36,8 @@ void Inventory::draw(sf::RenderWindow& window) {
 	inventory.setPosition(window.getView().getCenter() - offset);
 	window.draw(inventory);
 
-	/*sf::Vector2f pos(0.0f, 0.0f);
+	/*
+	sf::Vector2f pos(0.0f, 0.0f);
 	//TODO change pos with the different items
 	for (int i = 0; i < m_items.size(); i++) {
 		m_items[i]->drawIcon(window, pos);

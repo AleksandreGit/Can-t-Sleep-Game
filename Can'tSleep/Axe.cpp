@@ -13,7 +13,3 @@ Axe::Axe() {
 void Axe::use(EnvironmentElement* target) {
 
 }
-
-void Axe::drawIcon(sf::RenderWindow& window, sf::Vector2f pos) {
-
-}
