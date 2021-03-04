@@ -74,15 +74,23 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -148,81 +156,79 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AnimableEntity.cpp" />
-    <ClCompile Include="Axe.cpp" />
-    <ClCompile Include="Chest.cpp" />
-    <ClCompile Include="ConstructionItem.cpp" />
-    <ClCompile Include="Craftable.cpp" />
-    <ClCompile Include="DefaultAnimableBuilder.cpp" />
-    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp" />
-    <ClCompile Include="EnvironmentElement.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="HitBox.cpp" />
-    <ClCompile Include="Interactable.cpp" />
-    <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\Animation\AnimableEntity.cpp" />
+    <ClCompile Include="src\Inventory\Axe.cpp" />
+    <ClCompile Include="src\Entities\Chest.cpp" />
+    <ClCompile Include="src\Inventory\ConstructionItem.cpp" />
+    <ClCompile Include="src\Inventory\Craftable.cpp" />
+    <ClCompile Include="src\Animation\DefaultAnimableBuilder.cpp" />
+    <ClCompile Include="src\Entities\DefaultEnvironmentElementBuilder.cpp" />
+    <ClCompile Include="src\Entities\EnvironmentElement.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Interaction\HitBox.cpp" />
+    <ClCompile Include="src\Inventory\Inventory.cpp" />
+    <ClCompile Include="src\Inventory\Item.cpp" />
+    <ClCompile Include="src\main.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="Mineral.cpp" />
-    <ClCompile Include="MovingEntity.cpp" />
-    <ClCompile Include="PerlinNoise.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerAttack.cpp" />
-    <ClCompile Include="PlayerIdle.cpp" />
-    <ClCompile Include="PlayerInteract.cpp" />
-    <ClCompile Include="PlayerWalk.cpp" />
-    <ClCompile Include="PlayerWoodAxe.cpp" />
-    <ClCompile Include="TextureLoader.cpp" />
-    <ClCompile Include="Trap.cpp" />
-    <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="VoidAnimableBuilder.cpp" />
+    <ClCompile Include="src\Map.cpp" />
+    <ClCompile Include="src\Entities\Mineral.cpp" />
+    <ClCompile Include="src\Entities\MovingEntity.cpp" />
+    <ClCompile Include="src\PerlinNoise.cpp" />
+    <ClCompile Include="src\Entities\Player.cpp" />
+    <ClCompile Include="src\Animation\PlayerAttack.cpp" />
+    <ClCompile Include="src\Animation\PlayerIdle.cpp" />
+    <ClCompile Include="src\Animation\PlayerInteract.cpp" />
+    <ClCompile Include="src\Animation\PlayerWalk.cpp" />
+    <ClCompile Include="src\Animation\PlayerWoodAxe.cpp" />
+    <ClCompile Include="src\TextureLoader.cpp" />
+    <ClCompile Include="src\Inventory\Trap.cpp" />
+    <ClCompile Include="src\Entities\Tree.cpp" />
+    <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animable.h" />
-    <ClInclude Include="AnimableBuilder.h" />
-    <ClInclude Include="AnimableEntity.h" />
-    <ClInclude Include="AnimablePlayer.h" />
-    <ClInclude Include="Axe.h" />
-    <ClInclude Include="Chest.h" />
-    <ClInclude Include="Constructible.h" />
-    <ClInclude Include="ConstructionItem.h" />
-    <ClInclude Include="Craftable.h" />
-    <ClInclude Include="DefaultAnimableBuilder.h" />
-    <ClInclude Include="DefaultEnvironmentElementBuilder.h" />
-    <ClInclude Include="Direction.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EnvironmentElement.h" />
-    <ClInclude Include="EnvironmentElementBuilder.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="HitBox.h" />
-    <ClInclude Include="Interactable.h" />
-    <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MaskEntities.h" />
-    <ClInclude Include="Mineral.h" />
-    <ClInclude Include="MineralType.h" />
-    <ClInclude Include="MovingEntity.h" />
-    <ClInclude Include="Natural.h" />
-    <ClInclude Include="PerlinNoise.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerAttack.h" />
-    <ClInclude Include="PlayerIdle.h" />
-    <ClInclude Include="PlayerInteract.h" />
-    <ClInclude Include="PlayerWalk.h" />
-    <ClInclude Include="PlayerWoodAxe.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="TextureLoader.h" />
-    <ClInclude Include="TileType.h" />
-    <ClInclude Include="Tool.h" />
-    <ClInclude Include="Trap.h" />
-    <ClInclude Include="Tree.h" />
-    <ClInclude Include="TreeType.h" />
-    <ClInclude Include="Utils.h" />
-    <ClInclude Include="VoidAnimableBuilder.h" />
+    <ClInclude Include="header\Animation\Animable.h" />
+    <ClInclude Include="header\Animation\AnimableBuilder.h" />
+    <ClInclude Include="header\Animation\AnimableEntity.h" />
+    <ClInclude Include="header\Animation\AnimablePlayer.h" />
+    <ClInclude Include="header\Inventory\Axe.h" />
+    <ClInclude Include="header\Entities\Chest.h" />
+    <ClInclude Include="header\Entities\Constructible.h" />
+    <ClInclude Include="header\Inventory\ConstructionItem.h" />
+    <ClInclude Include="header\Inventory\Craftable.h" />
+    <ClInclude Include="header\Animation\DefaultAnimableBuilder.h" />
+    <ClInclude Include="header\Entities\DefaultEnvironmentElementBuilder.h" />
+    <ClInclude Include="header\Entities\Direction.h" />
+    <ClInclude Include="header\Entities\Entity.h" />
+    <ClInclude Include="header\Entities\EnvironmentElement.h" />
+    <ClInclude Include="header\Entities\EnvironmentElementBuilder.h" />
+    <ClInclude Include="header\Game.h" />
+    <ClInclude Include="header\Interaction\HitBox.h" />
+    <ClInclude Include="header\Interaction\Interactable.h" />
+    <ClInclude Include="header\Inventory\Inventory.h" />
+    <ClInclude Include="header\Inventory\Item.h" />
+    <ClInclude Include="header\Map.h" />
+    <ClInclude Include="header\Interaction\MaskEntities.h" />
+    <ClInclude Include="header\Entities\Mineral.h" />
+    <ClInclude Include="header\Entities\MineralType.h" />
+    <ClInclude Include="header\Entities\MovingEntity.h" />
+    <ClInclude Include="header\Entities\Natural.h" />
+    <ClInclude Include="header\PerlinNoise.h" />
+    <ClInclude Include="header\Entities\Player.h" />
+    <ClInclude Include="header\Animation\PlayerAttack.h" />
+    <ClInclude Include="header\Animation\PlayerIdle.h" />
+    <ClInclude Include="header\Animation\PlayerInteract.h" />
+    <ClInclude Include="header\Animation\PlayerWalk.h" />
+    <ClInclude Include="header\Animation\PlayerWoodAxe.h" />
+    <ClInclude Include="header\Entities\State.h" />
+    <ClInclude Include="header\TextureLoader.h" />
+    <ClInclude Include="header\TileType.h" />
+    <ClInclude Include="header\Inventory\Tool.h" />
+    <ClInclude Include="header\Inventory\Trap.h" />
+    <ClInclude Include="header\Entities\Tree.h" />
+    <ClInclude Include="header\Entities\TreeType.h" />
+    <ClInclude Include="header\Utils.h" />
+    <ClInclude Include="header\Animation\VoidAnimableBuilder.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

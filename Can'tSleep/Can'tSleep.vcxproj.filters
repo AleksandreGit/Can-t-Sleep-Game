@@ -1,220 +1,214 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="src\Game.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="HitBox.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Interactable.cpp">
+    <ClCompile Include="src\Map.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\PerlinNoise.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="src\TextureLoader.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="PerlinNoise.cpp">
+    <ClCompile Include="src\Animation\AnimableEntity.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\Chest.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\DefaultEnvironmentElementBuilder.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\EnvironmentElement.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\Mineral.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\MovingEntity.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entities\Tree.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Interaction\HitBox.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="AnimableEntity.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="DefaultAnimableBuilder.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerAttack.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerIdle.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerInteract.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerWalk.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="VoidAnimableBuilder.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="Tree.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="MovingEntity.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="EnvironmentElement.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="DefaultEnvironmentElementBuilder.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="Mineral.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="Chest.cpp">
-      <Filter>Source\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureLoader.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
+    <ClCompile Include="src\Inventory\Inventory.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="Axe.cpp">
+    <ClCompile Include="src\Inventory\Item.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="ConstructionItem.cpp">
+    <ClCompile Include="src\Inventory\Axe.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="Craftable.cpp">
+    <ClCompile Include="src\Inventory\Craftable.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="Trap.cpp">
+    <ClCompile Include="src\Inventory\ConstructionItem.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerWoodAxe.cpp">
+    <ClCompile Include="src\Animation\DefaultAnimableBuilder.cpp">
       <Filter>Source\Animation</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
+    <ClCompile Include="src\Entities\Player.cpp">
+      <Filter>Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerAttack.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerIdle.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerInteract.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerWalk.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerWoodAxe.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inventory\Trap.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DefaultEnvironmentElementBuilder.h">
+    <ClInclude Include="header\TextureLoader.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="HitBox.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Interactable.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="PerlinNoise.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Animable.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimableBuilder.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimableEntity.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimablePlayer.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="DefaultAnimableBuilder.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerWalk.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerInteract.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerIdle.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerAttack.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="VoidAnimableBuilder.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="EnvironmentElement.h">
+    <ClInclude Include="header\TileType.h">
       <Filter>Header\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="EnvironmentElementBuilder.h">
-      <Filter>Header\Entities</Filter>
+    <ClInclude Include="header\Utils.h">
+      <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="TileType.h">
-      <Filter>Header\Entities</Filter>
+    <ClInclude Include="header\Game.h">
+      <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Other</Filter>
+    <ClInclude Include="header\Map.h">
+      <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Constructible.h">
+    <ClInclude Include="header\PerlinNoise.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\Animable.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\AnimableBuilder.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\AnimableEntity.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\AnimablePlayer.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Inventory\Axe.h">
+      <Filter>Header\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Entities\Chest.h">
       <Filter>Header\Entities\Constructible</Filter>
     </ClInclude>
-    <ClInclude Include="Direction.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\ConstructionItem.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\Craftable.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="MaskEntities.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\Inventory.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\Item.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\Tool.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="MovingEntity.h">
-      <Filter>Header\Entities\Living</Filter>
+    <ClInclude Include="header\Inventory\Trap.h">
+      <Filter>Header\Inventory</Filter>
     </ClInclude>
-    <ClInclude Include="Mineral.h">
-      <Filter>Header\Entities\Natural</Filter>
-    </ClInclude>
-    <ClInclude Include="MineralType.h">
-      <Filter>Header\Entities\Natural</Filter>
-    </ClInclude>
-    <ClInclude Include="Natural.h">
-      <Filter>Header\Entities\Natural</Filter>
-    </ClInclude>
-    <ClInclude Include="Tree.h">
-      <Filter>Header\Entities\Natural</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeType.h">
-      <Filter>Header\Entities\Natural</Filter>
-    </ClInclude>
-    <ClInclude Include="Chest.h">
+    <ClInclude Include="header\Entities\Constructible.h">
       <Filter>Header\Entities\Constructible</Filter>
     </ClInclude>
-    <ClInclude Include="TextureLoader.h">
+    <ClInclude Include="header\Entities\DefaultEnvironmentElementBuilder.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\Direction.h">
+      <Filter>Header\Entities\Living</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\Entity.h">
+      <Filter>Header\Entities\Living</Filter>
     </ClInclude>
-    <ClInclude Include="Axe.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\EnvironmentElement.h">
+      <Filter>Header\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="ConstructionItem.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\EnvironmentElementBuilder.h">
+      <Filter>Header\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="Craftable.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\Mineral.h">
+      <Filter>Header\Entities\Natural</Filter>
     </ClInclude>
-    <ClInclude Include="Tool.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\MineralType.h">
+      <Filter>Header\Entities\Natural</Filter>
     </ClInclude>
-    <ClInclude Include="Trap.h">
-      <Filter>Header\Inventory</Filter>
+    <ClInclude Include="header\Entities\MovingEntity.h">
+      <Filter>Header\Entities\Living</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerWoodAxe.h">
+    <ClInclude Include="header\Entities\Natural.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Entities\Player.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Entities\Tree.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Entities\TreeType.h">
+      <Filter>Header\Entities\Natural</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\DefaultAnimableBuilder.h">
       <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerAttack.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerIdle.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerInteract.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerWalk.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerWoodAxe.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\VoidAnimableBuilder.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Interaction\HitBox.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Interaction\Interactable.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Interaction\MaskEntities.h">
+      <Filter>Header\Entities\Living</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Entities\State.h">
+      <Filter>Header\Entities\Living</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
