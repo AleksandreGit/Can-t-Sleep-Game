@@ -4,9 +4,11 @@
 Player::Player() : MovingEntity() {
 	m_animations.push_back(new PlayerIdle());
 	m_animations.push_back(new PlayerWalk());
-	m_animations.push_back(new PlayerInteract());
 	m_animations.push_back(new PlayerAttack());
-	m_animations.push_back(new PlayerWoodAxe());
+	m_animations.push_back(new PlayerInteract());
+	m_animations.push_back(new PlayerWoodAxeIdle());
+	m_animations.push_back(new PlayerWoodAxeWalk());
+	m_animations.push_back(new PlayerWoodAxeAttack());
 
 	// We place the player at the center of the map
 	m_realPosition = TILE_WIDTH * MAP_SIZE / 2;
@@ -23,6 +25,7 @@ Player::Player() : MovingEntity() {
 	m_isInventoryOpen = false;
 	m_inventory.addItem(new Axe());
 	m_inventory.addItem(new Axe());
+	m_inventory.deleteItem(0);
 }
 
 void Player::move(float deltaTime) {
@@ -63,17 +66,20 @@ void Player::move(float deltaTime) {
 			// Update the position of the player in the world according to his sprite position
 			setWorldPosition((int)(m_realPosition / TILE_WIDTH));
 			break;
-		case INTERACT:
+		case ATTACK:
 			anim = 2;
+			break;
+		case INTERACT:
+			anim = 3;
 			if (m_animations[anim]->isAnimationFinished()) {
 				this->setState(IDLE);
 			}
 			break;
-		case ATTACK:
-			anim = 4;
-			break;
 		default:
 			break;
+	}
+	if (dynamic_cast<Axe*>(m_inventory.getSelectedItem()) && m_currentState != INTERACT) {
+		anim += 4;
 	}
 	m_attackTimer += deltaTime;
 	// Animation of the current state
@@ -112,12 +118,15 @@ void Player::draw(sf::RenderWindow& window) {
 		case WALK:
 			anim = 1;
 			break;
-		case INTERACT:
+		case ATTACK:
 			anim = 2;
 			break;
-		case ATTACK:
-			anim = 4;
+		case INTERACT:
+			anim = 3;
 			break;
+	}
+	if (dynamic_cast<Axe*>(m_inventory.getSelectedItem()) && m_currentState != INTERACT) {
+		anim += 4;
 	}
 	m_animations[anim]->draw(window);
 	this->m_inventory.drawToolBar(window);
@@ -134,6 +143,16 @@ void Player::attack() {
 			m_target->defend(this); 
 			m_attackTimer = 0.0f;
 		}
+	}
+}
+
+void Player::useObject() {
+	if (dynamic_cast<Axe*>(m_inventory.getSelectedItem())) {
+		this->setState(ATTACK);
+		this->attack();
+	}
+	else if (!m_inventory.getSelectedItem()) {
+		std::cout << "Coup de poings wolla" << std::endl;
 	}
 }
 

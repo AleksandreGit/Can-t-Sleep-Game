@@ -1,1 +1,11 @@
-﻿  Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe
+﻿  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(18,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  Inventory.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(18,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(53,62): warning C4244: 'argument' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+  Génération de code en cours...
+  Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe

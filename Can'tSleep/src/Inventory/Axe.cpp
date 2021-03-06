@@ -4,6 +4,7 @@ Axe::Axe() {
 	m_name = "Wood Axe";
 	m_texture = TextureLoader::GetInstance()->getTexture("PlayerWoodAxe");
 	m_textureIcon = TextureLoader::GetInstance()->getTexture("WoodAxe");
+	m_efficacity = 10;
 	// TODO: add items to construct it, not yet implemented, need craft components
 	//m_craftList.push_back();
 

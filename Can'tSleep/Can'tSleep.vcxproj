@@ -156,6 +156,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
+    <ClCompile Include="src\Animation\PlayerWoodAxeIdle.cpp" />
     <ClCompile Include="src\Animation\AnimableEntity.cpp" />
     <ClCompile Include="src\Inventory\Axe.cpp" />
     <ClCompile Include="src\Entities\Chest.cpp" />
@@ -180,7 +182,7 @@
     <ClCompile Include="src\Animation\PlayerIdle.cpp" />
     <ClCompile Include="src\Animation\PlayerInteract.cpp" />
     <ClCompile Include="src\Animation\PlayerWalk.cpp" />
-    <ClCompile Include="src\Animation\PlayerWoodAxe.cpp" />
+    <ClCompile Include="src\Animation\PlayerWoodAxeAttack.cpp" />
     <ClCompile Include="src\TextureLoader.cpp" />
     <ClCompile Include="src\Inventory\Trap.cpp" />
     <ClCompile Include="src\Entities\Tree.cpp" />
@@ -219,7 +221,7 @@
     <ClInclude Include="header\Animation\PlayerIdle.h" />
     <ClInclude Include="header\Animation\PlayerInteract.h" />
     <ClInclude Include="header\Animation\PlayerWalk.h" />
-    <ClInclude Include="header\Animation\PlayerWoodAxe.h" />
+    <ClInclude Include="header\Animation\PlayerWoodAxeAttack.h" />
     <ClInclude Include="header\Entities\State.h" />
     <ClInclude Include="header\TextureLoader.h" />
     <ClInclude Include="header\TileType.h" />
@@ -229,6 +231,8 @@
     <ClInclude Include="header\Entities\TreeType.h" />
     <ClInclude Include="header\Utils.h" />
     <ClInclude Include="header\Animation\VoidAnimableBuilder.h" />
+    <ClInclude Include="header\Animation\PlayerWoodAxeIdle.h" />
+    <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

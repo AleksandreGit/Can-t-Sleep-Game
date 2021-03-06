@@ -73,15 +73,17 @@
     <ClCompile Include="src\Animation\PlayerWalk.cpp">
       <Filter>Source\Animation</Filter>
     </ClCompile>
-    <ClCompile Include="src\Animation\PlayerWoodAxe.cpp">
-      <Filter>Source\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp">
       <Filter>Source\Animation</Filter>
     </ClCompile>
     <ClCompile Include="src\Inventory\Trap.cpp">
       <Filter>Source\Inventory</Filter>
     </ClCompile>
+    <ClCompile Include="src\Animation\PlayerWoodAxeAttack.cpp">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\PlayerWoodAxeIdle.cpp" />
+    <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\TextureLoader.h">
@@ -192,9 +194,6 @@
     <ClInclude Include="header\Animation\PlayerWalk.h">
       <Filter>Header\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="header\Animation\PlayerWoodAxe.h">
-      <Filter>Header\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="header\Animation\VoidAnimableBuilder.h">
       <Filter>Header\Animation</Filter>
     </ClInclude>
@@ -210,6 +209,11 @@
     <ClInclude Include="header\Entities\State.h">
       <Filter>Header\Entities\Living</Filter>
     </ClInclude>
+    <ClInclude Include="header\Animation\PlayerWoodAxeAttack.h">
+      <Filter>Header\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Animation\PlayerWoodAxeIdle.h" />
+    <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

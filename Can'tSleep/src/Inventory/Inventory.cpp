@@ -78,14 +78,14 @@ void Inventory::dropItem(int id) {
 	if (m_items[id]) {
 		Item* item = m_items[id];
 		//TODO: make this items drop to the floor
-		m_items.erase(m_items.begin() + id);
+		m_items[id] = nullptr;
 		m_nbItem--;
 	}
 }
 
 void Inventory::deleteItem(int id) {
 	if (m_items[id]) {
-		m_items.erase(m_items.begin() + id);
+		m_items[id] = nullptr;
 		m_nbItem--;
 	}
 }

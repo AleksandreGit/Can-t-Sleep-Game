@@ -13,9 +13,6 @@ Game::Game() :
 
     m_player = Player();
     m_map = Map();
-    if (!BoxTexture.loadFromFile("./Assets/bush.png")) {
-        std::cout << "Pas bien chargé" << std::endl;
-    }
 }
 
 void Game::draw() {
@@ -65,8 +62,7 @@ void Game::handleEvents(float deltaTime) {
                 m_player.setState(INTERACT);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-                m_player.setState(ATTACK);
-                m_player.attack();
+                m_player.useObject();
             }
             else {
                 m_player.setState(IDLE);
