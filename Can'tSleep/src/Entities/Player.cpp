@@ -152,7 +152,8 @@ void Player::useObject() {
 		this->attack();
 	}
 	else if (!m_inventory.getSelectedItem()) {
-		std::cout << "Coup de poings wolla" << std::endl;
+		this->setState(ATTACK);
+		this->attack();
 	}
 }
 
