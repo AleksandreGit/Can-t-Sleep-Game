@@ -1,5 +1,7 @@
 # Can't Sleep - The Game
 
+Voir ma chaîne Youtube pour suivre l'évolution du projet: https://www.youtube.com/channel/UCv9v0MaEkK0Lq-3QQ-zr8mA
+
 ## 1) Introduction:
 
   L'origine de ce projet date du *20 Décembre 2020*, date à laquelle nous avons décidé avec plusieurs amis de nous lancer dans un projet de GameJam. Le sujet conservé était ***"Créatures de la nuit"*** et nous avions les vacances de Noël pour travailler sur le projet.
