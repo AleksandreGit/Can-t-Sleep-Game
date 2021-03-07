@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Inventory\DropedItem.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeIdle.cpp" />
     <ClCompile Include="src\Animation\AnimableEntity.cpp" />
@@ -189,6 +190,7 @@
     <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header\Inventory\DropedItem.h" />
     <ClInclude Include="header\Animation\Animable.h" />
     <ClInclude Include="header\Animation\AnimableBuilder.h" />
     <ClInclude Include="header\Animation\AnimableEntity.h" />

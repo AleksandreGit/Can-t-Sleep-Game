@@ -25,7 +25,12 @@ Player::Player() : MovingEntity() {
 	m_isInventoryOpen = false;
 	m_inventory.addItem(new Axe());
 	m_inventory.addItem(new Axe());
-	m_inventory.deleteItem(0);
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new Axe());
 }
 
 void Player::move(float deltaTime) {
@@ -169,4 +174,33 @@ bool Player::checkInteraction(Entity& entity) {
 		return true;
 	}
 	return false;
+}
+
+void Player::changeFocusTool(int value) {
+	Item* lastItem = m_inventory.getSelectedItem();
+	m_inventory.changeSelectedItem(value);
+
+	// If the selected item is a tool
+	if (dynamic_cast<Tool*>(m_inventory.getSelectedItem())) {
+		// If the last item was a tool we update the strength of the player
+		if (lastItem && dynamic_cast<Tool*>(lastItem)) {
+			m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
+			m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
+		}
+		else {
+			m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
+		}
+	}
+	// If the selected item isn't a tool
+	else {
+		if (lastItem && dynamic_cast<Tool*>(lastItem)) {
+			m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
+		}
+	}
+};
+
+Item* Player::dropCurrentItem(){
+	Item* dropedItem = m_inventory.getSelectedItem();
+	m_inventory.dropCurrentItem();
+	return dropedItem;
 }

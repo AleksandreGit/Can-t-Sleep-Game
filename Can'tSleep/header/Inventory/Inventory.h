@@ -12,6 +12,7 @@ public:
 	bool addItem(Item* item);
 	bool canAddItem();
 	void dropItem(int id);
+	void dropCurrentItem();
 	void deleteItem(int id);
 	void craftItem(std::string name);
 	inline bool changeSelectedItem(int index) { 

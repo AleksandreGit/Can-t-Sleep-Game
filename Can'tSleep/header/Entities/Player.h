@@ -29,31 +29,10 @@ public:
 	virtual void attack();
 	void drawInventory(sf::RenderWindow& window);
 	bool checkInteraction(Entity& hitBox);
-	inline void changeFocusTool(int value) { 
-		Item* lastItem = m_inventory.getSelectedItem();
-		m_inventory.changeSelectedItem(value); 
-
-		// If the selected item is a tool
-		if (dynamic_cast<Tool*>(m_inventory.getSelectedItem())) {
-			// If the last item was a tool we update the strength of the player
-			if (lastItem && dynamic_cast<Tool*>(lastItem)) {
-				m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
-				m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
-			}
-			else {
-				m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
-			}
-		}
-		// If the selected item isn't a tool
-		else {
-			if (lastItem && dynamic_cast<Tool*>(lastItem)) {
-				m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
-			}
-		}
-		std::cout << "New strength = " << m_strength << std::endl;
-	};
+	void changeFocusTool(int value);
 	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
 	inline bool isInventoryOpen() { return m_isInventoryOpen; };
+	Item* dropCurrentItem();
 
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);

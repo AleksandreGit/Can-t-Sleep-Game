@@ -15,6 +15,8 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	int bound = BLOC_TO_SHOW / 2;
 	int lowerBound = currentPos - bound + 1;
 	int upperBound = currentPos + bound;
+	float lowerF = lowerBound * TILE_WIDTH;
+	float upperF = upperBound * TILE_WIDTH;
 
 	if (lowerBound < 0) {
 		lowerBound = 0;
@@ -47,6 +49,12 @@ void Map::draw(sf::RenderWindow& window, int currentPos) const {
 		sprite.setPosition(TILE_WIDTH * firstValue-1, 0);
 		firstValue++;
 		window.draw(sprite);
+	}
+
+	for (DropedItem item : m_dropedItems) {
+		if (lowerF < item.getCurrentPosition() < upperF) {
+			item.draw(window);
+		}
 	}
 }
 
@@ -117,4 +125,16 @@ void Map::generateRandom() {
 	}
 	int pos = MAP_SIZE / 2;
 	m_elements[pos] = new Chest(pos);
+}
+
+
+void Map::dropItem(Item* item, int position) {
+	std::random_device rd;
+	std::default_random_engine generator(rd());
+	std::uniform_real_distribution<float> distribution((position - 0.5f) * TILE_WIDTH, (position + 0.5f) * TILE_WIDTH);
+	std::uniform_real_distribution<float> seed(-10000.0f, 10000.0f);
+
+	float itemPos = distribution(generator);
+	m_dropedItems.push_back(DropedItem(item, itemPos));
+
 }

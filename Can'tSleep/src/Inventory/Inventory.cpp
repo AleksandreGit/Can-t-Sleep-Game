@@ -83,6 +83,15 @@ void Inventory::dropItem(int id) {
 	}
 }
 
+void Inventory::dropCurrentItem() {
+	if (m_items[m_currentItemIndex]) {
+		Item* item = m_items[m_currentItemIndex];
+		//TODO: make this items drop to the floor
+		m_items[m_currentItemIndex] = nullptr;
+		m_nbItem--;
+	}
+}
+
 void Inventory::deleteItem(int id) {
 	if (m_items[id]) {
 		m_items[id] = nullptr;

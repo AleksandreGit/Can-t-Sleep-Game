@@ -89,6 +89,13 @@ void Game::handleEvents(float deltaTime) {
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7)) {
                 m_player.changeFocusTool(6);
             }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::T)) {
+                Item* dropedItem = m_player.dropCurrentItem();
+                if (dropedItem){
+                    m_map.dropItem(dropedItem, m_player.getWorldPosition());
+                }
+            }
         }
     }
 }
