@@ -60,6 +60,7 @@ void Game::handleEvents(float deltaTime) {
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
                 m_player.setState(INTERACT);
+                // TODO: make the check interaction after a little load time
                 m_map.checkInteraction(m_player);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {

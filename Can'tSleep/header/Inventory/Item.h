@@ -12,5 +12,6 @@ protected:
 	std::string m_name;
 	sf::Texture m_texture;
 	sf::Texture m_textureIcon;
+	int m_sizeOfStack;
 };
 

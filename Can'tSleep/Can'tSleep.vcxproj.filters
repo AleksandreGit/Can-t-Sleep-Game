@@ -85,6 +85,7 @@
     <ClCompile Include="src\Animation\PlayerWoodAxeIdle.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
     <ClCompile Include="src\Inventory\DropedItem.cpp" />
+    <ClCompile Include="src\Inventory\WoodLog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\TextureLoader.h">
@@ -216,6 +217,7 @@
     <ClInclude Include="header\Animation\PlayerWoodAxeIdle.h" />
     <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
     <ClInclude Include="header\Inventory\DropedItem.h" />
+    <ClInclude Include="header\Inventory\WoodLog.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

@@ -58,6 +58,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["WoodAxe"].loadFromFile("./Assets/Tools/axeWood.png")) {
 		std::cout << "Can't load axe texture" << std::endl;
 	}
+	if (!m_textures["WoodLog"].loadFromFile("./Assets/Items/log.png")) {
+		std::cout << "Can't load log texture" << std::endl;
+	}
 }
 
 TextureLoader* TextureLoader::GetInstance()

@@ -1,8 +1,7 @@
 #pragma once
 #include "./../Interaction/Interactable.h"
 #include "./../Interaction/HitBox.h"
-
-using namespace std;
+#include "./../Inventory/DropedItem.h"
 
 class Entity : public Interactable
 {
@@ -26,12 +25,15 @@ public:
 	inline HitBox getHitBox() const { return m_hitBox; };
 
 	inline bool collide(const Entity& entity) { return m_hitBox.collide(entity.getHitBox()); };
+	inline std::vector<DropedItem* > getDropedItems() { return m_dropedItem; };
 
 protected:
 	float m_health;
 	float m_realPosition;
 	int m_worldPosition;
 	HitBox m_hitBox;
+	// Item droped when death or destroyed
+	std::vector<DropedItem*> m_dropedItem;
 
 };
 

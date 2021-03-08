@@ -18,6 +18,9 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	m_animation->setOffsetY(10);
 	m_hitBox.setSize(150, TILE_HEIGHT / 1.5f);
 	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
+	m_dropedItem.push_back(new DropedItem(new WoodLog(), m_realPosition - m_hitBox.getWidth() / 2));
+	m_dropedItem.push_back(new DropedItem(new WoodLog(), m_realPosition - m_hitBox.getWidth() / 2));
+	m_dropedItem.push_back(new DropedItem(new WoodLog(), m_realPosition - m_hitBox.getWidth() / 2));
 };
 
 

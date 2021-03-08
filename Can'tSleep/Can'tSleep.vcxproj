@@ -188,6 +188,7 @@
     <ClCompile Include="src\Inventory\Trap.cpp" />
     <ClCompile Include="src\Entities\Tree.cpp" />
     <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp" />
+    <ClCompile Include="src\Inventory\WoodLog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Inventory\DropedItem.h" />
@@ -235,6 +236,7 @@
     <ClInclude Include="header\Animation\VoidAnimableBuilder.h" />
     <ClInclude Include="header\Animation\PlayerWoodAxeIdle.h" />
     <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
+    <ClInclude Include="header\Inventory\WoodLog.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

@@ -75,6 +75,11 @@ std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
 	for (int i = lowerBound; i < upperBound; i++) {
 		if (m_elements[i]) {
 			if (m_elements[i]->getHealth() <= 0) {
+				std::vector<DropedItem*> items = m_elements[i]->getDropedItems();
+				for (DropedItem* item : items) {
+					m_dropedItems.push_back(*item);
+				}
+				m_elements[i]->remove();
 				m_elements[i] = nullptr;
 			}
 			else {
@@ -136,14 +141,12 @@ void Map::dropItem(Item* item, int position) {
 
 	float itemPos = distribution(generator);
 	m_dropedItems.push_back(DropedItem(item, itemPos));
-
 }
 
 void Map::checkInteraction(Player& player) {
 	int i = 0;
 	for (DropedItem item : m_dropedItems) {
 		if (player.canPickUpItem(&item)) {
-			std::cout << "PICK UP" << std::endl;
 			player.pickUpItem(&item);
 			m_dropedItems.erase(m_dropedItems.begin() + i);
 			break;

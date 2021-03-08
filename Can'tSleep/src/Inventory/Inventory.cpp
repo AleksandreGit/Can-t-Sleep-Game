@@ -19,7 +19,7 @@ void Inventory::drawToolBar(sf::RenderWindow& window){
 	toolBar.setPosition(window.getView().getCenter().x - m_toolBarTexture.getSize().x / 2, offsetY);
 	window.draw(toolBar);
 
-	sf::Vector2f posIcon(toolBar.getPosition().x + 40.0f, toolBar.getPosition().y + 40.0f);
+	sf::Vector2f posIcon(toolBar.getPosition().x + 30.0f, toolBar.getPosition().y + 40.0f);
 	sf::Vector2f posItem(toolBar.getPosition().x + 10.0f, toolBar.getPosition().y + 10.0f);
 	for (int i = 0; i < TOOLBAR_SIZE; i++) {
 		if (i == m_currentItemIndex) {
@@ -42,7 +42,7 @@ void Inventory::draw(sf::RenderWindow& window) {
 	inventory.setPosition(window.getView().getCenter() - offset);
 	window.draw(inventory);
 
-	sf::Vector2f pos(inventory.getPosition().x + 40.0f, inventory.getPosition().y + 40.0f);
+	sf::Vector2f pos(inventory.getPosition().x + 30.0f, inventory.getPosition().y + 40.0f);
 	//TODO change pos with the different items
 	int total = INVENTORY_SIZE - TOOLBAR_SIZE;
 	int colNumber = total / 4;
