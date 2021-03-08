@@ -22,6 +22,7 @@ public:
 	void generateRandom();
 	std::vector<EnvironmentElement*> getCurrentElements(int currentPos);
 	void dropItem(Item* item, int position);
+	void checkInteraction(Player& player);
 
 private:
 	std::vector<TileType> m_tiles;

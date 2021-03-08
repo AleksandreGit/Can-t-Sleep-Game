@@ -31,6 +31,7 @@ Player::Player() : MovingEntity() {
 	m_inventory.addItem(new Axe());
 	m_inventory.addItem(new Axe());
 	m_inventory.addItem(new Axe());
+	m_inventory.deleteItem(0);
 }
 
 void Player::move(float deltaTime) {
@@ -201,6 +202,19 @@ void Player::changeFocusTool(int value) {
 
 Item* Player::dropCurrentItem(){
 	Item* dropedItem = m_inventory.getSelectedItem();
+	if (dynamic_cast<Tool*>(dropedItem)) {
+		m_strength -= dynamic_cast<Tool*>(dropedItem)->getEfficacity();
+	}
 	m_inventory.dropCurrentItem();
 	return dropedItem;
+}
+
+
+bool Player::canPickUpItem(DropedItem* dropedItem) {
+	std::cout << dropedItem->collide(m_fieldOfAction) << std::endl;
+	return dropedItem->collide(m_fieldOfAction) && m_inventory.canAddItem();
+}
+
+void Player::pickUpItem(DropedItem* dropedItem) {
+	m_inventory.addItem(dropedItem->getItem());
 }

@@ -9,6 +9,7 @@
 #include "./../Animation/PlayerWoodAxeAttack.h"
 #include "./../Animation/PlayerWoodAxeIdle.h"
 #include "./../Animation/PlayerWoodAxeWalk.h"
+#include "./../Inventory/DropedItem.h"
 #include "./../Inventory/Inventory.h"
 #include "./../Inventory/Axe.h"
 #include "./../Utils.h"
@@ -33,6 +34,8 @@ public:
 	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
 	inline bool isInventoryOpen() { return m_isInventoryOpen; };
 	Item* dropCurrentItem();
+	bool canPickUpItem(DropedItem* dropedItem);
+	void pickUpItem(DropedItem* dropedItem);
 
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);
@@ -48,7 +51,6 @@ public:
 
 private:
 	vector<AnimablePlayer*> m_animations;
-
 	Inventory m_inventory;
 	bool m_isInventoryOpen;
 

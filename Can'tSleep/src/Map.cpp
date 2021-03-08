@@ -138,3 +138,16 @@ void Map::dropItem(Item* item, int position) {
 	m_dropedItems.push_back(DropedItem(item, itemPos));
 
 }
+
+void Map::checkInteraction(Player& player) {
+	int i = 0;
+	for (DropedItem item : m_dropedItems) {
+		if (player.canPickUpItem(&item)) {
+			std::cout << "PICK UP" << std::endl;
+			player.pickUpItem(&item);
+			m_dropedItems.erase(m_dropedItems.begin() + i);
+			break;
+		}
+		i++;
+	}
+}
