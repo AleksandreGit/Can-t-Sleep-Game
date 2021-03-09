@@ -19,7 +19,7 @@ Voir ma chaîne Youtube pour suivre l'évolution du projet: https://www.youtube.
 ## 3) Etat actuel du jeu:
 
 Version actuelle du jeu: Dev. 0.1
-(Mis à jour 5 Mars 2021)
+(Mis à jour 9 Mars 2021)
 Actuellement les fonctionnalités suivantes ont étés mises en place:
 
 - Animations basique de personnage
@@ -27,14 +27,21 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 - Génération de carte procédurale classique
 - Interaction basique avec environnement (destruction d'arbres, rochers, ...)
 - Mise en place de l'UI de l'inventaire
-
-## 4) Prochains ajouts
-- Mettre en place les effets d'items
-- Créer de nouveaux items (animations, intégration, ...)
 - Possibilité de changer d'item
 - Mise en place du drop d'objets
 - Mise en place du ramassage des objets
 - Possibilité de détruire des arbres/récolter des ressources
+
+## 4) Bugs détectées actuels 
+
+- Problème mémoire lorsque drop du dernier objet
+- Stack dépasse la taille max indiquée
+- Problème affichage à l'intérieur inventaire
+- Problème effet objet lorsque drop et récupération ensuite
+
+## 5) Prochains ajouts
+- Mettre en place les effets d'items
+- Créer de nouveaux items (animations, intégration, ...)
 - Prémices de la construction
 - ....
 (Autres idées à venir)

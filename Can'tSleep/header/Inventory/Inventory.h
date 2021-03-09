@@ -22,13 +22,15 @@ public:
 		}
 		return false;
 	}
-	inline Item* getSelectedItem() { return m_items[m_currentItemIndex]; }
+	inline Item* getSelectedItem() { return m_items[m_currentItemIndex][0]; };
 
 private:
-	std::vector<Item*> m_items;
+	std::vector< std::vector<Item* > > m_items;
 	sf::Texture m_toolBarTexture;
 	sf::Texture m_inventoryTexture;
 	int m_nbItem;
 	int m_currentItemIndex;
+	sf::Font m_font;
+	sf::Text m_inventoryText;
 };
 
