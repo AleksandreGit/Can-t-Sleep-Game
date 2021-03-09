@@ -25,12 +25,6 @@ Player::Player() : MovingEntity() {
 	m_isInventoryOpen = false;
 	m_inventory.addItem(new Axe());
 	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
 	m_inventory.deleteItem(0);
 }
 

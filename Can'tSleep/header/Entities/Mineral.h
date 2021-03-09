@@ -2,6 +2,7 @@
 
 #include "Natural.h"
 #include "MineralType.h"
+#include "./../Inventory/RockItem.h"
 #include "DefaultEnvironmentElementBuilder.h"
 
 class Mineral : public Natural {

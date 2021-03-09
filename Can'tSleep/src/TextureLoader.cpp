@@ -61,6 +61,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["WoodLog"].loadFromFile("./Assets/Items/log.png")) {
 		std::cout << "Can't load log texture" << std::endl;
 	}
+	if (!m_textures["RockItem"].loadFromFile("./Assets/Items/rock.png")) {
+		std::cout << "Can't load rock item texture" << std::endl;
+	}
 }
 
 TextureLoader* TextureLoader::GetInstance()

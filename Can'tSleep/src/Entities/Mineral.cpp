@@ -17,6 +17,9 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 	m_animation->setOffsetY(10);
 	m_hitBox.setSize(230, 210);
 	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
+	m_dropedItem.push_back(new DropedItem(new RockItem(), m_realPosition - m_hitBox.getWidth() / 2));
+	m_dropedItem.push_back(new DropedItem(new RockItem(), m_realPosition - m_hitBox.getWidth() / 2));
+	m_dropedItem.push_back(new DropedItem(new RockItem(), m_realPosition - m_hitBox.getWidth() / 2));
 };
 
 

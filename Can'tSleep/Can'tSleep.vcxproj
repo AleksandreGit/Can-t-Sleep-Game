@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Inventory\RockItem.cpp" />
     <ClCompile Include="src\Inventory\DropedItem.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeIdle.cpp" />
@@ -237,6 +238,7 @@
     <ClInclude Include="header\Animation\PlayerWoodAxeIdle.h" />
     <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
     <ClInclude Include="header\Inventory\WoodLog.h" />
+    <ClInclude Include="header\Inventory\RockItem.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

@@ -36,13 +36,20 @@ void Inventory::drawToolBar(sf::RenderWindow& window){
 			sf::Vector2f current(posIcon.x + i * 190, posIcon.y);
 			m_items[i][0]->drawIcon(window, current);
 			if (m_items[i].size() > 1) {
+				sf::CircleShape circle;
+				circle.setFillColor(sf::Color(255, 255, 255, 200));
+				float radius = 20;
+				circle.setRadius(radius);
+				circle.setOrigin(radius/2, radius/2);
+				circle.setPosition(sf::Vector2f(current.x + 110 + radius/2, current.y + 100 + radius/2));
+				window.draw(circle);
 				sf::Text text;
 				text.setString(std::to_string(m_items[i].size()));
 				text.setFont(m_font);
-				text.setCharacterSize(50);
-				text.setFillColor(sf::Color::White);
+				text.setCharacterSize(35);
+				text.setFillColor(sf::Color::Black);
 				text.setStyle(sf::Text::Bold);
-				text.setPosition(current);
+				text.setPosition(sf::Vector2f(current.x + 120, current.y + 100));
 				window.draw(text);
 			}
 		}
@@ -67,7 +74,7 @@ void Inventory::draw(sf::RenderWindow& window) {
 		if (m_items[index][0]) {
 			sf::Vector2f current(pos.x + (i % colNumber) * 190, pos.y + floor(i / colNumber) * 190);
 			m_items[index][0]->drawIcon(window, current);
-			if (m_items[i].size() > 1) {
+			if (m_items[index].size() > 1) {
 				sf::Text text;
 				text.setString(std::to_string(m_items[i].size()));
 				text.setFont(m_font);
@@ -114,8 +121,11 @@ bool Inventory::canAddItem() {
 void Inventory::dropItem(int id) {
 	if (m_items[id][0]) {
 		int index = m_items[id].size()-1;
-		m_items[id].erase(m_items[id].begin() + index);
-		if (index == 0) {
+		if (index > 0) {
+			m_items[id].erase(m_items[id].begin() + index);
+		}
+		else {
+			m_items[id][index] = nullptr;
 			m_nbItem--;
 		}
 	}
