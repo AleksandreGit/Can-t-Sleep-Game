@@ -32,16 +32,17 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 - Mise en place du ramassage des objets
 - Possibilité de détruire des arbres/récolter des ressources
 
-## 4) Bugs détectées actuels 
-
-- Problème mémoire lorsque drop du dernier objet
-- Stack dépasse la taille max indiquée
-- Problème affichage à l'intérieur inventaire
+## 4) Bugs détectés actuels 
 - Problème effet objet lorsque drop et récupération ensuite
 
 ## 5) Prochains ajouts
+- Drag and drop avec la barre d'outils
 - Mettre en place les effets d'items
 - Créer de nouveaux items (animations, intégration, ...)
 - Prémices de la construction
 - ....
 (Autres idées à venir)
+
+## 6) Idées d'amélioration 
+- Temps d'attente avant ramassage des objets au sol
+- Affichage de l'objet lorsqu'il est drag

@@ -23,8 +23,9 @@ Player::Player() : MovingEntity() {
 
 	// INVENTORY
 	m_isInventoryOpen = false;
-	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new Axe());
+	for (int i = 0; i < 15; i++) {
+		m_inventory.addItem(new Axe());
+	}
 	m_inventory.deleteItem(0);
 }
 
@@ -71,11 +72,6 @@ void Player::move(float deltaTime) {
 			break;
 		case INTERACT:
 			anim = 3;
-			if (m_animations[anim]->isAnimationFinished()) {
-				this->setState(IDLE);
-			}
-			break;
-		default:
 			break;
 	}
 	if (dynamic_cast<Axe*>(m_inventory.getSelectedItem()) && m_currentState != INTERACT) {
@@ -203,9 +199,7 @@ Item* Player::dropCurrentItem(){
 	return dropedItem;
 }
 
-
 bool Player::canPickUpItem(DropedItem* dropedItem) {
-	std::cout << dropedItem->collide(m_fieldOfAction) << std::endl;
 	return dropedItem->collide(m_fieldOfAction) && m_inventory.canAddItem();
 }
 

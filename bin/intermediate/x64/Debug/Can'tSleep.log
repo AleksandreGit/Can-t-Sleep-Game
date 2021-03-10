@@ -1,3 +1,15 @@
-﻿  Player.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(19,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+﻿  Inventory.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(76,62): warning C4244: 'argument' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(113,61): warning C4244: 'argument' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(159,35): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(214): warning C4715: 'Inventory::switchPosition' : les chemins de contrôle ne retournent pas tous une valeur
   Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe

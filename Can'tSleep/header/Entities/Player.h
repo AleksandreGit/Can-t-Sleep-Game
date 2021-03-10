@@ -33,10 +33,6 @@ public:
 	void changeFocusTool(int value);
 	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
 	inline bool isInventoryOpen() { return m_isInventoryOpen; };
-	Item* dropCurrentItem();
-	bool canPickUpItem(DropedItem* dropedItem);
-	void pickUpItem(DropedItem* dropedItem);
-
 	virtual void setState(State state);
 	virtual void setDirection(Direction dir);
 	virtual  void setRealPosition(float pos);
@@ -48,6 +44,18 @@ public:
 		m_hitBox.draw(window);
 		m_fieldOfAction.draw(window);
 	};
+
+	// Inventory elements : TODO --> make them work another way !
+	Item* dropCurrentItem();
+	bool canPickUpItem(DropedItem* dropedItem);
+	void pickUpItem(DropedItem* dropedItem);
+	inline int getLastClicked() { return m_inventory.getLastClicked(); };
+	inline int getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow& window, bool mousePressed = true) {
+		return m_inventory.getItemIndexWithPos(xPos, yPos, window, mousePressed);
+	}
+	inline Item* switchInventoryElements(int firstId, int secondId) {
+		return m_inventory.switchPosition(firstId, secondId);
+	}
 
 private:
 	vector<AnimablePlayer*> m_animations;

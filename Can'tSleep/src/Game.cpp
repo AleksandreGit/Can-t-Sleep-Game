@@ -99,6 +99,32 @@ void Game::handleEvents(float deltaTime) {
                 }
             }
         }
+        else {
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    sf::Vector2i position = sf::Mouse::getPosition(m_window);
+                    // Convert coordinates to the view coordinates
+                    sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
+                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
+                }
+            }
+            else if (event.type == sf::Event::MouseButtonReleased){
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    sf::Vector2i position = sf::Mouse::getPosition(m_window);
+                    // Convert coordinates to the view coordinates
+                    sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
+                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
+                    Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), index);
+                    if (item) {
+                        m_map.dropItem(item, m_player.getWorldPosition());
+                    }
+                }
+
+            }
+        }
     }
 }
 

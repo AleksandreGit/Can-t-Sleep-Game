@@ -10,7 +10,6 @@ Map::Map() {
 
 }
 
-
 void Map::draw(sf::RenderWindow& window, int currentPos) const {
 	int bound = BLOC_TO_SHOW / 2;
 	int lowerBound = currentPos - bound + 1;
@@ -76,9 +75,7 @@ std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
 		if (m_elements[i]) {
 			if (m_elements[i]->getHealth() <= 0) {
 				std::vector<DropedItem*> items = m_elements[i]->getDropedItems();
-				for (DropedItem* item : items) {
-					m_dropedItems.push_back(*item);
-				}
+				dropItems(items);
 				m_elements[i]->remove();
 				m_elements[i] = nullptr;
 			}
@@ -132,6 +129,19 @@ void Map::generateRandom() {
 	m_elements[pos] = new Chest(pos);
 }
 
+void Map::dropItems(std::vector<DropedItem*> items) {
+	std::random_device rd;
+	std::default_random_engine generator(rd());
+	std::uniform_real_distribution<float> distribution(items[0]->getCurrentPosition() - 0.5f * TILE_WIDTH, items[0]->getCurrentPosition() + 0.5f * TILE_WIDTH);
+	std::uniform_real_distribution<float> seed(-10000.0f, 10000.0f);
+	float itemPos;
+	for (DropedItem* item : items) {
+		itemPos = distribution(generator);
+		item->setCurrentPosition(itemPos);
+		m_dropedItems.push_back(*item);
+	}
+
+}
 
 void Map::dropItem(Item* item, int position) {
 	std::random_device rd;

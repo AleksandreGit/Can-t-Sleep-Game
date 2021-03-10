@@ -13,6 +13,7 @@ Inventory::Inventory() {
 	if (!m_font.loadFromFile("./Assets/Fonts/arial.ttf")) {
 		std::cout << "Can't load inventory font correctly" << std::endl;
 	}
+	m_lastClicked = -1;
 }
 
 void Inventory::drawToolBar(sf::RenderWindow& window){
@@ -75,18 +76,53 @@ void Inventory::draw(sf::RenderWindow& window) {
 			sf::Vector2f current(pos.x + (i % colNumber) * 190, pos.y + floor(i / colNumber) * 190);
 			m_items[index][0]->drawIcon(window, current);
 			if (m_items[index].size() > 1) {
+				sf::CircleShape circle;
+				circle.setFillColor(sf::Color(255, 255, 255, 200));
+				float radius = 20;
+				circle.setRadius(radius);
+				circle.setOrigin(radius / 2, radius / 2);
+				circle.setPosition(sf::Vector2f(current.x + 110 + radius / 2, current.y + 100 + radius / 2));
+				window.draw(circle);
 				sf::Text text;
-				text.setString(std::to_string(m_items[i].size()));
+				text.setString(std::to_string(m_items[index].size()));
 				text.setFont(m_font);
-				text.setCharacterSize(50);
-				text.setFillColor(sf::Color::White);
+				text.setCharacterSize(35);
+				text.setFillColor(sf::Color::Black);
 				text.setStyle(sf::Text::Bold);
-				text.setPosition(current);
+				text.setPosition(sf::Vector2f(current.x + 120, current.y + 100));
 				window.draw(text);
 			}
 		}
 		index++;
 	}
+}
+
+
+int Inventory::getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow &window, bool mousePressed) {
+	float offsetY = 40.0f;
+	sf::Vector2f offset(m_inventoryTexture.getSize().x / 2.0f, m_inventoryTexture.getSize().y / 2.0f);
+	sf::Vector2f posCenter = window.getView().getCenter() - offset;
+
+	sf::Vector2f pos(posCenter.x + 10.0f, posCenter.y + 10.0f);
+	//TODO change pos with the different items
+	int total = INVENTORY_SIZE - TOOLBAR_SIZE;
+	int colNumber = total / 4;
+
+	int index = TOOLBAR_SIZE;
+	for (int i = 0; i < total; i++) {
+		sf::Vector2f current(pos.x + (i % colNumber) * 190, pos.y + floor(i / colNumber) * 190);
+		if (xPos > current.x && xPos < current.x + 180) {
+			if (yPos > current.y && yPos < current.y + 180) {
+				if(mousePressed)
+					m_lastClicked = TOOLBAR_SIZE + i;
+				return TOOLBAR_SIZE + i;
+			}
+		}
+		index++;
+	}
+	if(mousePressed)
+		m_lastClicked = -1;
+	return -1;
 }
 
 bool Inventory::addItem(Item* item) {
@@ -147,4 +183,32 @@ void Inventory::deleteItem(int id) {
 void Inventory::craftItem(std::string name) {
 	// TODO: make a JSON containing the necessary elements for each craft
 	// depending on the name find the right element and the craft that are necessary
+}
+
+Item* Inventory::switchPosition(int firstId, int secondId) {
+	if (firstId >= 0) {
+		if (secondId >= 0) {
+			if (m_items[firstId][0]) {
+				if (m_items[secondId][0]) {
+					std::vector<Item*> temp = m_items[secondId];
+					m_items[secondId] = m_items[firstId];
+					m_items[firstId] = temp;
+					return nullptr;
+				}
+				else {
+					m_items[secondId] = m_items[firstId];
+					std::vector<Item*> nullItem;
+					nullItem.push_back(nullptr);
+					m_items[firstId] = nullItem;
+					return nullptr;
+				}
+			}
+		}
+		else {
+			// TODO : make possible to drop all items at once !
+			Item* item = m_items[firstId][0];
+			dropItem(firstId);
+			return item;
+		}
+	}
 }
