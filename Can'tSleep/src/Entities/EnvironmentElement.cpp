@@ -18,8 +18,8 @@ void EnvironmentElement::animate(float deltaTime) {
 	m_animation->animate(deltaTime);
 }
 
-void EnvironmentElement::draw(sf::RenderWindow& window) {
-	m_animation->draw(window);
+void EnvironmentElement::draw(sf::RenderWindow& window, bool showFilter) {
+	m_animation->draw(window, showFilter);
 }
 
 void EnvironmentElement::remove() {

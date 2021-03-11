@@ -23,10 +23,8 @@ Player::Player() : MovingEntity() {
 
 	// INVENTORY
 	m_isInventoryOpen = false;
-	for (int i = 0; i < 15; i++) {
-		m_inventory.addItem(new Axe());
-	}
-	m_inventory.deleteItem(0);
+	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new TrapItem());
 }
 
 void Player::move(float deltaTime) {
@@ -105,7 +103,7 @@ void Player::setRealPosition(float pos) {
 	m_realPosition = pos;
 }
 
-void Player::draw(sf::RenderWindow& window) {
+void Player::draw(sf::RenderWindow& window, bool drawFilter) {
 	int anim = 0;
 	switch (m_currentState) {
 		case IDLE:
@@ -154,7 +152,6 @@ void Player::useObject() {
 		this->setState(ATTACK);
 		this->attack();
 	}
-	std::cout << m_strength << std::endl;
 }
 
 bool Player::checkInteraction(Entity& entity) {

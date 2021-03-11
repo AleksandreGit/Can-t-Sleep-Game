@@ -7,7 +7,7 @@
 #include "PerlinNoise.h"
 #include "./Entities/Tree.h"
 #include "./Entities/Mineral.h"
-#include "./Entities/Chest.h"
+#include "./Entities/Trap.h"
 #include "TileType.h"
 #include "./Entities/Player.h"
 #include <iostream>

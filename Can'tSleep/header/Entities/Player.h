@@ -12,6 +12,7 @@
 #include "./../Inventory/DropedItem.h"
 #include "./../Inventory/Inventory.h"
 #include "./../Inventory/Axe.h"
+#include "./../Inventory/TrapItem.h"
 #include "./../Utils.h"
 #include <vector>
 #include <iostream>
@@ -25,7 +26,7 @@ public:
 	Player();
 
 	virtual void move(float deltaTime);
-	virtual void draw(sf::RenderWindow& window);
+	virtual void draw(sf::RenderWindow& window, bool showFilter = false);
 	virtual void useObject();
 	virtual void attack();
 	void drawInventory(sf::RenderWindow& window);
@@ -56,6 +57,7 @@ public:
 	inline Item* switchInventoryElements(int firstId, int secondId) {
 		return m_inventory.switchPosition(firstId, secondId);
 	}
+	inline Item* getCurrentItem() { return m_inventory.getSelectedItem(); };
 
 private:
 	vector<AnimablePlayer*> m_animations;

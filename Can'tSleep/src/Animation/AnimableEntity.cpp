@@ -29,7 +29,7 @@ void AnimableEntity::animate(float deltaTime) {
 	}
 }
 
-void AnimableEntity::draw(sf::RenderWindow& window) const {
+void AnimableEntity::draw(sf::RenderWindow& window, bool drawFilter) const {
 	window.draw(m_currentSprite);
 }
 

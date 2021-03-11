@@ -126,7 +126,7 @@ void Map::generateRandom() {
 		j++;
 	}
 	int pos = MAP_SIZE / 2;
-	m_elements[pos] = new Chest(pos);
+	m_elements[pos] = new Trap(pos);
 }
 
 void Map::dropItems(std::vector<DropedItem*> items) {

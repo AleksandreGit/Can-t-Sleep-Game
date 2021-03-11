@@ -11,8 +11,8 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 		.setFrameRate(1.0f)
 		.setTotalFrame(1)
 		.setTexture("Tree")
-		.setHeight(1677)
-		.setWidth(817)
+		.setHeight(49)
+		.setWidth(282)
 		.build();
 	m_animation->moveTo(m_realPosition);
 	m_animation->setOffsetY(10);

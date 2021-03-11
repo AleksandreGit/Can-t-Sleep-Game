@@ -24,6 +24,10 @@ void Game::draw() {
     if (m_player.isInventoryOpen()) {
         m_player.drawInventory(m_window);
     }
+    ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.getCurrentItem());
+    if (constructItem) {
+        constructItem->placingDraw(m_window, m_player.getWorldPosition() + 1, m_map);
+    }
     m_window.display();
 
 }
@@ -46,6 +50,16 @@ void Game::handleEvents(float deltaTime) {
                     static_cast<float>(TILE_WIDTH * 10 * event.size.height / event.size.width)
                 });
             m_window.setView(m_playerView);
+        }
+
+        if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.mouseButton.button == sf::Mouse::Left)
+            {
+                sf::Vector2i position = sf::Mouse::getPosition(m_window);
+                sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
+                m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
+            }
         }
 
         if (!m_player.isInventoryOpen()) {
@@ -98,19 +112,31 @@ void Game::handleEvents(float deltaTime) {
                     m_map.dropItem(dropedItem, m_player.getWorldPosition());
                 }
             }
-        }
-        else {
-            if (event.type == sf::Event::MouseButtonPressed)
-            {
+            if (event.type == sf::Event::MouseButtonReleased) {
                 if (event.mouseButton.button == sf::Mouse::Left)
                 {
                     sf::Vector2i position = sf::Mouse::getPosition(m_window);
                     // Convert coordinates to the view coordinates
                     sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
-                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
+                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
+                    if (index < TOOLBAR_SIZE) {
+                        Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), index);
+                        if (item) {
+                            m_map.dropItem(item, m_player.getWorldPosition());
+                        }
+                    }
+                    else if(m_player.getLastClicked() != index){
+                        Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), -1);
+                        if (item) {
+                            m_map.dropItem(item, m_player.getWorldPosition());
+                        }
+                    }
                 }
+
             }
-            else if (event.type == sf::Event::MouseButtonReleased){
+        }
+        else {
+            if (event.type == sf::Event::MouseButtonReleased){
                 if (event.mouseButton.button == sf::Mouse::Left)
                 {
                     sf::Vector2i position = sf::Mouse::getPosition(m_window);

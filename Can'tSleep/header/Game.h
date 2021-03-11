@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "./Animation/AnimableBuilder.h"
 #include "./Entities/Player.h"
+#include "./Inventory/ConstructionItem.h"
 #include "Map.h"
 
 class Game

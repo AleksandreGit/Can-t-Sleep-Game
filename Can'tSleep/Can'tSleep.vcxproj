@@ -186,10 +186,11 @@
     <ClCompile Include="src\Animation\PlayerWalk.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeAttack.cpp" />
     <ClCompile Include="src\TextureLoader.cpp" />
-    <ClCompile Include="src\Inventory\Trap.cpp" />
+    <ClCompile Include="src\Entities\Trap.cpp" />
     <ClCompile Include="src\Entities\Tree.cpp" />
     <ClCompile Include="src\Animation\VoidAnimableBuilder.cpp" />
     <ClCompile Include="src\Inventory\WoodLog.cpp" />
+    <ClCompile Include="src\Inventory\TrapItem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Inventory\DropedItem.h" />
@@ -230,7 +231,7 @@
     <ClInclude Include="header\TextureLoader.h" />
     <ClInclude Include="header\TileType.h" />
     <ClInclude Include="header\Inventory\Tool.h" />
-    <ClInclude Include="header\Inventory\Trap.h" />
+    <ClInclude Include="header\Entities\Trap.h" />
     <ClInclude Include="header\Entities\Tree.h" />
     <ClInclude Include="header\Entities\TreeType.h" />
     <ClInclude Include="header\Utils.h" />
@@ -239,6 +240,7 @@
     <ClInclude Include="header\Animation\PlayerWoodAxeWalk.h" />
     <ClInclude Include="header\Inventory\WoodLog.h" />
     <ClInclude Include="header\Inventory\RockItem.h" />
+    <ClInclude Include="header\Inventory\TrapItem.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

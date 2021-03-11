@@ -9,7 +9,7 @@ public:
 	inline Entity() : Interactable(), m_health(100), m_realPosition(0), m_hitBox(m_realPosition, 0) {};
 	
 	// TODO : add a variable that check if we add the debug function
-	virtual void draw(sf::RenderWindow& window) = 0;
+	virtual void draw(sf::RenderWindow& window, bool showFilter = false) = 0;
 	virtual void debugCollision(sf::RenderWindow& window) = 0;
 
 	inline void setHealth(float health) { m_health = health; };
@@ -17,7 +17,7 @@ public:
 
 	virtual void defend(Entity* attacker) = 0;
 
-	inline void setWorldPosition(int pos) { m_worldPosition = pos; };
+	virtual inline void setWorldPosition(int pos) { m_worldPosition = pos; };
 	virtual inline void setRealPosition(float pos) { m_realPosition = pos; };
 
 	inline float getRealPosition() const { return m_realPosition; };

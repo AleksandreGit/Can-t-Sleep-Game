@@ -2,14 +2,14 @@
 #include "Craftable.h"
 #include "./../Map.h"
 
-class ConstructionItem
+class ConstructionItem : public Craftable
 {
 public:
-	ConstructionItem();
-	bool placingDraw(sf::RenderWindow& window, int pos);
-	bool placeOnMap(Map& map);
+	ConstructionItem() = default;
+	void placingDraw(sf::RenderWindow& window, int pos);
+	bool construct(int pos);
 
 protected:
-	Constructible m_constructible;
+	Constructible* m_constructible;
 };
 

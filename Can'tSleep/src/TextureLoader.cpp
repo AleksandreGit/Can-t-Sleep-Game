@@ -19,6 +19,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["Floor"].loadFromFile("./Assets/Environment/tiles.png")) {
 		std::cout << "Can't load floor texture" << std::endl;
 	}
+	if (!m_textures["Trap"].loadFromFile("./Assets/Environment/trap.png")) {
+		std::cout << "Can't load trap texture" << std::endl;
+	}
 
 	// PLAYER
 	if (!m_textures["PlayIdle"].loadFromFile("./Assets/Player/idle.png")) {
