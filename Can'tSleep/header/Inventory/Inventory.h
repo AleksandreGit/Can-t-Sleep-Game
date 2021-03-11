@@ -36,5 +36,7 @@ private:
 	sf::Font m_font;
 	sf::Text m_inventoryText;
 	int m_lastClicked;
+
+	void drawItem(sf::RenderWindow& window, sf::Vector2f pos, int size);
 };
 

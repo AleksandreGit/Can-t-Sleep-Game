@@ -18,8 +18,8 @@ Voir ma chaîne Youtube pour suivre l'évolution du projet: https://www.youtube.
 
 ## 3) Etat actuel du jeu:
 
-Version actuelle du jeu: Dev. 0.1
-(Mis à jour 9 Mars 2021)
+Version actuelle du jeu: Dev. 0.2 (**Inventory MAJ**)
+(Mis à jour 11 Mars 2021)
 Actuellement les fonctionnalités suivantes ont étés mises en place:
 
 - Animations basique de personnage
@@ -31,15 +31,28 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 - Mise en place du drop d'objets
 - Mise en place du ramassage des objets
 - Possibilité de détruire des arbres/récolter des ressources
-
-## 4) Bugs détectés actuels 
-- Problème effet objet lorsque drop et récupération ensuite
-
-## 5) Prochains ajouts
 - Drag and drop avec la barre d'outils
 - Mettre en place les effets d'items
-- Créer de nouveaux items (animations, intégration, ...)
-- Prémices de la construction
+
+## 4) Bugs détectés actuels 
+- NONE
+
+## 5) Prochains ajouts
+- Prémices de la construction: 
+	- Afficher l'objet sur carte en transparence lorsque tenu en main
+	- Posage de l'objet lorsque clic
+	- Possibilité de casser l'objet
+	- Ramassage de l'objet et cassage à nouveau
+-  --> version 0.3 !
+- Prémices du craft
+-  --> version 0.4 !
+- Cycle jour et nuit
+- Ajout premier ennemi
+-  --> version 0.5 !
+- Test
+- Correction de bugs
+- Refactoring de code
+- Fix version 0.5.1
 - ....
 (Autres idées à venir)
 

@@ -16,6 +16,25 @@ Inventory::Inventory() {
 	m_lastClicked = -1;
 }
 
+
+void Inventory::drawItem(sf::RenderWindow& window, sf::Vector2f pos, int size){
+	sf::CircleShape circle;
+	circle.setFillColor(sf::Color(255, 255, 255, 200));
+	float radius = 20;
+	circle.setRadius(radius);
+	circle.setOrigin(radius / 2, radius / 2);
+	circle.setPosition(sf::Vector2f(pos.x + 110 + radius / 2, pos.y + 100 + radius / 2));
+	window.draw(circle);
+	sf::Text text;
+	text.setString(std::to_string(size));
+	text.setFont(m_font);
+	text.setCharacterSize(35);
+	text.setFillColor(sf::Color::Black);
+	text.setStyle(sf::Text::Bold);
+	text.setPosition(sf::Vector2f(pos.x + 120, pos.y + 100));
+	window.draw(text);
+}
+
 void Inventory::drawToolBar(sf::RenderWindow& window){
 	sf::Sprite toolBar;
 	sf::Sprite selectedItem;
@@ -37,21 +56,7 @@ void Inventory::drawToolBar(sf::RenderWindow& window){
 			sf::Vector2f current(posIcon.x + i * 190, posIcon.y);
 			m_items[i][0]->drawIcon(window, current);
 			if (m_items[i].size() > 1) {
-				sf::CircleShape circle;
-				circle.setFillColor(sf::Color(255, 255, 255, 200));
-				float radius = 20;
-				circle.setRadius(radius);
-				circle.setOrigin(radius/2, radius/2);
-				circle.setPosition(sf::Vector2f(current.x + 110 + radius/2, current.y + 100 + radius/2));
-				window.draw(circle);
-				sf::Text text;
-				text.setString(std::to_string(m_items[i].size()));
-				text.setFont(m_font);
-				text.setCharacterSize(35);
-				text.setFillColor(sf::Color::Black);
-				text.setStyle(sf::Text::Bold);
-				text.setPosition(sf::Vector2f(current.x + 120, current.y + 100));
-				window.draw(text);
+				drawItem(window, current, m_items[i].size());
 			}
 		}
 	}
@@ -76,39 +81,35 @@ void Inventory::draw(sf::RenderWindow& window) {
 			sf::Vector2f current(pos.x + (i % colNumber) * 190, pos.y + floor(i / colNumber) * 190);
 			m_items[index][0]->drawIcon(window, current);
 			if (m_items[index].size() > 1) {
-				sf::CircleShape circle;
-				circle.setFillColor(sf::Color(255, 255, 255, 200));
-				float radius = 20;
-				circle.setRadius(radius);
-				circle.setOrigin(radius / 2, radius / 2);
-				circle.setPosition(sf::Vector2f(current.x + 110 + radius / 2, current.y + 100 + radius / 2));
-				window.draw(circle);
-				sf::Text text;
-				text.setString(std::to_string(m_items[index].size()));
-				text.setFont(m_font);
-				text.setCharacterSize(35);
-				text.setFillColor(sf::Color::Black);
-				text.setStyle(sf::Text::Bold);
-				text.setPosition(sf::Vector2f(current.x + 120, current.y + 100));
-				window.draw(text);
+				drawItem(window, current, m_items[index].size());
 			}
 		}
 		index++;
 	}
 }
 
-
 int Inventory::getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow &window, bool mousePressed) {
 	float offsetY = 40.0f;
 	sf::Vector2f offset(m_inventoryTexture.getSize().x / 2.0f, m_inventoryTexture.getSize().y / 2.0f);
 	sf::Vector2f posCenter = window.getView().getCenter() - offset;
-
+	sf::Vector2f posToolBar(window.getView().getCenter().x - m_toolBarTexture.getSize().x / 2, offsetY);
+	sf::Vector2f posItem(posToolBar.x + 10.0f, posToolBar.y + 10.0f);
 	sf::Vector2f pos(posCenter.x + 10.0f, posCenter.y + 10.0f);
 	//TODO change pos with the different items
 	int total = INVENTORY_SIZE - TOOLBAR_SIZE;
 	int colNumber = total / 4;
-
 	int index = TOOLBAR_SIZE;
+
+	for (int i = 0; i < TOOLBAR_SIZE; i++) {
+		sf::Vector2f current(posItem.x + i * 190, posItem.y);
+		if (xPos > current.x && xPos < current.x + 180) {
+			if (yPos > current.y && yPos < current.y + 180) {
+				if (mousePressed)
+					m_lastClicked = i;
+				return i;
+			}
+		}
+	}
 	for (int i = 0; i < total; i++) {
 		sf::Vector2f current(pos.x + (i % colNumber) * 190, pos.y + floor(i / colNumber) * 190);
 		if (xPos > current.x && xPos < current.x + 180) {

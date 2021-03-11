@@ -143,14 +143,18 @@ void Player::attack() {
 }
 
 void Player::useObject() {
-	if (dynamic_cast<Axe*>(m_inventory.getSelectedItem())) {
+	Tool* tool = dynamic_cast<Tool*>(m_inventory.getSelectedItem());
+	if (tool) {
+		m_strength = m_baseStrength + tool->getEfficacity();
 		this->setState(ATTACK);
 		this->attack();
 	}
 	else if (!m_inventory.getSelectedItem()) {
+		m_strength = m_baseStrength;
 		this->setState(ATTACK);
 		this->attack();
 	}
+	std::cout << m_strength << std::endl;
 }
 
 bool Player::checkInteraction(Entity& entity) {
@@ -170,31 +174,10 @@ bool Player::checkInteraction(Entity& entity) {
 void Player::changeFocusTool(int value) {
 	Item* lastItem = m_inventory.getSelectedItem();
 	m_inventory.changeSelectedItem(value);
-
-	// If the selected item is a tool
-	if (dynamic_cast<Tool*>(m_inventory.getSelectedItem())) {
-		// If the last item was a tool we update the strength of the player
-		if (lastItem && dynamic_cast<Tool*>(lastItem)) {
-			m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
-			m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
-		}
-		else {
-			m_strength += dynamic_cast<Tool*>(m_inventory.getSelectedItem())->getEfficacity();
-		}
-	}
-	// If the selected item isn't a tool
-	else {
-		if (lastItem && dynamic_cast<Tool*>(lastItem)) {
-			m_strength -= dynamic_cast<Tool*>(lastItem)->getEfficacity();
-		}
-	}
 };
 
 Item* Player::dropCurrentItem(){
 	Item* dropedItem = m_inventory.getSelectedItem();
-	if (dynamic_cast<Tool*>(dropedItem)) {
-		m_strength -= dynamic_cast<Tool*>(dropedItem)->getEfficacity();
-	}
 	m_inventory.dropCurrentItem();
 	return dropedItem;
 }
