@@ -14,7 +14,7 @@ public:
 		int framePerCol, int totalFrame, int height, int width);
 
 	virtual void animate(float deltaTime);
-	virtual void draw(sf::RenderWindow& window, bool drawFilter = false) const;
+	virtual void draw(sf::RenderWindow& window, bool drawFilter = false);
 	virtual void reset();
 
 	// SETTERS
@@ -34,13 +34,10 @@ public:
 	inline const float getPosition() { return m_currentSprite.getPosition().y; }
 	inline const bool isAnimationFinished() { return m_elapsedTime > (m_totalFrame / m_frameRate); }
 	inline const sf::Sprite getCurrentSprite() { return m_currentSprite; }
-	inline const sf::Color getFilter() { return m_filter; };
-	inline void setFilter(sf::Color filter) { m_filter = filter; };
 
 protected:
 	sf::Texture m_texture;
 	sf::Sprite m_currentSprite;
-	sf::Color m_filter;
 
 	// Animation handlers
 	float m_frameRate; // Speed of the animation	

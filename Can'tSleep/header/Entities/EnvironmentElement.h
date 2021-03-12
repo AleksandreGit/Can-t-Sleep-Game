@@ -16,11 +16,10 @@ public:
 	inline int getWidth() const { return m_width; };
 	virtual inline void debugCollision(sf::RenderWindow& window) { m_hitBox.setColor(0, 255, 0, 100); m_hitBox.draw(window); };
 	inline AnimableEntity* getAnimation() { return m_animation; };
-	inline void setFilter(sf::Color filter) { m_animation->setFilter(filter); };
 
 	virtual inline void setWorldPosition(int pos) {
 		m_worldPosition = pos;
-		m_animation->moveTo((m_worldPosition-0.5f)*TILE_WIDTH);
+		m_animation->moveTo((m_worldPosition+0.5f)*TILE_WIDTH);
 	};
 	virtual inline void setRealPosition(float pos) {
 		m_realPosition = pos;

@@ -67,6 +67,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["RockItem"].loadFromFile("./Assets/Items/rock.png")) {
 		std::cout << "Can't load rock item texture" << std::endl;
 	}
+	if (!m_textures["TrapItem"].loadFromFile("./Assets/Items/trap.png")) {
+		std::cout << "Can't load trap item texture" << std::endl;
+	}
 }
 
 TextureLoader* TextureLoader::GetInstance()

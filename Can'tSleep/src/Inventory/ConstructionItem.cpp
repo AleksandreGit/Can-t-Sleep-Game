@@ -1,24 +1,25 @@
 #include "./../../header/Inventory/ConstructionItem.h"
 
-void ConstructionItem::placingDraw(sf::RenderWindow& window, int pos) {
-	sf::Color color;
-	//std::vector<EnvironmentElement*> elements = map.getCurrentElements(pos);
-
+void ConstructionItem::placingDraw(sf::RenderWindow& window, int pos, std::vector< EnvironmentElement*> envElements, Direction dir) {
+	std::cout << "Player position : " << pos << std::endl;
 	// Set the color to red or green depending on if we can construct
 	bool elementOnPos = false;
-	for (EnvironmentElement* elem : elements) {
+	//m_constructible->setFilter(color);
+	if (dir == LEFT) {
+		m_constructible->setWorldPosition(pos-2);
+		pos -= 2;
+	}
+	else {
+		m_constructible->setWorldPosition(pos+3);
+		pos += 3;
+	}
+	for (EnvironmentElement* elem : envElements) {
 		if (elem->getWorldPosition() == pos) {
-			color = sf::Color(255, 0, 0, 100);
 			elementOnPos = true;
 			break;
 		}
 	}
-	if (!elementOnPos) {
-		color = sf::Color(0, 255, 0, 100);
-	}
-	m_constructible->setFilter(color);
-	m_constructible->setWorldPosition(pos);
-	m_constructible->draw(window, true);
+	m_constructible->draw(window, elementOnPos);
 }
 
 bool ConstructionItem::construct(int pos) {

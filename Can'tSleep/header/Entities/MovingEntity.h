@@ -15,6 +15,7 @@ public:
 	virtual void defend(Entity* attacker);
 
 	inline int getStrength() const { return m_strength; };
+	virtual inline Direction getDirection() { return m_dir; };
 	inline void setSpeed(float speed) { m_speed = speed; };
 	inline void setName(std::string name) { m_name = name; };
 	virtual inline void setDirection(Direction dir) { m_dir = dir; };

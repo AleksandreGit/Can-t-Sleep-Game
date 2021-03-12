@@ -5,7 +5,6 @@ Trap::Trap(int position) : Constructible(DefaultEnvironmentElementBuilder()
 	.setWidth(1)
 	.setTexture("Trap")
 	.build()) {
-
 	m_animation = &DefaultAnimableBuilder()
 		.setFrameRate(1.0f)
 		.setTotalFrame(1)

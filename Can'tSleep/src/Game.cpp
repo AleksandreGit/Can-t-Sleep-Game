@@ -26,7 +26,7 @@ void Game::draw() {
     }
     ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.getCurrentItem());
     if (constructItem) {
-        constructItem->placingDraw(m_window, m_player.getWorldPosition() + 1, m_map);
+        constructItem->placingDraw(m_window, m_player.getWorldPosition(), m_map.getCurrentElements(m_player.getWorldPosition()), m_player.getDirection());
     }
     m_window.display();
 

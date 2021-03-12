@@ -1,53 +1,8 @@
-﻿  Player.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Map.h(26,30): error C2061: erreur de syntaxe : identificateur 'Player'
-  Game.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Map.h(26,30): error C2061: erreur de syntaxe : identificateur 'Player'
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(19,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(61,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+﻿  AnimableEntity.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,60): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
           with
           [
-              T=float
+              T=int
           ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(61,54): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(78,48): error C2660: 'Map::checkInteraction' : la fonction ne prend pas 1 arguments
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Map.h(26,7): message : voir la déclaration de 'Map::checkInteraction'
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(121,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(121,70): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(145,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
-          with
-          [
-              T=float
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(145,70): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
-          with
-          [
-              T=float
-          ]
-  ConstructionItem.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(6,1): error C2504: 'ConstructionItem' : classe de base non définie
-  TrapItem.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-  Map.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\ConstructionItem.h(9,57): error C2061: erreur de syntaxe : identificateur 'Map'
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\ConstructionItem.h(10,29): error C2061: erreur de syntaxe : identificateur 'Map'
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(17,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(18,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(48,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(54,14): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-  Génération de code en cours...
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,43): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe

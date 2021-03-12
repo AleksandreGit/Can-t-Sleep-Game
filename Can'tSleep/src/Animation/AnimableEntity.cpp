@@ -29,7 +29,13 @@ void AnimableEntity::animate(float deltaTime) {
 	}
 }
 
-void AnimableEntity::draw(sf::RenderWindow& window, bool drawFilter) const {
+void AnimableEntity::draw(sf::RenderWindow& window, bool drawFilter) {
+	/*if (drawFilter) {
+		m_currentSprite.setColor(sf::Color(255, 0, 0, 255));
+	}
+	else {
+		m_currentSprite.setColor(sf::Color(255, 255, 255, 255));
+	}*/
 	window.draw(m_currentSprite);
 }
 
