@@ -11,8 +11,8 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 		.setFrameRate(1.0f)
 		.setTotalFrame(1)
 		.setTexture("Tree")
-		.setHeight(49)
-		.setWidth(282)
+		.setHeight(1677)
+		.setWidth(817)
 		.build();
 	m_animation->moveTo(m_realPosition);
 	m_animation->setOffsetY(10);
@@ -22,9 +22,3 @@ Tree::Tree(TreeType treeType, int position) : Natural(DefaultEnvironmentElementB
 	m_dropedItem.push_back(new DropedItem(new WoodLog(), m_realPosition - m_hitBox.getWidth() / 2));
 	m_dropedItem.push_back(new DropedItem(new WoodLog(), m_realPosition - m_hitBox.getWidth() / 2));
 };
-
-
-void Tree::draw(sf::RenderWindow& window) {
-	EnvironmentElement::draw(window);
-	//debugCollision(window);
-}

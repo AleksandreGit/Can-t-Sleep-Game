@@ -21,9 +21,3 @@ Mineral::Mineral(MineralType mineralType, int position) : Natural(DefaultEnviron
 	m_dropedItem.push_back(new DropedItem(new RockItem(), m_realPosition - m_hitBox.getWidth() / 2));
 	m_dropedItem.push_back(new DropedItem(new RockItem(), m_realPosition - m_hitBox.getWidth() / 2));
 };
-
-
-void Mineral::draw(sf::RenderWindow& window) {
-	EnvironmentElement::draw(window);
-	//debugCollision(window);
-}

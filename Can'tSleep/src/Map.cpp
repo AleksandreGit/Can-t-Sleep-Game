@@ -80,7 +80,6 @@ std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
 				m_elements[i] = nullptr;
 			}
 			else {
-				std::cout << "Element en position : " << i << std::endl;
 				result.push_back(m_elements[i]);
 			}
 		}

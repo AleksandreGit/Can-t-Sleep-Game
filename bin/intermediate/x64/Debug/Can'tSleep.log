@@ -1,8 +1,24 @@
-﻿  AnimableEntity.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,60): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
-          with
-          [
-              T=int
-          ]
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,43): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe
+﻿  Map.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(9,10): error C2061: erreur de syntaxe : identificateur 'Trap'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(9,10): error C2535: 'TrapItem::TrapItem(void)' : fonction membre déjà définie ou déclarée
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(8): message : voir la déclaration de 'TrapItem::TrapItem'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(17,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(18,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(48,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(54,14): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  Trap.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(9,10): error C2061: erreur de syntaxe : identificateur 'Trap'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(9,10): error C2535: 'TrapItem::TrapItem(void)' : fonction membre déjà définie ou déclarée
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(8): message : voir la déclaration de 'TrapItem::TrapItem'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,58): error C2664: 'TrapItem::TrapItem(const TrapItem &)' : impossible de convertir l'argument 1 de 'Trap *' en 'const TrapItem &'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,58): message : Raison : impossible de convertir de 'Trap *' en 'const TrapItem'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,58): message : Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\TrapItem.h(10,1): message : voir la déclaration de 'TrapItem::TrapItem'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,101): error C2664: 'DropedItem::DropedItem(const DropedItem &)' : impossible de convertir l'argument 1 de 'float' en 'const DropedItem &'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,101): message : Raison : impossible de convertir de 'float' en 'const DropedItem'
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Entities\Trap.cpp(19,101): message : Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\DropedItem.h(20,1): message : voir la déclaration de 'DropedItem::DropedItem'
+  Génération de code en cours...

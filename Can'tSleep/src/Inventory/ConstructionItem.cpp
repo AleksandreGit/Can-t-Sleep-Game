@@ -1,7 +1,6 @@
 #include "./../../header/Inventory/ConstructionItem.h"
 
 void ConstructionItem::placingDraw(sf::RenderWindow& window, int pos, std::vector< EnvironmentElement*> envElements, Direction dir) {
-	std::cout << "Player position : " << pos << std::endl;
 	// Set the color to red or green depending on if we can construct
 	bool elementOnPos = false;
 	//m_constructible->setFilter(color);
