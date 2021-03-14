@@ -33,9 +33,11 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 - Possibilité de détruire des arbres/récolter des ressources
 - Drag and drop avec la barre d'outils
 - Mettre en place les effets d'items
+- Prémices de la construction: 
+	- Afficher l'objet sur carte en transparence lorsque tenu en main
 
 ## 4) Bugs détectés actuels 
-- NONE
+- Problème avec double composition du Constructible
 
 ## 5) Prochains ajouts
 - Prémices de la construction: 
@@ -59,3 +61,4 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 ## 6) Idées d'amélioration 
 - Temps d'attente avant ramassage des objets au sol
 - Affichage de l'objet lorsqu'il est drag
+- Utilisation Flyweight pour Constructible/Item pour permettre double compo ?

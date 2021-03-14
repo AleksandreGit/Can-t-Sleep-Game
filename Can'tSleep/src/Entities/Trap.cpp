@@ -16,5 +16,7 @@ Trap::Trap(int position) : Constructible(DefaultEnvironmentElementBuilder()
 	m_animation->setOffsetY(10);
 	m_hitBox.setSize(200, TILE_HEIGHT / 1.5f);
 	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
-	m_dropedItem.push_back(new DropedItem(new TrapItem(), m_realPosition - m_hitBox.getWidth() / 2));
+	TrapItem* trap = new TrapItem();
+	trap->setConstructible(this);
+	m_dropedItem.push_back(new DropedItem(trap, m_realPosition - m_hitBox.getWidth() / 2));
 }
