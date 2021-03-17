@@ -211,7 +211,6 @@
     <ClInclude Include="header\Entities\EnvironmentElementBuilder.h" />
     <ClInclude Include="header\Game.h" />
     <ClInclude Include="header\Interaction\HitBox.h" />
-    <ClInclude Include="header\Interaction\Interactable.h" />
     <ClInclude Include="header\Inventory\Inventory.h" />
     <ClInclude Include="header\Inventory\Item.h" />
     <ClInclude Include="header\Map.h" />

@@ -1,12 +1,12 @@
 #pragma once
-#include "./../Interaction/Interactable.h"
 #include "./../Interaction/HitBox.h"
 #include "./../Inventory/DropedItem.h"
+#include "./Direction.h"
 
-class Entity : public Interactable
+class Entity
 {
 public:
-	inline Entity() : Interactable(), m_health(100), m_realPosition(0), m_hitBox(m_realPosition, 0) {};
+	inline Entity() : m_health(100), m_realPosition(0), m_hitBox(m_realPosition, 0) {};
 	
 	// TODO : add a variable that check if we add the debug function
 	virtual void draw(sf::RenderWindow& window, bool showFilter = false) = 0;

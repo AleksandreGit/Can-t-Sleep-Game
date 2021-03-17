@@ -24,6 +24,7 @@ Player::Player() : MovingEntity() {
 	// INVENTORY
 	m_isInventoryOpen = false;
 	m_inventory.addItem(new Axe());
+	m_inventory.addItem(new TrapItem());
 }
 
 void Player::move(float deltaTime) {

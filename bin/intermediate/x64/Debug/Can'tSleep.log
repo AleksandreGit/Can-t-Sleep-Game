@@ -1,4 +1,13 @@
-﻿  Game.cpp
+﻿  Chest.cpp
+  DefaultEnvironmentElementBuilder.cpp
+  EnvironmentElement.cpp
+  Mineral.cpp
+  MovingEntity.cpp
+  Player.cpp
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  Trap.cpp
+  Tree.cpp
+  Game.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(19,45): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(61,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
@@ -31,16 +40,15 @@ C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(145,
           [
               T=float
           ]
+  Axe.cpp
+  ConstructionItem.cpp
+  TrapItem.cpp
   Map.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(17,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(18,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(48,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(54,14): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-  Player.cpp
-C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-  Trap.cpp
-  TrapItem.cpp
   Génération de code en cours...
   main.cpp
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(21,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération

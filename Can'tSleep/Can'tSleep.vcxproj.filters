@@ -201,9 +201,6 @@
     <ClInclude Include="header\Interaction\HitBox.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="header\Interaction\Interactable.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="header\Interaction\MaskEntities.h">
       <Filter>Header\Entities\Living</Filter>
     </ClInclude>
