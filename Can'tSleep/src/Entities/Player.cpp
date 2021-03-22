@@ -24,7 +24,6 @@ Player::Player() : MovingEntity() {
 	// INVENTORY
 	m_isInventoryOpen = false;
 	m_inventory.addItem(new Axe());
-	m_inventory.addItem(new TrapItem());
 }
 
 void Player::move(float deltaTime) {
@@ -125,10 +124,9 @@ void Player::draw(sf::RenderWindow& window, bool drawFilter) {
 	m_animations[anim]->draw(window);
 	this->m_inventory.drawToolBar(window);
 	//this->debugCollision(window);
-}
-
-void Player::drawInventory(sf::RenderWindow& window) {
-	m_inventory.draw(window);
+	if (isInventoryOpen()) {
+		m_inventory.draw(window);
+	}
 }
 
 void Player::attack() {
@@ -168,21 +166,6 @@ bool Player::checkInteraction(Entity& entity) {
 	return false;
 }
 
-void Player::changeFocusTool(int value) {
-	Item* lastItem = m_inventory.getSelectedItem();
-	m_inventory.changeSelectedItem(value);
-};
-
-Item* Player::dropCurrentItem(){
-	Item* dropedItem = m_inventory.getSelectedItem();
-	m_inventory.dropCurrentItem();
-	return dropedItem;
-}
-
 bool Player::canPickUpItem(DropedItem* dropedItem) {
 	return dropedItem->collide(m_fieldOfAction) && m_inventory.canAddItem();
-}
-
-void Player::pickUpItem(DropedItem* dropedItem) {
-	m_inventory.addItem(dropedItem->getItem());
 }

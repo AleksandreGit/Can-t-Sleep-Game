@@ -21,10 +21,7 @@ void Game::draw() {
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
 
-    if (m_player.isInventoryOpen()) {
-        m_player.drawInventory(m_window);
-    }
-    ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.getCurrentItem());
+    ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.m_inventory.getSelectedItem());
     if (constructItem) {
         constructItem->placingDraw(m_window, m_player.getWorldPosition(), m_map.getCurrentElements(m_player.getWorldPosition()), m_player.getDirection());
     }
@@ -58,7 +55,7 @@ void Game::handleEvents(float deltaTime) {
             {
                 sf::Vector2i position = sf::Mouse::getPosition(m_window);
                 sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
-                m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
+                m_player.m_inventory.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
             }
         }
 
@@ -85,29 +82,29 @@ void Game::handleEvents(float deltaTime) {
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
-                m_player.changeFocusTool(0);
+                m_player.m_inventory.changeSelectedItem(0);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
-                m_player.changeFocusTool(1);
+                m_player.m_inventory.changeSelectedItem(1);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
-                m_player.changeFocusTool(2);
+                m_player.m_inventory.changeSelectedItem(2);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)) {
-                m_player.changeFocusTool(3);
+                m_player.m_inventory.changeSelectedItem(3);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5)) {
-                m_player.changeFocusTool(4);
+                m_player.m_inventory.changeSelectedItem(4);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num6)) {
-                m_player.changeFocusTool(5);
+                m_player.m_inventory.changeSelectedItem(5);
             }
             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7)) {
-                m_player.changeFocusTool(6);
+                m_player.m_inventory.changeSelectedItem(6);
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::T)) {
-                Item* dropedItem = m_player.dropCurrentItem();
+                Item* dropedItem = m_player.m_inventory.dropCurrentItem();
                 if (dropedItem){
                     m_map.dropItem(dropedItem, m_player.getWorldPosition());
                 }
@@ -118,15 +115,15 @@ void Game::handleEvents(float deltaTime) {
                     sf::Vector2i position = sf::Mouse::getPosition(m_window);
                     // Convert coordinates to the view coordinates
                     sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
-                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
+                    int index = m_player.m_inventory.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
                     if (index < TOOLBAR_SIZE) {
-                        Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), index);
+                        Item* item = m_player.m_inventory.switchPosition(m_player.m_inventory.getLastClicked(), index);
                         if (item) {
                             m_map.dropItem(item, m_player.getWorldPosition());
                         }
                     }
-                    else if(m_player.getLastClicked() != index){
-                        Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), -1);
+                    else if(m_player.m_inventory.getLastClicked() != index){
+                        Item* item = m_player.m_inventory.switchPosition(m_player.m_inventory.getLastClicked(), -1);
                         if (item) {
                             m_map.dropItem(item, m_player.getWorldPosition());
                         }
@@ -142,8 +139,8 @@ void Game::handleEvents(float deltaTime) {
                     sf::Vector2i position = sf::Mouse::getPosition(m_window);
                     // Convert coordinates to the view coordinates
                     sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
-                    int index = m_player.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
-                    Item* item = m_player.switchInventoryElements(m_player.getLastClicked(), index);
+                    int index = m_player.m_inventory.getItemIndexWithPos(worldPos.x, worldPos.y, m_window, false);
+                    Item* item = m_player.m_inventory.switchPosition(m_player.m_inventory.getLastClicked(), index);
                     if (item) {
                         m_map.dropItem(item, m_player.getWorldPosition());
                     }

@@ -29,9 +29,7 @@ public:
 	virtual void draw(sf::RenderWindow& window, bool showFilter = false);
 	virtual void useObject();
 	virtual void attack();
-	void drawInventory(sf::RenderWindow& window);
 	bool checkInteraction(Entity& hitBox);
-	void changeFocusTool(int value);
 	inline void toggleInventory() { m_isInventoryOpen = !m_isInventoryOpen; }
 	inline bool isInventoryOpen() { return m_isInventoryOpen; };
 	virtual void setState(State state);
@@ -47,22 +45,14 @@ public:
 	};
 
 	// Inventory elements : TODO --> make them work another way !
-	Item* dropCurrentItem();
 	bool canPickUpItem(DropedItem* dropedItem);
-	void pickUpItem(DropedItem* dropedItem);
-	inline int getLastClicked() { return m_inventory.getLastClicked(); };
-	inline int getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow& window, bool mousePressed = true) {
-		return m_inventory.getItemIndexWithPos(xPos, yPos, window, mousePressed);
-	}
-	inline Item* switchInventoryElements(int firstId, int secondId) {
-		return m_inventory.switchPosition(firstId, secondId);
-	}
-	inline Item* getCurrentItem() { return m_inventory.getSelectedItem(); };
 
 private:
 	vector<AnimablePlayer*> m_animations;
-	Inventory m_inventory;
 	bool m_isInventoryOpen;
+
+public:
+	Inventory m_inventory;
 
 };
 

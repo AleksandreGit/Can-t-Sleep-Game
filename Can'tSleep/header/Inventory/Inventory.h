@@ -11,8 +11,8 @@ public:
 	void draw(sf::RenderWindow& window);
 	bool addItem(Item* item);
 	bool canAddItem();
-	void dropItem(int id);
-	void dropCurrentItem();
+	Item* dropItem(int id);
+	Item* dropCurrentItem();
 	void deleteItem(int id);
 	void craftItem(std::string name);
 	Item* switchPosition(int firstId, int secondId);

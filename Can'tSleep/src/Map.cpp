@@ -157,7 +157,7 @@ void Map::checkInteraction(Player& player) {
 	int i = 0;
 	for (DropedItem item : m_dropedItems) {
 		if (player.canPickUpItem(&item)) {
-			player.pickUpItem(&item);
+			player.m_inventory.addItem(item.getItem());
 			m_dropedItems.erase(m_dropedItems.begin() + i);
 			break;
 		}

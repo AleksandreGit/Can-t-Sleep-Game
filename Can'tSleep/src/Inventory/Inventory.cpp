@@ -155,21 +155,26 @@ bool Inventory::canAddItem() {
 	return m_nbItem < INVENTORY_SIZE;
 }
 
-void Inventory::dropItem(int id) {
+Item* Inventory::dropItem(int id) {
+	Item* item;
 	if (m_items[id][0]) {
 		int index = m_items[id].size()-1;
 		if (index > 0) {
+			item = m_items[id][index];
 			m_items[id].erase(m_items[id].begin() + index);
 		}
 		else {
+			item = m_items[id][index];
 			m_items[id][index] = nullptr;
 			m_nbItem--;
 		}
+		return item;
 	}
+	return nullptr;
 }
 
-void Inventory::dropCurrentItem() {
-	this->dropItem(m_currentItemIndex);
+Item* Inventory::dropCurrentItem() {
+	return this->dropItem(m_currentItemIndex);
 }
 
 void Inventory::deleteItem(int id) {

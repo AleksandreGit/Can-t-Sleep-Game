@@ -38,6 +38,7 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 
 ## 4) Bugs détectés actuels 
 - Problème avec double composition du Constructible
+- Exception levée lors de clic sur case vide
 
 ## 5) Prochains ajouts
 - Prémices de la construction: 
