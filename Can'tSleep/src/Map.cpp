@@ -76,7 +76,12 @@ std::vector<EnvironmentElement*> Map::getCurrentElements(int currentPos) {
 			if (m_elements[i]->getHealth() <= 0) {
 				std::vector<DropedItem*> items = m_elements[i]->getDropedItems();
 				dropItems(items);
-				m_elements[i]->remove();
+				if (!dynamic_cast<Constructible*>(m_elements[i])) {
+					m_elements[i]->remove();
+				}
+				else {
+					m_elements[i]->setHealth(100);
+				}
 				m_elements[i] = nullptr;
 			}
 			else {

@@ -18,6 +18,7 @@ public:
 	virtual inline Direction getDirection() { return m_dir; };
 	inline void setSpeed(float speed) { m_speed = speed; };
 	inline void setName(std::string name) { m_name = name; };
+	inline void setTarget(Entity* target) { m_target = target; };
 	virtual inline void setDirection(Direction dir) { m_dir = dir; };
 	virtual inline void setState(State state) { m_currentState = state; };
 

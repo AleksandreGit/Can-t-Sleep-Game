@@ -13,7 +13,7 @@ public:
 	DefaultEnvironmentElementBuilder setPosition(int position);
 	DefaultEnvironmentElementBuilder setTexture(std::string id);
 
-private:
+protected:
 	int width;
 	int position;
 	sf::Texture texture;

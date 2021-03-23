@@ -192,29 +192,34 @@ void Inventory::craftItem(std::string name) {
 }
 
 Item* Inventory::switchPosition(int firstId, int secondId) {
-	if (firstId >= 0) {
-		if (secondId >= 0) {
-			if (m_items[firstId][0]) {
-				if (m_items[secondId][0]) {
-					std::vector<Item*> temp = m_items[secondId];
-					m_items[secondId] = m_items[firstId];
-					m_items[firstId] = temp;
-					return nullptr;
+	if (firstId != secondId) {
+		if (firstId >= 0) {
+			if (secondId >= 0) {
+				if (m_items[firstId][0]) {
+					if (m_items[secondId][0]) {
+						std::vector<Item*> temp = m_items[secondId];
+						m_items[secondId] = m_items[firstId];
+						m_items[firstId] = temp;
+						return nullptr;
+					}
+					else {
+						m_items[secondId] = m_items[firstId];
+						std::vector<Item*> nullItem;
+						nullItem.push_back(nullptr);
+						m_items[firstId] = nullItem;
+						return nullptr;
+					}
 				}
-				else {
-					m_items[secondId] = m_items[firstId];
-					std::vector<Item*> nullItem;
-					nullItem.push_back(nullptr);
-					m_items[firstId] = nullItem;
-					return nullptr;
+			}
+			else {
+				if (m_items[firstId][0]) {
+					// TODO : make possible to drop all items at once !
+					Item* item = m_items[firstId][0];
+					dropItem(firstId);
+					return item;
 				}
 			}
 		}
-		else {
-			// TODO : make possible to drop all items at once !
-			Item* item = m_items[firstId][0];
-			dropItem(firstId);
-			return item;
-		}
 	}
+	return nullptr;
 }

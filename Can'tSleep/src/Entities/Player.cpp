@@ -98,10 +98,6 @@ void Player::setDirection(Direction dir) {
 	}
 }
 
-void Player::setRealPosition(float pos) {
-	m_realPosition = pos;
-}
-
 void Player::draw(sf::RenderWindow& window, bool drawFilter) {
 	int anim = 0;
 	switch (m_currentState) {

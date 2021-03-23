@@ -25,7 +25,6 @@ private:
 	sf::Clock m_clock;
 	Player m_player;
 	Map m_map;
-	sf::Texture BoxTexture;
 
 	const float ratio = 9 / 16;
 	const unsigned int S_SIZE = 200;

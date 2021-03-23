@@ -25,7 +25,7 @@ public:
 	inline float getWidth() const { return m_box.getSize().x; };
 	inline float getHeight() const { return m_box.getSize().y; };
 
-private:
+protected:
 	sf::RectangleShape m_box;
 };
 
