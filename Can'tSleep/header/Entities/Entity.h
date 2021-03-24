@@ -17,8 +17,20 @@ public:
 
 	virtual void defend(Entity* attacker) = 0;
 
-	virtual inline void setWorldPosition(int pos) { m_worldPosition = pos; };
-	virtual inline void setRealPosition(float pos) { m_realPosition = pos; };
+	virtual inline void setWorldPosition(int pos) { 
+		m_worldPosition = pos;
+		m_hitBox.setXPos(m_worldPosition * TILE_WIDTH);
+		for (DropedItem* item : m_dropedItem) {
+			item->setCurrentPosition((m_worldPosition + 0.5f) * TILE_WIDTH);
+		}
+	};
+	virtual inline void setRealPosition(float pos) {
+		m_realPosition = pos;
+		m_hitBox.setXPos(m_realPosition);
+		for (DropedItem* item : m_dropedItem) {
+			item->setCurrentPosition(m_realPosition - 0.5f* TILE_WIDTH);
+		}
+	};
 
 	inline float getRealPosition() const { return m_realPosition; };
 	inline int  getWorldPosition() const { return m_worldPosition; };

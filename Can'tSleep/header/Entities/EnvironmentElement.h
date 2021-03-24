@@ -18,11 +18,12 @@ public:
 	inline AnimableEntity* getAnimation() { return m_animation; };
 
 	virtual inline void setWorldPosition(int pos) {
-		m_worldPosition = pos;
+		Entity::setWorldPosition(pos);
 		m_animation->moveTo((m_worldPosition+0.5f)*TILE_WIDTH);
+
 	};
 	virtual inline void setRealPosition(float pos) {
-		m_realPosition = pos;
+		Entity::setRealPosition(pos);
 		m_animation->moveTo(m_realPosition);
 	};
 

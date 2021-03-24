@@ -158,10 +158,19 @@ void Map::dropItem(Item* item, int position) {
 	m_dropedItems.push_back(DropedItem(item, itemPos));
 }
 
+bool Map::putDownConstructible(Constructible* constructible, int position) {
+	if (!m_elements[position]) {
+		m_elements[position] = constructible;
+		return true;
+	}
+	return false;
+}
+
 void Map::checkInteraction(Player& player) {
 	int i = 0;
 	for (DropedItem item : m_dropedItems) {
 		if (player.canPickUpItem(&item)) {
+			std::cout << "ON PICKUP LA!" << std::endl;
 			player.m_inventory.addItem(item.getItem());
 			m_dropedItems.erase(m_dropedItems.begin() + i);
 			break;

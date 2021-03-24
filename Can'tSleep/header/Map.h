@@ -23,6 +23,7 @@ public:
 	std::vector<EnvironmentElement*> getCurrentElements(int currentPos);
 	void dropItem(Item* item, int position);
 	void dropItems(std::vector<DropedItem*> items);
+	bool putDownConstructible(Constructible* constructible, int position);
 	void checkInteraction(Player& player);
 
 private:

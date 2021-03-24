@@ -23,6 +23,14 @@ void ConstructionItem::placingDraw(sf::RenderWindow& window, int pos, std::vecto
 	}
 }
 
-bool ConstructionItem::construct(int pos) {
-	return false;
+int ConstructionItem::getDrawingPos(int pos, Direction dir) {
+	if (dir == LEFT) {
+		m_constructible->setWorldPosition(pos - 2);
+		pos -= 2;
+	}
+	else {
+		m_constructible->setWorldPosition(pos + 3);
+		pos += 3;
+	}
+	return pos;
 }

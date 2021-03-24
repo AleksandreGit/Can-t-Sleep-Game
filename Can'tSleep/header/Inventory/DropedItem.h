@@ -11,7 +11,10 @@ public:
 	void draw(sf::RenderWindow& window);
 	bool collide(const HitBox& hB) const;
 	inline float getCurrentPosition() { return m_currentPosition; };
-	inline void setCurrentPosition(float pos) { m_currentPosition = pos; };
+	inline void setCurrentPosition(float pos) { 
+		m_currentPosition = pos; 
+		m_hitbox.setXPos(pos);
+	};
 	inline Item* getItem() { return m_linkedItem; };
 private:
 	Item* m_linkedItem;

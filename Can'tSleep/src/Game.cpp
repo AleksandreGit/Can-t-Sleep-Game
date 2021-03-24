@@ -56,6 +56,19 @@ void Game::handleEvents(float deltaTime) {
                 sf::Vector2i position = sf::Mouse::getPosition(m_window);
                 sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
                 m_player.m_inventory.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
+
+            }
+            else if (event.mouseButton.button == sf::Mouse::Right) {
+                ConstructionItem* constructionItem = dynamic_cast<ConstructionItem*>(m_player.m_inventory.getSelectedItem());
+                if (constructionItem) {
+                    int position = constructionItem->getDrawingPos(m_player.getWorldPosition(), m_player.getDirection());
+                    Constructible* constructible = constructionItem->getConstructible();
+                    if (m_map.putDownConstructible(constructible, position)) {
+                        constructible->setWorldPosition(position);
+                        m_player.m_inventory.dropCurrentItem();
+                    }
+
+                }
             }
         }
 

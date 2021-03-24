@@ -13,6 +13,7 @@ public:
 	bool canAddItem();
 	Item* dropItem(int id);
 	Item* dropCurrentItem();
+	bool useItem(int id);
 	void deleteItem(int id);
 	void craftItem(std::string name);
 	Item* switchPosition(int firstId, int secondId);
