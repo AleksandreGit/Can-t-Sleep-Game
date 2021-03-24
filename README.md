@@ -18,8 +18,8 @@ Voir ma chaîne Youtube pour suivre l'évolution du projet: https://www.youtube.
 
 ## 3) Etat actuel du jeu:
 
-Version actuelle du jeu: Dev. 0.2 (**Inventory MAJ**)
-(Mis à jour 11 Mars 2021)
+Version actuelle du jeu: Dev. 0.3 (**Construction MAJ**)
+(Mis à jour 24 Mars 2021)
 Actuellement les fonctionnalités suivantes ont étés mises en place:
 
 - Animations basique de personnage
@@ -35,30 +35,27 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 - Mettre en place les effets d'items
 - Prémices de la construction: 
 	- Afficher l'objet sur carte en transparence lorsque tenu en main
-
-## 4) Bugs détectés actuels 
-- Problème avec double composition du Constructible
-
-## 5) Prochains ajouts
-- Prémices de la construction: 
-	- Afficher l'objet sur carte en transparence lorsque tenu en main
 	- Posage de l'objet lorsque clic
 	- Possibilité de casser l'objet
 	- Ramassage de l'objet et cassage à nouveau
--  --> version 0.3 !
+
+## 4) Feature en cours de dev
 - Prémices du craft
--  --> version 0.4 !
+
+## 5) Bugs détectés actuels 
+NONE
+
+## 6) Prochains ajouts
 - Cycle jour et nuit
 - Ajout premier ennemi
--  --> version 0.5 !
 - Test
 - Correction de bugs
 - Refactoring de code
-- Fix version 0.5.1
 - ....
 (Autres idées à venir)
 
-## 6) Idées d'amélioration 
+## 7) Idées d'amélioration 
 - Temps d'attente avant ramassage des objets au sol
 - Affichage de l'objet lorsqu'il est drag
 - Utilisation Flyweight pour Constructible/Item pour permettre double compo ?
+- Entity Component System ?
