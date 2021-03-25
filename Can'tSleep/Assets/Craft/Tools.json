@@ -1,0 +1,11 @@
+"Tools" : [
+	{
+		"name": "WoodAxe",
+		"recipe": {
+			"WoodLog",
+			"WoodLog",
+			"WoodLog",
+			"WoodLog"
+		}
+	}
+]
