@@ -1,6 +1,5 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
-#include <box2d/box2d.h>
 #include "./../header/PerlinNoise.h"
 #include <iostream>
 #include <ctime>

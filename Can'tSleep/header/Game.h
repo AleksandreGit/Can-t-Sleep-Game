@@ -4,6 +4,7 @@
 #include "./Entities/Player.h"
 #include "./Inventory/ConstructionItem.h"
 #include "Map.h"
+#include "./Craft/CraftSystem.h"
 
 class Game
 {

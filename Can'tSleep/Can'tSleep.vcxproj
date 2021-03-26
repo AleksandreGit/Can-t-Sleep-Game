@@ -125,18 +125,18 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\Box2D\box2d\include\;C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\;C:\Users\alexc\Desktop\Documents\C++\Jam\jsoncpp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\alexc\Desktop\Documents\C++\Box2D\box2d\build\bin\Debug\;C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\lib\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>box2d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;winmm.lib;ws2_32.lib;ogg.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;opengl32.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;winmm.lib;ws2_32.lib;ogg.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;opengl32.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Craft\CraftSystem.cpp" />
     <ClCompile Include="src\Inventory\RockItem.cpp" />
     <ClCompile Include="src\Inventory\DropedItem.cpp" />
     <ClCompile Include="src\Animation\PlayerWoodAxeWalk.cpp" />
@@ -193,6 +194,7 @@
     <ClCompile Include="src\Inventory\TrapItem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header\Craft\CraftSystem.h" />
     <ClInclude Include="header\Inventory\DropedItem.h" />
     <ClInclude Include="header\Animation\Animable.h" />
     <ClInclude Include="header\Animation\AnimableBuilder.h" />

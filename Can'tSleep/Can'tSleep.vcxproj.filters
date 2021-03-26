@@ -88,6 +88,7 @@
       <Filter>Source\Inventory</Filter>
     </ClCompile>
     <ClCompile Include="src\Inventory\TrapItem.cpp" />
+    <ClCompile Include="src\Craft\CraftSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\TextureLoader.h">
@@ -219,6 +220,7 @@
       <Filter>Header\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="header\Inventory\TrapItem.h" />
+    <ClInclude Include="header\Craft\CraftSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
