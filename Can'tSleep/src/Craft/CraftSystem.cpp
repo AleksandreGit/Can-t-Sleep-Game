@@ -22,23 +22,34 @@ void CraftSystem::readJSONFile(std::string path) {
 	while (std::getline(ifs, line)) {
 		// Line containing the category name
 		if (std::isdigit(line[0])) {
-			std::cout << "Category number : " << line[0] << std::endl;
-			std::cout << "Category name : " << splitString(line, " ")[1] << std::endl;
+			//std::cout << "Category number : " << line[0] << std::endl;
+			//std::cout << "Category name : " << splitString(line, " ")[1] << std::endl;
 		}
 		// Line containing an item
 		else {
+
 			std::vector<std::string> splitted = splitString(line, ":");
+			// We get the item
 			std::string element = splitted[0];
+			std::cout << element << std::endl;
+			// We get the recipe
 			std::vector<std::string> ingredients = splitString(splitted[1], " ");
 			std::map<std::string, int> numIngredients;
 			for (std::string in : ingredients) {
+				std::cout << in << std::endl;
 				if (numIngredients[in]) {
-					int val = numIngredients[in];
-					numIngredients.emplace(in, val + 1);
+					numIngredients[in] += 1;
+				}
+				else {
+					numIngredients[in] = 1;
 				}
 			}
-
-			std::map<std::string, int>::iterator it;
+			for (std::map<std::string, int>::iterator iter = numIngredients.begin(); iter != numIngredients.end(); ++iter)
+			{
+				std::cout << "Total : " << iter->first << std::endl;
+				std::cout << "Nombre requis : " << iter->second << std::endl;
+			}
+			std::cout << "" << std::endl;
 		}
 
 	}
