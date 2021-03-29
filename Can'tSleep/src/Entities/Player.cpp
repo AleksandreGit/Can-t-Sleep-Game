@@ -26,6 +26,31 @@ Player::Player() : MovingEntity() {
 	m_inventory.addItem(new Axe());
 }
 
+Player::Player(float speed) : MovingEntity(speed) {
+	m_animations.push_back(new PlayerIdle());
+	m_animations.push_back(new PlayerWalk());
+	m_animations.push_back(new PlayerAttack());
+	m_animations.push_back(new PlayerInteract());
+	m_animations.push_back(new PlayerWoodAxeIdle());
+	m_animations.push_back(new PlayerWoodAxeWalk());
+	m_animations.push_back(new PlayerWoodAxeAttack());
+
+	// We place the player at the center of the map
+	m_realPosition = TILE_WIDTH * MAP_SIZE / 2;
+	for (int i = 0; i < m_animations.size(); i++) {
+		m_animations[i]->moveTo(m_realPosition);
+	}
+	setWorldPosition((int)(m_realPosition / TILE_WIDTH));
+	m_hitBox.setSize(150, 300);
+	m_hitBox.setPosition(m_realPosition - m_hitBox.getWidth() / 2, -m_hitBox.getHeight());
+	m_fieldOfAction.setSize(100, 300);
+	m_fieldOfAction.setPosition(m_realPosition + 75, -m_fieldOfAction.getHeight());
+
+	// INVENTORY
+	m_isInventoryOpen = false;
+	m_inventory.addItem(new Axe());
+}
+
 void Player::move(float deltaTime) {
 	int anim = 0;
 	switch (m_currentState) {

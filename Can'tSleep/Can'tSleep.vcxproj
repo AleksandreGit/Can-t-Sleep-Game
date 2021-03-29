@@ -99,10 +99,10 @@
       <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include</AdditionalIncludeDirectories>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CreateHotpatchableImage>
-      </CreateHotpatchableImage>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
       <LanguageStandard>stdcpp14</LanguageStandard>
+      <MinimalRebuild />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,11 +123,12 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <CreateHotpatchableImage>
-      </CreateHotpatchableImage>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MinimalRebuild />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,9 +146,9 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CreateHotpatchableImage>
-      </CreateHotpatchableImage>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
+      <MinimalRebuild />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -168,11 +169,12 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <CreateHotpatchableImage>
-      </CreateHotpatchableImage>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MinimalRebuild />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

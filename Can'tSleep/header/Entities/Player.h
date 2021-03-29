@@ -24,6 +24,7 @@ class Player : public MovingEntity
 {
 public:
 	Player();
+	Player(float speed);
 
 	virtual void move(float deltaTime);
 	virtual void draw(sf::RenderWindow& window, bool showFilter = false);

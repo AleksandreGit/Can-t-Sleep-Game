@@ -2,10 +2,11 @@
 
 #include "./../TextureLoader.h"
 #include "./../Inventory/Item.h"
-#include "./../Inventory/Axe.h"
-#include "./../Inventory/WoodLog.h"
 #include <fstream>
 #include <string>
+
+class Axe;
+class WoodLog;
 
 class CraftSystem
 {
@@ -31,6 +32,7 @@ private:
 	sf::Texture m_craftTexture;
 	sf::Text m_craftText;
 	sf::Font m_font;
+	std::map<std::string, Item*> m_itemsMap; // Mapping from string to objects
 	std::vector<Item*> m_items; // Contains the items we can craft
 	std::vector<Item*> m_craftItems; // Contains the items necessary to craft
 

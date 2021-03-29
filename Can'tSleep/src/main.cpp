@@ -1,5 +1,3 @@
-// LIVE++
-//#include "../../LivePP/API/LPP_API.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 #include "./../header/PerlinNoise.h"
@@ -7,10 +5,14 @@
 #include <ctime>
 #include "./../header/Game.h"
 
+// LIVE++
+#include <accctrl.h>
+#include "../../LivePP/API/LPP_API.h"
+
 
 int main()
 {
-    //HMODULE livePP = lpp::lppLoadAndRegister(L"./../API/LPP_API.h", "Quickstart");
+    //HMODULE livePP = lpp::lppLoadAndRegister(L"./../../../../../LivePP", "Quickstart");
 
     // enable Live++
     //lpp::lppEnableAllCallingModulesSync(livePP);

@@ -10,7 +10,7 @@ Game::Game() :
     m_playerView.setSize(TILE_WIDTH * 10, TILE_WIDTH * 10 * 9 / 16);
     m_window.setView(m_playerView);
 
-    m_player = Player();
+    m_player = Player(200.0f);
     m_map = Map();
     CraftSystem test;
 }

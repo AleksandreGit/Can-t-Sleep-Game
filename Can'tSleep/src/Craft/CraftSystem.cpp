@@ -1,7 +1,10 @@
 #include "./../../header/Craft/CraftSystem.h"
+#include "./../../header/Inventory/Axe.h"
+#include "./../../header/Inventory/WoodLog.h"
 
 
 CraftSystem::CraftSystem() {
+	//m_itemsMap;
 	readJSONFile("./Assets/Craft/Tools.txt");
 }
 
@@ -18,6 +21,7 @@ Item* CraftSystem::getItemWithName(std::string name) {
 void CraftSystem::readJSONFile(std::string path) {
 	std::ifstream ifs(path);
 	std::string line;
+	std::map<std::string, std::map<std::string, int>> recipes;
 
 	while (std::getline(ifs, line)) {
 		// Line containing the category name
@@ -31,12 +35,11 @@ void CraftSystem::readJSONFile(std::string path) {
 			std::vector<std::string> splitted = splitString(line, ":");
 			// We get the item
 			std::string element = splitted[0];
-			std::cout << element << std::endl;
+			//std::cout << element << std::endl;
 			// We get the recipe
 			std::vector<std::string> ingredients = splitString(splitted[1], " ");
 			std::map<std::string, int> numIngredients;
 			for (std::string in : ingredients) {
-				std::cout << in << std::endl;
 				if (numIngredients[in]) {
 					numIngredients[in] += 1;
 				}
@@ -44,12 +47,14 @@ void CraftSystem::readJSONFile(std::string path) {
 					numIngredients[in] = 1;
 				}
 			}
+			recipes[element] = numIngredients;
+			/*
 			for (std::map<std::string, int>::iterator iter = numIngredients.begin(); iter != numIngredients.end(); ++iter)
 			{
 				std::cout << "Total : " << iter->first << std::endl;
 				std::cout << "Nombre requis : " << iter->second << std::endl;
 			}
-			std::cout << "" << std::endl;
+			std::cout << "" << std::endl;*/
 		}
 
 	}

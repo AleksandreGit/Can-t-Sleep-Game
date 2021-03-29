@@ -10,6 +10,11 @@ public:
 		m_fieldOfAction(m_realPosition + 50, 0), m_target(nullptr), m_attackInterval(0.8f), 
 		m_attackTimer(0.0f), m_baseStrength(10) {};
 
+	inline MovingEntity(float speed) : Entity(), m_strength(10),
+		m_dir(RIGHT), m_speed(speed), m_name("Entity"), m_currentState(IDLE),
+		m_fieldOfAction(m_realPosition + 50, 0), m_target(nullptr), m_attackInterval(0.8f),
+		m_attackTimer(0.0f), m_baseStrength(10) {};
+
 	virtual void move(float deltaTime) = 0;
 	virtual void attack() = 0;
 	virtual void defend(Entity* attacker);
