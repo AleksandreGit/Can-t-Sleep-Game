@@ -7,8 +7,9 @@ class Item
 public:
 	Item() = default;
 	Item(std::string name, std::string textureName, std::string iconTextureName);
-	virtual void drawIcon(sf::RenderWindow& window, sf::Vector2f pos);
+	virtual void drawIcon(sf::RenderWindow& window, sf::Vector2f pos, float scale = 1.0f);
 	inline int getStackSize() { return m_sizeOfStack; };
+	inline float getItemTextureSize() { return m_textureIcon.getSize().x; }
 	inline std::string getName() { return m_name; };
 protected:
 	std::string m_name;

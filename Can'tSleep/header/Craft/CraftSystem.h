@@ -9,6 +9,7 @@ class Axe;
 class WoodLog;
 class RockItem;
 class TextureLoader;
+class Trap;
 
 class CraftSystem
 {

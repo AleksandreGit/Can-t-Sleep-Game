@@ -7,9 +7,10 @@ Item::Item(std::string name, std::string textureName, std::string iconTextureNam
 	this->m_textureIcon = TextureLoader::GetInstance()->getTexture(iconTextureName);
 }
 
-void Item::drawIcon(sf::RenderWindow& window, sf::Vector2f pos) {
+void Item::drawIcon(sf::RenderWindow& window, sf::Vector2f pos, float scale) {
 	sf::Sprite iconSprite;
 	iconSprite.setTexture(m_textureIcon);
 	iconSprite.setPosition(pos);
+	iconSprite.scale(sf::Vector2f(scale, scale));
 	window.draw(iconSprite);
 }

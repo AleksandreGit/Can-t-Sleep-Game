@@ -2,6 +2,7 @@
 #include "./../../header/Inventory/Axe.h"
 #include "./../../header/Inventory/WoodLog.h"
 #include "./../../header/Inventory/RockItem.h"
+#include "./../../header/Inventory/TrapItem.h"
 #include "./../../header/TextureLoader.h"
 
 
@@ -9,6 +10,7 @@ CraftSystem::CraftSystem() {
 	m_itemsMap["WoodAxe"] = new Axe();
 	m_itemsMap["WoodLog"] = new WoodLog();
 	m_itemsMap["Stone"] = new RockItem();
+	m_itemsMap["Trap"] = new TrapItem();
 	m_craftTexture = TextureLoader::GetInstance()->getTexture("CraftBackground");
 	readJSONFile("./Assets/Craft/Tools.txt"); 
 	m_isCraftOpen = false;
@@ -65,6 +67,18 @@ void CraftSystem::draw(sf::RenderWindow& window) {
 			window.getView().getCenter().x - m_craftTexture.getSize().x / 2,
 			window.getView().getCenter().y - m_craftTexture.getSize().y / 2);
 		window.draw(backgroundSprite);
+		float offsetX = 435;
+		float offsetY = 292;
+		sf::Vector2f pos(
+			backgroundSprite.getPosition().x + 235, 
+			backgroundSprite.getPosition().y + offsetY);
+		int i = 0;
+		for (Item* item : m_items) {
+			float textSize = item->getItemTextureSize() * 2;
+			sf::Vector2f current(pos.x + i * offsetX - textSize / 2, pos.y - textSize / 2);
+			item->drawIcon(window, current, 2.0f);
+			i++;
+		}
 	}
 }
 

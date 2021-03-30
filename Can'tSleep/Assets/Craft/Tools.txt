@@ -1,5 +1,4 @@
 0 Tools
 WoodAxe:WoodLog WoodLog WoodLog WoodLog
-Hammer:WoodLog WoodLog WoodLog WoodLog Stone
 1 Construct
 Trap:WoodLog WoodLog WoodLog Stone
