@@ -56,6 +56,9 @@ TextureLoader::TextureLoader() {
 	if (!m_textures["SelectedItem"].loadFromFile("./Assets/Inventory/selectItem.png")) {
 		std::cout << "Can't load selected item texture" << std::endl;
 	}
+	if (!m_textures["CraftBackground"].loadFromFile("./Assets/Craft/backgroundCraft.png")) {
+		std::cout << "Can't load selected craft background texture" << std::endl;
+	}
 
 	// ITEMS
 	if (!m_textures["WoodAxe"].loadFromFile("./Assets/Tools/axeWood.png")) {

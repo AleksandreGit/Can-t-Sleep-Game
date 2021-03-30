@@ -20,6 +20,7 @@ void Game::draw() {
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
+    m_craftSystem.draw(m_window);
 
     ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.m_inventory.getSelectedItem());
     if (constructItem) {
@@ -36,8 +37,12 @@ void Game::handleEvents(float deltaTime) {
         if (event.type == sf::Event::Closed) {
             m_window.close();
         }
-        else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::I) {
+        else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::I && !m_craftSystem.isCraftOpen()) {
             m_player.toggleInventory();
+            m_player.setState(IDLE);
+        } 
+        else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::C && !m_player.isInventoryOpen()) {
+            m_craftSystem.toggleCraftMenu();
             m_player.setState(IDLE);
         }
         else if (event.type == sf::Event::Resized) {
@@ -72,7 +77,7 @@ void Game::handleEvents(float deltaTime) {
             }
         }
 
-        if (!m_player.isInventoryOpen()) {
+        if (!m_player.isInventoryOpen() && !m_craftSystem.isCraftOpen()) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
                 m_player.setDirection(LEFT);
                 m_player.setState(WALK);

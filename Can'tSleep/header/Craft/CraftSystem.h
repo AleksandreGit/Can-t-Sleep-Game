@@ -7,13 +7,14 @@
 
 class Axe;
 class WoodLog;
+class RockItem;
+class TextureLoader;
 
 class CraftSystem
 {
 public:
 	CraftSystem();
 	~CraftSystem() = default;
-	Item* getItemWithName(std::string name);
 	void readJSONFile(std::string path);
 	std::vector<std::string> splitString(std::string content, std::string delimiter) {
 		std::vector<std::string> result;
@@ -27,6 +28,10 @@ public:
 		result.push_back(content);
 		return result;
 	}
+	void draw(sf::RenderWindow& window);
+	void drawItem(sf::RenderWindow& window, sf::Vector2f pos, int size);
+	inline bool isCraftOpen() { return m_isCraftOpen; };
+	inline void toggleCraftMenu() { m_isCraftOpen = !m_isCraftOpen; };
 
 private:
 	sf::Texture m_craftTexture;
@@ -34,7 +39,7 @@ private:
 	sf::Font m_font;
 	std::map<std::string, Item*> m_itemsMap; // Mapping from string to objects
 	std::vector<Item*> m_items; // Contains the items we can craft
-	std::vector<Item*> m_craftItems; // Contains the items necessary to craft
-
+	std::vector<std::map<std::string, int>> m_craftItems; // Contains the items necessary to craft each of craftable items
+	bool m_isCraftOpen;
 };
 

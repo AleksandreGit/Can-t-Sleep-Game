@@ -1,27 +1,22 @@
 #include "./../../header/Craft/CraftSystem.h"
 #include "./../../header/Inventory/Axe.h"
 #include "./../../header/Inventory/WoodLog.h"
+#include "./../../header/Inventory/RockItem.h"
+#include "./../../header/TextureLoader.h"
 
 
 CraftSystem::CraftSystem() {
-	//m_itemsMap;
-	readJSONFile("./Assets/Craft/Tools.txt");
+	m_itemsMap["WoodAxe"] = new Axe();
+	m_itemsMap["WoodLog"] = new WoodLog();
+	m_itemsMap["Stone"] = new RockItem();
+	m_craftTexture = TextureLoader::GetInstance()->getTexture("CraftBackground");
+	readJSONFile("./Assets/Craft/Tools.txt"); 
+	m_isCraftOpen = false;
 }
-
-Item* CraftSystem::getItemWithName(std::string name) {
-	if(name ==  "WoodAxe"){
-		return new Axe();
-	}
-	else if (name == "WoodLog") {
-		return new WoodLog();
-	}
-}
-
 
 void CraftSystem::readJSONFile(std::string path) {
 	std::ifstream ifs(path);
 	std::string line;
-	std::map<std::string, std::map<std::string, int>> recipes;
 
 	while (std::getline(ifs, line)) {
 		// Line containing the category name
@@ -35,6 +30,7 @@ void CraftSystem::readJSONFile(std::string path) {
 			std::vector<std::string> splitted = splitString(line, ":");
 			// We get the item
 			std::string element = splitted[0];
+			m_items.push_back(m_itemsMap[element]);
 			//std::cout << element << std::endl;
 			// We get the recipe
 			std::vector<std::string> ingredients = splitString(splitted[1], " ");
@@ -47,7 +43,7 @@ void CraftSystem::readJSONFile(std::string path) {
 					numIngredients[in] = 1;
 				}
 			}
-			recipes[element] = numIngredients;
+			m_craftItems.push_back(numIngredients);
 			/*
 			for (std::map<std::string, int>::iterator iter = numIngredients.begin(); iter != numIngredients.end(); ++iter)
 			{
@@ -58,6 +54,21 @@ void CraftSystem::readJSONFile(std::string path) {
 		}
 
 	}
+
+}
+
+void CraftSystem::draw(sf::RenderWindow& window) {
+	if (m_isCraftOpen) {
+		sf::Sprite backgroundSprite;
+		backgroundSprite.setTexture(m_craftTexture);
+		backgroundSprite.setPosition(
+			window.getView().getCenter().x - m_craftTexture.getSize().x / 2,
+			window.getView().getCenter().y - m_craftTexture.getSize().y / 2);
+		window.draw(backgroundSprite);
+	}
+}
+
+void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f pos, int size) {
 
 }
 
