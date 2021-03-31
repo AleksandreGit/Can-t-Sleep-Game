@@ -17,6 +17,7 @@ public:
 	CraftSystem();
 	~CraftSystem() = default;
 	void readJSONFile(std::string path);
+	std::string getItemNameWithPos(int xPos, int yPos, sf::RenderWindow& window);
 	std::vector<std::string> splitString(std::string content, std::string delimiter) {
 		std::vector<std::string> result;
 		size_t pos = 0;
@@ -30,7 +31,7 @@ public:
 		return result;
 	}
 	void draw(sf::RenderWindow& window);
-	void drawItem(sf::RenderWindow& window, sf::Vector2f pos, int size);
+	void drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index);
 	inline bool isCraftOpen() { return m_isCraftOpen; };
 	inline void toggleCraftMenu() { m_isCraftOpen = !m_isCraftOpen; };
 
@@ -39,8 +40,9 @@ private:
 	sf::Text m_craftText;
 	sf::Font m_font;
 	std::map<std::string, Item*> m_itemsMap; // Mapping from string to objects
-	std::vector<Item*> m_items; // Contains the items we can craft
-	std::vector<std::map<std::string, int>> m_craftItems; // Contains the items necessary to craft each of craftable items
+	std::vector<std::vector<Item*>> m_items; // Contains the items we can craft
+	std::vector<std::vector<std::map<std::string, int>>> m_craftItems; // Contains the items necessary to craft each of craftable items
 	bool m_isCraftOpen;
+	int m_actualCategory;
 };
 
