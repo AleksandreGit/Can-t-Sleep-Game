@@ -10,6 +10,7 @@ class WoodLog;
 class RockItem;
 class TextureLoader;
 class Trap;
+class Inventory; // TODO: AJOUTER INVENTORY POUR V2RIFIER NOMBRE D'ITEMS !!!
 
 class CraftSystem
 {

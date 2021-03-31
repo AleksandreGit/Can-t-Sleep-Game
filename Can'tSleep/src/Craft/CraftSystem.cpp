@@ -108,6 +108,8 @@ void CraftSystem::draw(sf::RenderWindow& window) {
 }
 
 void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index) {
+
+	// Show item
 	float offsetX = 435;
 	float offsetY = 292;
 	sf::Vector2f pos(
@@ -116,16 +118,40 @@ void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos,
 	sf::Vector2f textPos(
 		backgroundPos.x + 35,
 		backgroundPos.y + 35);
+	sf::Vector2f recipePos(
+		backgroundPos.x + 35,
+		backgroundPos.y + 502);
+
 	float textSize = item->getItemTextureSize();
 	sf::Vector2f current(pos.x + index * offsetX - textSize / 2, pos.y - textSize / 2);
-	sf::Text text;
-	text.setString(item->getName());
-	text.setFont(m_font);
-	text.setCharacterSize(25);
-	text.setFillColor(sf::Color::White);
-	text.setStyle(sf::Text::Bold);
-	text.setPosition(sf::Vector2f(textPos.x + 20, textPos.y + 20));
+
+	// Show item name
+	sf::Text itemName;
+	itemName.setString(item->getName());
+	itemName.setFont(m_font);
+	itemName.setCharacterSize(25);
+	itemName.setFillColor(sf::Color::White);
+	itemName.setStyle(sf::Text::Bold);
+	itemName.setPosition(sf::Vector2f(textPos.x + 20, textPos.y + 20));
 	item->drawIcon(window, current, 1.0);
-	window.draw(text);
+	window.draw(itemName);
+
+	std::map<std::string, int>::iterator it = m_craftItems[m_actualCategory][index].begin();
+	
+	int i = 0;
+	while (it != m_craftItems[m_actualCategory][index].end()) {
+		Item* recipeItem = m_itemsMap[it->first];
+		sf::Text recipeName;
+		recipeName.setString("0 / " + std::to_string(it->second));
+		recipeName.setFont(m_font);
+		recipeName.setCharacterSize(25);
+		recipeName.setFillColor(sf::Color::White);
+		recipeName.setStyle(sf::Text::Bold);
+		recipeName.setPosition(sf::Vector2f(recipePos.x + 100, recipePos.y + i * 80 + 20));
+		recipeItem->drawIcon(window, sf::Vector2f(recipePos.x, recipePos.y + i * 80), 0.25f);
+		window.draw(recipeName);
+		i++;
+		it++;
+	}
 }
 
