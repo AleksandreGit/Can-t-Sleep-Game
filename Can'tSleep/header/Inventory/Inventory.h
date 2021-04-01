@@ -18,6 +18,7 @@ public:
 	void craftItem(std::string name);
 	Item* switchPosition(int firstId, int secondId);
 	int getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow& window, bool mousePressed=true);
+	int getQuantityOfItem(Item* item) const;
 	inline bool changeSelectedItem(int index) { 
 		if (0 < m_currentItemIndex < TOOLBAR_SIZE) {
 			m_currentItemIndex = index;

@@ -6,4 +6,5 @@ C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\
               T=unsigned int
           ]
 C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(23,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
   Can'tSleep.vcxproj -> C:\Users\alexc\Desktop\Documents\C++\Jam\Can'tSleep\bin\x64\Debug\Can'tSleep.exe

@@ -10,7 +10,7 @@ class WoodLog;
 class RockItem;
 class TextureLoader;
 class Trap;
-class Inventory; // TODO: AJOUTER INVENTORY POUR V2RIFIER NOMBRE D'ITEMS !!!
+class Inventory;
 
 class CraftSystem
 {
@@ -31,8 +31,8 @@ public:
 		result.push_back(content);
 		return result;
 	}
-	void draw(sf::RenderWindow& window);
-	void drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index);
+	void draw(sf::RenderWindow& window, const Inventory& inventory);
+	void drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index, const Inventory& inventory);
 	inline bool isCraftOpen() { return m_isCraftOpen; };
 	inline void toggleCraftMenu() { m_isCraftOpen = !m_isCraftOpen; };
 

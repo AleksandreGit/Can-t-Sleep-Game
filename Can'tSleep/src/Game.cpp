@@ -20,7 +20,7 @@ void Game::draw() {
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
-    m_craftSystem.draw(m_window);
+    m_craftSystem.draw(m_window, m_player.m_inventory);
 
     ConstructionItem* constructItem = dynamic_cast<ConstructionItem*>(m_player.m_inventory.getSelectedItem());
     if (constructItem) {

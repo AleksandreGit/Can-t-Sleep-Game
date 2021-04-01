@@ -223,3 +223,15 @@ Item* Inventory::switchPosition(int firstId, int secondId) {
 	}
 	return nullptr;
 }
+
+int Inventory::getQuantityOfItem(Item* item) const{
+	int total = 0;
+	for (int i = 0; i < INVENTORY_SIZE; i++) {
+		if (m_items[i][0]) {
+			if (m_items[i][0]->getName() == item->getName()) {
+				total += m_items[i].size();
+			}
+		}
+	}
+	return total;
+}

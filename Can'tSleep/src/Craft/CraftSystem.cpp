@@ -3,6 +3,7 @@
 #include "./../../header/Inventory/WoodLog.h"
 #include "./../../header/Inventory/RockItem.h"
 #include "./../../header/Inventory/TrapItem.h"
+#include "./../../header/Inventory/Inventory.h"
 #include "./../../header/TextureLoader.h"
 
 
@@ -90,7 +91,7 @@ void CraftSystem::readJSONFile(std::string path) {
 
 }
 
-void CraftSystem::draw(sf::RenderWindow& window) {
+void CraftSystem::draw(sf::RenderWindow& window, const Inventory& inventory) {
 	if (m_isCraftOpen) {
 		sf::Sprite backgroundSprite;
 		backgroundSprite.setTexture(m_craftTexture);
@@ -101,13 +102,13 @@ void CraftSystem::draw(sf::RenderWindow& window) {
 
 		int i = 0;
 		for (Item* item : m_items[m_actualCategory]) {
-			drawItem(window, backgroundSprite.getPosition(), item, i);
+			drawItem(window, backgroundSprite.getPosition(), item, i, inventory);
 			i++;
 		}
 	}
 }
 
-void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index) {
+void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index, const Inventory& inventory) {
 
 	// Show item
 	float offsetX = 435;
@@ -142,10 +143,16 @@ void CraftSystem::drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos,
 	while (it != m_craftItems[m_actualCategory][index].end()) {
 		Item* recipeItem = m_itemsMap[it->first];
 		sf::Text recipeName;
-		recipeName.setString("0 / " + std::to_string(it->second));
+		int quantityOfItem = inventory.getQuantityOfItem(recipeItem);
+		recipeName.setString(std::to_string(quantityOfItem) + " / " + std::to_string(it->second));
 		recipeName.setFont(m_font);
 		recipeName.setCharacterSize(25);
-		recipeName.setFillColor(sf::Color::White);
+		if (quantityOfItem > it->second) {
+			recipeName.setFillColor(sf::Color::Green);
+		}
+		else{
+			recipeName.setFillColor(sf::Color::Red);
+		}
 		recipeName.setStyle(sf::Text::Bold);
 		recipeName.setPosition(sf::Vector2f(recipePos.x + 100, recipePos.y + i * 80 + 20));
 		recipeItem->drawIcon(window, sf::Vector2f(recipePos.x, recipePos.y + i * 80), 0.25f);
