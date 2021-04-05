@@ -186,9 +186,43 @@ void Inventory::deleteItem(int id) {
 	}
 }
 
-void Inventory::craftItem(std::string name) {
-	// TODO: make a JSON containing the necessary elements for each craft
-	// depending on the name find the right element and the craft that are necessary
+void Inventory::deleteLastItem(int id) {
+	if (m_items[id][0]) {
+		int index = m_items[id].size() - 1;
+		if (index > 0) {
+			m_items[id].erase(m_items[id].begin() + index);
+		}
+		else {
+			m_items[id][index] = nullptr;
+			m_nbItem--;
+		}
+	}
+
+}
+
+int Inventory::getItemIndex(Item* item) {
+	for (int i = 0; i < INVENTORY_SIZE; i++) {
+		if (m_items[i][0]) {
+			if (m_items[i][0]->getName() == item->getName()) {
+				return i;
+			}
+		}
+	}
+	return -1;
+}
+
+void Inventory::craftItem(Item* item, std::map<Item*, int> recipe) {
+	std::map<Item*, int>::iterator it = recipe.begin();
+	while(it != recipe.end()) {
+		for (int i = 0; i < it->second; i++) {
+			int index = getItemIndex(it->first);
+			if (index > -1) {
+				deleteLastItem(index);
+			}
+		}
+		it++;
+	}
+	addItem(item);
 }
 
 Item* Inventory::switchPosition(int firstId, int secondId) {

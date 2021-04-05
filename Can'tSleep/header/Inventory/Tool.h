@@ -5,7 +5,7 @@
 class Tool : public Craftable
 {
 public:
-	Tool() = default;
+	Tool() {m_sizeOfStack = 1;};
 	virtual void use(EnvironmentElement* target) = 0;
 	int getEfficacity() { return m_efficacity; };
 

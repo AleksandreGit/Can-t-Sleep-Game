@@ -33,6 +33,8 @@ public:
 	}
 	void draw(sf::RenderWindow& window, const Inventory& inventory);
 	void drawItem(sf::RenderWindow& window, sf::Vector2f backgroundPos, Item* item, int index, const Inventory& inventory);
+	void craftItem(int xPos, int yPos, sf::RenderWindow& window, Inventory& inventory);
+	bool canCraftItem(int index, Inventory& inventory);
 	inline bool isCraftOpen() { return m_isCraftOpen; };
 	inline void toggleCraftMenu() { m_isCraftOpen = !m_isCraftOpen; };
 

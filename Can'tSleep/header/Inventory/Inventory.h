@@ -15,8 +15,10 @@ public:
 	Item* dropCurrentItem();
 	bool useItem(int id);
 	void deleteItem(int id);
-	void craftItem(std::string name);
+	void deleteLastItem(int id);
+	void craftItem(Item* item, std::map<Item*, int> recipe); // TODO: create this function
 	Item* switchPosition(int firstId, int secondId);
+	int getItemIndex(Item* item);
 	int getItemIndexWithPos(int xPos, int yPos, sf::RenderWindow& window, bool mousePressed=true);
 	int getQuantityOfItem(Item* item) const;
 	inline bool changeSelectedItem(int index) { 

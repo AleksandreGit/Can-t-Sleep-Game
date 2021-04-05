@@ -61,7 +61,7 @@ void Game::handleEvents(float deltaTime) {
                 sf::Vector2i position = sf::Mouse::getPosition(m_window);
                 sf::Vector2f worldPos = m_window.mapPixelToCoords(position);
                 m_player.m_inventory.getItemIndexWithPos(worldPos.x, worldPos.y, m_window);
-                //std::cout << m_craftSystem.getItemNameWithPos(worldPos.x, worldPos.y, m_window) << std::endl;
+                m_craftSystem.craftItem(worldPos.x, worldPos.y, m_window, m_player.m_inventory);
 
             }
             else if (event.mouseButton.button == sf::Mouse::Right) {

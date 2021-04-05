@@ -50,6 +50,59 @@ std::string CraftSystem::getItemNameWithPos(int xPos, int yPos, sf::RenderWindow
 
 }
 
+void CraftSystem::craftItem(int xPos, int yPos, sf::RenderWindow& window, Inventory& inventory) {
+	if (m_isCraftOpen) {
+		sf::Vector2f offset(35, 92);
+		sf::Vector2f craftPos(
+			window.getView().getCenter().x - m_craftTexture.getSize().x / 2,
+			window.getView().getCenter().y - m_craftTexture.getSize().y / 2);
+		craftPos += offset;
+		float blockSize = 400;
+		bool clickOnItem = false;
+		int index = 0;
+		for (int i = 0; i < 3; i++) {
+			sf::Vector2f current(craftPos.x + i * (blockSize + 35), craftPos.y);
+			if (xPos > current.x && xPos < current.x + blockSize) {
+				if (yPos > current.y && yPos < current.y + blockSize) {
+					clickOnItem = true;
+					index = i;
+					break;
+				}
+			}
+			index++;
+		}
+		if (clickOnItem) {
+			if (index < m_items[m_actualCategory].size()) {
+				if (canCraftItem(index, inventory)) {
+					if (inventory.canAddItem()) {
+						std::map<Item*, int> recipe;
+						std::map<std::string, int>::iterator it = m_craftItems[m_actualCategory][index].begin();
+						while (it != m_craftItems[m_actualCategory][index].end()) {
+							Item* recipeItem = m_itemsMap[it->first];
+							recipe[recipeItem] = it->second;
+							it++;
+						}
+						inventory.craftItem(m_items[m_actualCategory][index], recipe);
+					}
+				}
+			}
+		}
+	}
+}
+
+bool CraftSystem::canCraftItem(int index, Inventory& inventory) {
+	std::map<std::string, int>::iterator it = m_craftItems[m_actualCategory][index].begin();
+	while (it != m_craftItems[m_actualCategory][index].end()) {
+		Item* recipeItem = m_itemsMap[it->first];
+		int quantityOfItem = inventory.getQuantityOfItem(recipeItem);
+		if (quantityOfItem < it->second) {
+			return false;
+		}
+		it++;
+	}
+	return true;
+}
+
 void CraftSystem::readJSONFile(std::string path) {
 	std::ifstream ifs(path);
 	std::string line;
