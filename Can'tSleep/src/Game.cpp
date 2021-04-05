@@ -13,10 +13,18 @@ Game::Game() :
     m_player = Player(200.0f);
     m_map = Map();
     CraftSystem test;
+    m_currentTime = 0;
+    m_state = 0;
 }
 
 void Game::draw() {
-    m_window.clear(sf::Color(154, 240, 229, 1.0f));
+    if (m_state) {
+        // TODO CHANGE COLOR DEPENDING ON TIME with clamp
+        m_window.clear(sf::Color(132 * m_currentTime / 10, 238, 255, 1.0f));
+    }
+    else {
+        m_window.clear(sf::Color(0, 0, 0, 1.0f));
+    }
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
@@ -175,6 +183,11 @@ void Game::update() {
     {
         float dt = m_clock.restart().asSeconds();
         m_player.move(dt);
+        m_currentTime += dt;
+        if (m_currentTime > DAY_DURATION) {
+            m_currentTime = 0;
+            m_state = !m_state;
+        }
 
         this->handleEvents(dt);
         this->handleCamera();

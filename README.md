@@ -38,15 +38,15 @@ Actuellement les fonctionnalités suivantes ont étés mises en place:
 	- Posage de l'objet lorsque clic
 	- Possibilité de casser l'objet
 	- Ramassage de l'objet et cassage à nouveau
+- Prémices du craft
 
 ## 4) Feature en cours de dev
-- Prémices du craft
+- Cycle jour et nuit
 
 ## 5) Bugs détectés actuels 
 NONE
 
 ## 6) Prochains ajouts
-- Cycle jour et nuit
 - Ajout premier ennemi
 - Test
 - Correction de bugs

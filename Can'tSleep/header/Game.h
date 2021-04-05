@@ -19,6 +19,7 @@ public:
 	const static float WORLD_UNIT;
 	const static int W_WIDTH = 1920;
 	const static int W_HEIGHT = 1080;
+	const static int DAY_DURATION = 10;
 
 private:
 	sf::RenderWindow m_window;
@@ -27,6 +28,8 @@ private:
 	Player m_player;
 	Map m_map;
 	CraftSystem m_craftSystem;
+	float m_currentTime;
+	bool m_state; // 0 : day; 1 : night
 
 	const float ratio = 9 / 16;
 	const unsigned int S_SIZE = 200;
