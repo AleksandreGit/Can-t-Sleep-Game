@@ -15,16 +15,18 @@ Game::Game() :
     CraftSystem test;
     m_currentTime = 0;
     m_state = 0;
+    m_sky[0] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 115, 255));
+    m_sky[1] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 115, 255));
+    m_sky[2] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(155, 255, 255));
+    m_sky[3] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(155, 255, 255));
 }
 
 void Game::draw() {
-    if (m_state) {
+    //if (!m_state) {
         // TODO CHANGE COLOR DEPENDING ON TIME with clamp
-        m_window.clear(sf::Color(132 * m_currentTime / 10, 238, 255, 1.0f));
-    }
-    else {
-        m_window.clear(sf::Color(0, 0, 0, 1.0f));
-    }
+    m_window.clear(sf::Color(0.0f, 0.0f, 0.0f, 1));
+    // Draw the sky
+    m_window.draw(m_sky, 4, sf::Quads);
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);

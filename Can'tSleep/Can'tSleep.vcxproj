@@ -144,7 +144,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\alexc\Documents\Documents\C++\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <CreateHotpatchableImage>true</CreateHotpatchableImage>
@@ -153,7 +153,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\alexc\Desktop\Documents\C++\SFML-2.5.1\lib\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\alexc\Documents\Documents\C++\SFML-2.5.1\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;winmm.lib;ws2_32.lib;ogg.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;opengl32.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <CreateHotPatchableImage>Enabled</CreateHotPatchableImage>
       <OptimizeReferences>false</OptimizeReferences>
