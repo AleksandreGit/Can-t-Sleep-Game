@@ -7,45 +7,45 @@ C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventor
           ]
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(25,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(27,42): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(27,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(27,30): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(83,78): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(37,42): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(37,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(37,30): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(96,78): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(83,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(96,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(84,61): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(97,61): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(84,49): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(97,49): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(157,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(170,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(157,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(170,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(181,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(194,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(181,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(194,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float

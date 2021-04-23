@@ -14,11 +14,22 @@ Game::Game() :
     m_map = Map();
     CraftSystem test;
     m_currentTime = 0;
-    m_state = 0;
+    m_currentState = 0;
     m_sky[0] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 115, 255));
     m_sky[1] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 115, 255));
     m_sky[2] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(155, 255, 255));
     m_sky[3] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(155, 255, 255));
+    
+    m_sky[4] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(200, 50, 200));
+    m_sky[5] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(200, 50, 200));
+    m_sky[6] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(200, 130, 0));
+    m_sky[7] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(200, 130, 0));
+    
+    m_sky[8] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 0, 20));
+    m_sky[9] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, -TILE_WIDTH * 10 * 9 / 16), sf::Color(0, 0, 20));
+    m_sky[10] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
+    m_sky[11] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
+    m_currentAlpha = 0.0f; 
 }
 
 void Game::draw() {
@@ -26,7 +37,21 @@ void Game::draw() {
         // TODO CHANGE COLOR DEPENDING ON TIME with clamp
     m_window.clear(sf::Color(0.0f, 0.0f, 0.0f, 1));
     // Draw the sky
-    m_window.draw(m_sky, 4, sf::Quads);
+    switch (m_currentState) {
+        case 0: // day
+            m_window.draw(&m_sky[0], 4, sf::Quads);
+            break;
+        case 1: // sunset
+
+            m_window.draw(&m_sky[4], 4, sf::Quads);
+            break;
+        case 2: // night
+            m_window.draw(&m_sky[8], 4, sf::Quads);
+            break;
+        default:
+            m_window.draw(&m_sky[0], 4, sf::Quads);
+            break;
+    }
 
     m_map.draw(m_window, m_player.getWorldPosition());
     m_player.draw(m_window);
@@ -186,9 +211,36 @@ void Game::update() {
         float dt = m_clock.restart().asSeconds();
         m_player.move(dt);
         m_currentTime += dt;
-        if (m_currentTime > DAY_DURATION) {
-            m_currentTime = 0;
-            m_state = !m_state;
+        switch (m_currentState) {
+            case 0: // day
+                if (m_currentTime > DAY_DURATION) {
+                    m_currentTime = 0;
+                    m_currentState++;
+                }
+                break;
+            case 1: // sunset
+                if (m_currentTime < TRANS_DURATION) {
+
+                }
+                else if (m_currentTime > TRANS_DURATION && m_currentTime < 2 * TRANS_DURATION) {
+
+                }
+
+                if (m_currentTime > SUNSET_DURATION) {
+                    m_currentTime = 0;
+                    m_currentState++;
+                }
+                break;
+            case 2: // night
+                if (m_currentTime > DAY_DURATION) {
+                    m_currentTime = 0;
+                    m_currentState++;
+                }
+                break;
+            default:
+                m_currentState = 0;
+                m_currentTime = 0;
+                break;
         }
 
         this->handleEvents(dt);
@@ -207,6 +259,19 @@ void Game::update() {
         if (!hasTarget) {
             m_player.setTarget(nullptr);
         }
+
+        m_sky[0].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
+        m_sky[1].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[2].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[3].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
+        m_sky[4].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
+        m_sky[5].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[6].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[7].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
+        m_sky[8].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
+        m_sky[9].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[10].position.x = m_player.getRealPosition() + TILE_WIDTH * 5;
+        m_sky[11].position.x = m_player.getRealPosition() - TILE_WIDTH * 5;
 
         this->draw();
     }
