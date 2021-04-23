@@ -30,6 +30,8 @@ Game::Game() :
     m_sky[10] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
     m_sky[11] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
     m_currentAlpha = 0.0f; 
+    m_transitions[0] = false;
+    m_transitions[1] = false;
 }
 
 void Game::draw() {
@@ -39,14 +41,64 @@ void Game::draw() {
     // Draw the sky
     switch (m_currentState) {
         case 0: // day
+            std::cout << "DAY" << std::endl;
+            for (int i = 0; i < 4; i++) {
+                m_sky[i].color.a = 255;
+            }
             m_window.draw(&m_sky[0], 4, sf::Quads);
             break;
         case 1: // sunset
-
-            m_window.draw(&m_sky[4], 4, sf::Quads);
+            std::cout << "SUNSET" << std::endl;
+            if (!m_transitions[0] && !m_transitions[1]) {
+                for (int i = 0; i < 4; i++) {
+                    m_sky[i].color.a = 255 - 255*m_currentAlpha;
+                }
+                for (int i = 4; i < 8; i++) {
+                    m_sky[i].color.a = 255*m_currentAlpha;
+                }
+                m_window.draw(&m_sky[0], 4, sf::Quads);
+                m_window.draw(&m_sky[4], 4, sf::Quads);
+            }
+            else {
+                for (int i = 4; i < 8; i++) {
+                    m_sky[i].color.a = 255 * m_currentAlpha;
+                }
+                for (int i = 8; i < 12; i++) {
+                    m_sky[i].color.a = 255 - 255 * m_currentAlpha;
+                }
+                m_window.draw(&m_sky[4], 4, sf::Quads);
+                m_window.draw(&m_sky[8], 4, sf::Quads);
+            }
             break;
         case 2: // night
+            for (int i = 8; i < 12; i++) {
+                m_sky[i].color.a = 255;
+            }
+            std::cout << "NIGHT" << std::endl;
             m_window.draw(&m_sky[8], 4, sf::Quads);
+            break;
+        case 3: // morning
+            std::cout << "MORNING" << std::endl;
+            if (!m_transitions[0] && !m_transitions[1]) {
+                for (int i = 8; i < 12; i++) {
+                    m_sky[i].color.a = 255 - 255 * m_currentAlpha;
+                }
+                for (int i = 4; i < 8; i++) {
+                    m_sky[i].color.a = 255 * m_currentAlpha;
+                }
+                m_window.draw(&m_sky[8], 4, sf::Quads);
+                m_window.draw(&m_sky[4], 4, sf::Quads);
+            }
+            else {
+                for (int i = 4; i < 8; i++) {
+                    m_sky[i].color.a = 255 * m_currentAlpha;
+                }
+                for (int i = 0; i < 4; i++) {
+                    m_sky[i].color.a = 255 - 255 * m_currentAlpha;
+                }
+                m_window.draw(&m_sky[4], 4, sf::Quads);
+                m_window.draw(&m_sky[0], 4, sf::Quads);
+            }
             break;
         default:
             m_window.draw(&m_sky[0], 4, sf::Quads);
@@ -211,36 +263,41 @@ void Game::update() {
         float dt = m_clock.restart().asSeconds();
         m_player.move(dt);
         m_currentTime += dt;
-        switch (m_currentState) {
-            case 0: // day
-                if (m_currentTime > DAY_DURATION) {
-                    m_currentTime = 0;
-                    m_currentState++;
-                }
-                break;
-            case 1: // sunset
-                if (m_currentTime < TRANS_DURATION) {
-
-                }
-                else if (m_currentTime > TRANS_DURATION && m_currentTime < 2 * TRANS_DURATION) {
-
-                }
-
-                if (m_currentTime > SUNSET_DURATION) {
-                    m_currentTime = 0;
-                    m_currentState++;
-                }
-                break;
-            case 2: // night
-                if (m_currentTime > DAY_DURATION) {
-                    m_currentTime = 0;
-                    m_currentState++;
-                }
-                break;
-            default:
-                m_currentState = 0;
+        if (m_currentState == 0) { // day
+            m_currentAlpha = 0;
+            if (m_currentTime > DAY_DURATION) {
                 m_currentTime = 0;
-                break;
+                m_currentState++;
+            }
+        }
+        else if (m_currentState == 1 || m_currentState == 3) { // morning and sunset
+            if (m_currentTime < TRANS_DURATION) {
+                float incr = 1.0f / TRANS_DURATION;
+                m_currentAlpha += incr*dt;
+                m_transitions[0] = true;
+            }
+            else if (m_currentTime > TRANS_DURATION && m_currentTime < 2 * TRANS_DURATION) {
+                float incr = 1.0f / TRANS_DURATION;
+                m_currentAlpha -= incr * dt;
+                m_transitions[1] = true;
+            }
+            if (m_currentTime > SUNSET_DURATION) {
+                m_currentTime = 0;
+                m_currentState++;
+                m_transitions[0] = false;
+                m_transitions[1] = false;
+            }
+        }
+        else if (m_currentState == 2) { // night
+            m_currentAlpha = 0;
+            if (m_currentTime > DAY_DURATION) {
+                m_currentTime = 0;
+                m_currentState++;
+            }
+        }
+        else {
+            m_currentState = 0;
+            m_currentTime = 0;
         }
 
         this->handleEvents(dt);
