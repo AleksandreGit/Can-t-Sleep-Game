@@ -30,8 +30,7 @@ Game::Game() :
     m_sky[10] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() + TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
     m_sky[11] = sf::Vertex(sf::Vector2f(m_player.getRealPosition() - TILE_WIDTH * 5, 10), sf::Color(40, 0, 70));
     m_currentAlpha = 0.0f; 
-    m_transitions[0] = false;
-    m_transitions[1] = false;
+    m_transition = false;
 }
 
 void Game::draw() {
@@ -41,15 +40,14 @@ void Game::draw() {
     // Draw the sky
     switch (m_currentState) {
         case 0: // day
-            std::cout << "DAY" << std::endl;
             for (int i = 0; i < 4; i++) {
                 m_sky[i].color.a = 255;
             }
             m_window.draw(&m_sky[0], 4, sf::Quads);
             break;
         case 1: // sunset
-            std::cout << "SUNSET" << std::endl;
-            if (!m_transitions[0] && !m_transitions[1]) {
+            m_window.draw(&m_sky[4], 4, sf::Quads);
+            if (!m_transition) {
                 for (int i = 0; i < 4; i++) {
                     m_sky[i].color.a = 255 - 255*m_currentAlpha;
                 }
@@ -74,12 +72,10 @@ void Game::draw() {
             for (int i = 8; i < 12; i++) {
                 m_sky[i].color.a = 255;
             }
-            std::cout << "NIGHT" << std::endl;
             m_window.draw(&m_sky[8], 4, sf::Quads);
             break;
         case 3: // morning
-            std::cout << "MORNING" << std::endl;
-            if (!m_transitions[0] && !m_transitions[1]) {
+            if (!m_transition) {
                 for (int i = 8; i < 12; i++) {
                     m_sky[i].color.a = 255 - 255 * m_currentAlpha;
                 }
@@ -274,18 +270,16 @@ void Game::update() {
             if (m_currentTime < TRANS_DURATION) {
                 float incr = 1.0f / TRANS_DURATION;
                 m_currentAlpha += incr*dt;
-                m_transitions[0] = true;
             }
             else if (m_currentTime > TRANS_DURATION && m_currentTime < 2 * TRANS_DURATION) {
                 float incr = 1.0f / TRANS_DURATION;
                 m_currentAlpha -= incr * dt;
-                m_transitions[1] = true;
+                m_transition = true;
             }
             if (m_currentTime > SUNSET_DURATION) {
                 m_currentTime = 0;
                 m_currentState++;
-                m_transitions[0] = false;
-                m_transitions[1] = false;
+                m_transition = false;
             }
         }
         else if (m_currentState == 2) { // night

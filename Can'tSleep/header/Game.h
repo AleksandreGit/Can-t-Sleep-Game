@@ -19,8 +19,8 @@ public:
 	const static float WORLD_UNIT;
 	const static int W_WIDTH = 1920;
 	const static int W_HEIGHT = 1080;
-	const static int DAY_DURATION = 10;//570;
-	const static int SUNSET_DURATION = 20;//30;
+	const static int DAY_DURATION = 5;//570;
+	const static int SUNSET_DURATION = 15;//30;
 	const static int TRANS_DURATION = 5;
 
 private:
@@ -34,7 +34,7 @@ private:
 	float m_currentTime;
 	int m_currentState; // 0 : day; 1 : sunset; 2 : night
 	float m_currentAlpha;
-	bool m_transitions[2];
+	bool m_transition;
 
 	const float ratio = 9 / 16;
 	const unsigned int S_SIZE = 200;
