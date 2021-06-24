@@ -223,9 +223,11 @@
     <ClCompile Include="src\Inventory\TrapItem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="EntityComponentSystem\Component.h" />
+    <ClInclude Include="EntityComponentSystem\ComponentManager.h" />
+    <ClInclude Include="EntityComponentSystem\Coordinator.h" />
+    <ClInclude Include="EntityComponentSystem\Entity.h" />
+    <ClInclude Include="EntityComponentSystem\EntityManager.h" />
     <ClInclude Include="header\Craft\CraftSystem.h" />
     <ClInclude Include="header\Inventory\DropedItem.h" />
     <ClInclude Include="header\Animation\Animable.h" />
@@ -274,7 +276,10 @@
     <ClInclude Include="header\Inventory\WoodLog.h" />
     <ClInclude Include="header\Inventory\RockItem.h" />
     <ClInclude Include="header\Inventory\TrapItem.h" />
-    <ClInclude Include="Signature.h" />
+    <ClInclude Include="EntityComponentSystem\ComponentArray.h" />
+    <ClInclude Include="EntityComponentSystem\Signature.h" />
+    <ClInclude Include="EntityComponentSystem\System.h" />
+    <ClInclude Include="EntityComponentSystem\SystemManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

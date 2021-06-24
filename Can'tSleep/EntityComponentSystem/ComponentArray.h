@@ -15,7 +15,7 @@ public:
 };
 
 /**
-* CLASS --> ComponentArray
+* CLASS ComponentArray
 * Class linked to a certain Component to contain all of its iterations
 */
 template<typename T>

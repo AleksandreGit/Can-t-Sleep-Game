@@ -221,10 +221,15 @@
     </ClInclude>
     <ClInclude Include="header\Inventory\TrapItem.h" />
     <ClInclude Include="header\Craft\CraftSystem.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Signature.h" />
-    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="EntityComponentSystem\Entity.h" />
+    <ClInclude Include="EntityComponentSystem\Component.h" />
+    <ClInclude Include="EntityComponentSystem\Signature.h" />
+    <ClInclude Include="EntityComponentSystem\EntityManager.h" />
+    <ClInclude Include="EntityComponentSystem\ComponentArray.h" />
+    <ClInclude Include="EntityComponentSystem\ComponentManager.h" />
+    <ClInclude Include="EntityComponentSystem\System.h" />
+    <ClInclude Include="EntityComponentSystem\SystemManager.h" />
+    <ClInclude Include="EntityComponentSystem\Coordinator.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

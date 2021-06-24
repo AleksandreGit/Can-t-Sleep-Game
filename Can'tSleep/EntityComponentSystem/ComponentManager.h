@@ -3,10 +3,15 @@
 #include "ComponentArray.h"
 #include <memory>
 
+/**
+* CLASS ComponentManager
+* TODO : describe this class 
+*/
 class ComponentManager {
 public:
+
 	/**
-	* 
+	* Register a component (create a new type and add it into the list and create the array)
 	*/
 	template<typename T>
 	void registerComponent()
@@ -26,7 +31,7 @@ public:
 	}
 
 	/**
-	*
+	* Return the type of a given component 
 	*/
 	template<typename T>
 	ComponentType getComponentType()
@@ -40,7 +45,10 @@ public:
 	}
 
 	/**
-	*
+	* Add a component to a given entity
+	* 
+	* @param entity : the entity to which add the component
+	* @param component : the component to add
 	*/
 	template<typename T>
 	void addComponent(Entity entity, T component)
@@ -50,7 +58,9 @@ public:
 	}
 
 	/**
-	*
+	* Remove a component to a given entity
+	* 
+	* @param entity : the entity to which remove the component
 	*/
 	template<typename T>
 	void removeComponent(Entity entity)
@@ -60,7 +70,9 @@ public:
 	}
 
 	/**
-	*
+	* Get the component from the entity 
+	* 
+	* @param entity : the entity from which get the component
 	*/
 	template<typename T>
 	T& getComponent(Entity entity)
@@ -70,7 +82,9 @@ public:
 	}
 
 	/**
-	*
+	* Destroy the components linked to the given destroyed entity
+	* 
+	* @param entity : the destroyed entity
 	*/
 	void entityDestroyed(Entity entity)
 	{

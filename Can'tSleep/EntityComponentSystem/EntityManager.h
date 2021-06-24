@@ -5,6 +5,10 @@
 #include "Entity.h"
 #include "Signature.h"
 
+/**
+* CLASS EntityManager
+* TODO : describe this class
+*/
 class EntityManager {
 public:
 
