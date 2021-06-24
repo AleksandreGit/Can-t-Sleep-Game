@@ -223,6 +223,9 @@
     <ClCompile Include="src\Inventory\TrapItem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManager.h" />
     <ClInclude Include="header\Craft\CraftSystem.h" />
     <ClInclude Include="header\Inventory\DropedItem.h" />
     <ClInclude Include="header\Animation\Animable.h" />
@@ -271,6 +274,7 @@
     <ClInclude Include="header\Inventory\WoodLog.h" />
     <ClInclude Include="header\Inventory\RockItem.h" />
     <ClInclude Include="header\Inventory\TrapItem.h" />
+    <ClInclude Include="Signature.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Can%27tSleep.rc" />

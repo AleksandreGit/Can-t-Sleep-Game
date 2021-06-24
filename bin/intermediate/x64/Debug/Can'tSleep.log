@@ -1,4 +1,75 @@
 ﻿cl : ligne de commande warning D9002: option '/hotpatch' inconnue ignorée
+  CraftSystem.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(25,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  RockItem.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+  DropedItem.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+  PlayerWoodAxeWalk.cpp
+  PlayerWoodAxeIdle.cpp
+  AnimableEntity.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,60): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Animation\AnimableEntity.cpp(11,43): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Axe.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Chest.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  ConstructionItem.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Craftable.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+  DefaultAnimableBuilder.cpp
+  DefaultEnvironmentElementBuilder.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  EnvironmentElement.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   Game.cpp
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
           with
@@ -10,54 +81,157 @@ C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventor
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(39,42): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(39,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(39,30): warning C4244: 'argument' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(54,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(57,43): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(52,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(55,43): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(62,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(65,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(68,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(80,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(83,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(86,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(90,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(93,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(96,44): warning C4244: '=' : conversion de 'float' en 'sf::Uint8', perte possible de données
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(149,78): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(146,78): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(149,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(146,66): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(150,61): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(147,61): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(150,49): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(147,49): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(223,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(220,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(223,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(220,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(247,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(244,94): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
-C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(247,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Game.cpp(244,82): warning C4244: 'argument' : conversion de 'T' en 'int', perte possible de données
           with
           [
               T=float
           ]
+  HitBox.cpp
+  Inventory.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(25,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(59,48): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(81,62): warning C4244: 'argument' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(84,52): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(114,61): warning C4244: 'argument' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(161,35): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(191,37): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Inventory\Inventory.cpp(266,31): warning C4267: '+=' : conversion de 'size_t' en 'int', perte possible de données
+  Item.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+  Map.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(25,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(17,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(18,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(48,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\Map.cpp(54,14): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  Mineral.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  MovingEntity.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Génération de code en cours...
+  Compilation en cours...
+  PerlinNoise.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\PerlinNoise.cpp(11,78): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\src\PerlinNoise.cpp(20,42): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Player.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Inventory.h(25,9): warning C4804: '<' : utilisation risquée du type 'bool' dans l'opération
+  PlayerAttack.cpp
+  PlayerIdle.cpp
+  PlayerInteract.cpp
+  PlayerWalk.cpp
+  PlayerWoodAxeAttack.cpp
+  TextureLoader.cpp
+  Trap.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Tree.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  VoidAnimableBuilder.cpp
+  WoodLog.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+  TrapItem.cpp
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Entities\Entity.h(22,36): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Génération de code en cours...
 cl : ligne de commande warning D9002: option '/hotpatch' inconnue ignorée
   main.cpp
 C:\Users\alexc\Documents\Documents\C++\Jam\Can'tSleep\Can'tSleep\header\Inventory\Item.h(12,68): warning C4244: 'return' : conversion de 'T' en 'float', perte possible de données

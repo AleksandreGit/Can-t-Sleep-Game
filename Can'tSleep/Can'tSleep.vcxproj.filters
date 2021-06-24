@@ -221,6 +221,10 @@
     </ClInclude>
     <ClInclude Include="header\Inventory\TrapItem.h" />
     <ClInclude Include="header\Craft\CraftSystem.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Signature.h" />
+    <ClInclude Include="EntityManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
